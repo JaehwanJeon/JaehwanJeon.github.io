@@ -23,7 +23,7 @@ repository               : "JaehwanJeon/JaehwanJeon.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.png"
+  avatar           : "profile.jpg.jpg"
   name             : "Jaehwan Jeon"
   pronouns         : # example: "she/her"  
   bio              : "Jaehwan Jeon is a Ph.D. candidate in Civil Engineering at Seoul National University. He works on physics-informed deep learning and uncertainty quantification for structural dynamics and digital twins."
