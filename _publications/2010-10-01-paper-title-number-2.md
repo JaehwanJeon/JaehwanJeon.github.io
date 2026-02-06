@@ -1,14 +1,14 @@
 ---
-title: "Paper Title Number 2"
+title: "Unified Hysteresis Modeling via Physics-based Deep Learning and Data Augmentation"
 collection: publications
 category: manuscripts
-permalink: /publication/2010-10-01-paper-title-number-2
-excerpt: 'This paper is about the number 2. The number 3 is left for future work.'
-date: 2010-10-01
-venue: 'Journal 1'
-slidesurl: 'https://academicpages.github.io/files/slides2.pdf'
-paperurl: 'https://academicpages.github.io/files/paper2.pdf'
-citation: 'Your Name, You. (2010). &quot;Paper Title Number 2.&quot; <i>Journal 1</i>. 1(2).'
+permalink: /publication/2025-11-20-unified-hysteresis-modeling-via-physics-based-deep-learning
+excerpt: 'This paper proposes a unified hysteresis modeling framework based on deep learning, leveraging physics-encoded architecture and physics-informed loss functions to capture complex nonlinearities under stochastic excitations.'
+date: 2025-11-20
+venue: 'Earthquake Engineering & Structural Dynamics'
+slidesurl: ''
+paperurl: 'https://onlinelibrary.wiley.com/doi/full/10.1002/eqe.70081'
+citation: 'Jeon, J., Kwon, O., & Song, J. (2025). &quot;Unified Hysteresis Modeling via Physics-based Deep Learning and Data Augmentation.&quot; <i>Earthquake Engineering & Structural Dynamics</i>. DOI: 10.1002/eqe.70081'
 ---
 
 The contents above will be part of a list of publications, if the user clicks the link for the publication than the contents of section will be rendered as a full page, allowing you to provide more information about the paper for the reader. When publications are displayed as a single page, the contents of the above "citation" field will automatically be included below this section in a smaller font.
