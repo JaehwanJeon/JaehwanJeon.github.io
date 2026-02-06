@@ -4,7 +4,7 @@ collection: publications
 category: manuscripts
 permalink: /publication/2026-11-20-unified-hysteresis-modeling-via-physics-based-deep-learning
 excerpt: 'This paper proposes a unified hysteresis modeling framework based on deep learning, leveraging physics-encoded architecture and physics-informed loss functions to capture complex nonlinearities under stochastic excitations.'
-date: 2026
+date: 2026-01-01
 venue: 'Earthquake Engineering & Structural Dynamics'
 slidesurl: ''
 paperurl: 'https://onlinelibrary.wiley.com/doi/full/10.1002/eqe.70081'
