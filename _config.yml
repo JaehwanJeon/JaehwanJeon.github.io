@@ -88,6 +88,8 @@ publication_category:
     title: 'Books'
   manuscripts:
     title: 'Journal Articles'    
+  underreview:
+    title: 'Under Review'
   conferences:
     title: 'Conference Papers'
 
