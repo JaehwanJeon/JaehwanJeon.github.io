@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "Jaehwan Jeon"
+title: "Welcome to my Research Website"
 author_profile: true
 redirect_from:
   - /about/
