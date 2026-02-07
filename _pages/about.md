@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "Welcome to my Research Website"
+title: "Welcome to my Research Website!!"
 author_profile: true
 redirect_from:
   - /about/
@@ -24,5 +24,5 @@ I am a Ph.D. candidate in Civil and Environmental Engineering at Seoul National 
   [Paper/Preprint](#) · [Materials](#)
 
 ## Contact
-- Email: your.email@domain.com  
+- Email: dudesup123@snu.ac.kr  
 - CV: [/files/CV.pdf](/files/CV.pdf) · [Google Scholar](#) · [GitHub](#) · [LinkedIn](#)
