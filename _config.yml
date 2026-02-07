@@ -26,7 +26,7 @@ author:
   avatar           : "profile.jpg.jpg"
   name             : "Jaehwan Jeon"
   pronouns         : # example: "she/her"  
-  bio              : "Jaehwan Jeon is a Ph.D. candidate in Civil Engineering at Seoul National University. He works on physics-informed deep learning and uncertainty quantification for structural dynamics and digital twins."
+  bio              : "Jaehwan Jeon is a Ph.D. candidate in Civil Engineering at Seoul National University. He works on physics-informed deep learning and uncertainty quantification for structural dynamics."
   location         : "Seoul, South Korea"
   employer         : "Seoul National University"
   uri              : # URL
@@ -86,6 +86,8 @@ author:
 publication_category:
   books:
     title: 'Books'
+  thesis:
+    title: 'Graduation Thesis'
   manuscripts:
     title: 'Journal Articles'    
   underreview:
