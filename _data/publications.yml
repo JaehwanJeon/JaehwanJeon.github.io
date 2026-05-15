@@ -16,15 +16,16 @@
     <i>Earthquake Engineering & Structural Dynamics (Submitted)</i>.
 - title: Ensemble-based Uncertainty Quantification and Decomposition of Probabilistic
     Surrogate Models Using Bayesian Neural Networks
-  category: underreview
+  category: manuscripts
   date: 2026-01-23
-  venue: Under Review (Draft)
+  venue: Structural Safety
+  paperurl: https://doi.org/10.1016/j.strusafe.2026.102698
   excerpt: This study presents a new framework for decomposing predictive uncertainty
     in ensembles of Bayesian neural networks, systematically separating irreducible
     randomness from reducible model-form and data-induced uncertainties.
   citation: Jeon, J., Song, J., & Kwon, O. (2026). &quot;Ensemble-based Uncertainty
     Quantification and Decomposition of Probabilistic Surrogate Models Using Bayesian
-    Neural Networks.&quot; <i>Draft Manuscript</i>.
+    Neural Networks.&quot; <i>Structural Safety</i>. https://doi.org/10.1016/j.strusafe.2026.102698
 - title: Unified Hysteresis Modeling via Physics-based Deep Learning and Data Augmentation
   category: manuscripts
   date: 2026-01-01
