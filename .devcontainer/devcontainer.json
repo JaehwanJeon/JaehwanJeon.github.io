@@ -9,6 +9,7 @@
         "--user",
         "1000:1000"
     ],
+    "overrideCommand": true,
     "workspaceFolder": "/usr/src/app",
     "remoteUser": "vscode",
     "forwardPorts": [4000] // Add port forwarding
