@@ -11,26 +11,40 @@ author_profile: true
 
 {% include base_path %}
 
-<!-- New style rendering if publication categories are defined -->
-{% if site.publication_category %}
-  {% for category in site.publication_category  %}
-    {% assign title_shown = false %}
-    {% for post in site.publications reversed %}
-      {% if post.category != category[0] %}
-        {% continue %}
-      {% endif %}
-      {% unless title_shown %}
-        <h2>{{ category[1].title }}</h2><hr />
-        {% assign title_shown = true %}
-      {% endunless %}
-      {% include archive-single.html %}
-    {% endfor %}
-  {% endfor %}
-{% else %}
-  {% for post in site.publications reversed %}
-    {% include archive-single.html %}
-  {% endfor %}
-{% endif %}
-
-
-
+<!--
+  Publications are a single source of truth in _data/publications.yml
+  (one file, not one .md per paper). This page only renders it.
+  Grouped by site.publication_category; each paper's long citation + links
+  are tucked into a collapsible <details> so the list stays scannable.
+-->
+{% for category in site.publication_category %}
+  {% assign pubs = site.data.publications | where: "category", category[0] %}
+  {% if pubs.size > 0 %}
+    <h2>{{ category[1].title }}</h2><hr />
+    <ol class="pub-list">
+      {% for p in pubs %}
+        <li class="pub-item">
+          <h3 class="pub-title">{{ p.title }}</h3>
+          {% if category[0] == 'conferences' %}
+            <p class="pub-venue">Presented at <i>{{ p.venue }}</i>, {{ p.date | date: "%Y" }}</p>
+          {% elsif category[0] == 'underreview' or category[0] == 'thesis' %}
+            <p class="pub-venue"><i>{{ p.venue }}</i>, {{ p.date | date: "%Y" }}</p>
+          {% else %}
+            <p class="pub-venue">Published in <i>{{ p.venue }}</i>, {{ p.date | date: "%Y" }}</p>
+          {% endif %}
+          {% if p.excerpt %}
+            <p class="pub-excerpt">{{ p.excerpt }}</p>
+          {% endif %}
+          {% if p.citation or p.paperurl or p.slidesurl or p.bibtexurl %}
+            <details class="pub-details">
+              <summary>Citation &amp; links</summary>
+              {% if p.citation %}<p class="pub-citation">{{ p.citation }}</p>{% endif %}
+              {% capture links %}{% if p.paperurl %}<a href="{{ p.paperurl }}">Download Paper</a>{% endif %}{% if p.slidesurl %}{% if p.paperurl %} | {% endif %}<a href="{{ p.slidesurl }}">Download Slides</a>{% endif %}{% if p.bibtexurl %}{% if p.paperurl or p.slidesurl %} | {% endif %}<a href="{{ p.bibtexurl }}">Download Bibtex</a>{% endif %}{% endcapture %}
+              {% if links != "" %}<p class="pub-links">{{ links }}</p>{% endif %}
+            </details>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ol>
+  {% endif %}
+{% endfor %}

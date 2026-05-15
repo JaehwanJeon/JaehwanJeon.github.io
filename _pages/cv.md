@@ -43,8 +43,8 @@ Skills
 
 Publications
 ======
-  <ul>{% for post in site.publications reversed %}
-    {% include archive-single-cv.html %}
+  <ul>{% for p in site.data.publications %}
+    <li><div class="archive__item"><h3 class="archive__item-title">{{ p.title }}</h3>{% if p.citation %}<p class="archive__item-excerpt">{{ p.citation }}</p>{% endif %}</div></li>
   {% endfor %}</ul>
   
 Talks
