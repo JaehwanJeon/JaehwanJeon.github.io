@@ -8,7 +8,7 @@ redirect_from:
 ---
 
 ## About
-I am a Ph.D. candidate in Civil and Environmental Engineering at Seoul National University (SNU), working on **physics-informed machine learning** for **structural dynamics** with an emphasis on **uncertainty quantification (UQ)** and **trustworthy prediction**.
+I am a Postdoctoral Researcher in Civil, Urban, & Environmental Engineering at Seoul National University (SNU), working on **physics-informed machine learning** for **nonlinear structural dynamics** with an emphasis on **uncertainty quantification (UQ)** and **trustworthy prediction**.
 
 ## Research interests
 - Scientific Machine Learning (physics-informed / physics-encoded learning) for nonlinear structural response
