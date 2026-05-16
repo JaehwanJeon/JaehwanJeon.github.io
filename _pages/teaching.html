@@ -7,6 +7,16 @@ author_profile: true
 
 {% include base_path %}
 
-{% for post in site.teaching reversed %}
-  {% include archive-single.html %}
-{% endfor %}
+<!-- Teaching is a single source of truth in _data/teaching.yml (one file). -->
+<ol class="teaching-list">
+  {% for t in site.data.teaching %}
+    <li class="teaching-item">
+      <p class="teaching-role"><strong>{{ t.role }}.</strong> {{ t.venue }} <em>({{ t.term }})</em></p>
+      {% if t.courses %}
+        <ul class="teaching-courses">
+          {% for c in t.courses %}<li>{{ c }}</li>{% endfor %}
+        </ul>
+      {% endif %}
+    </li>
+  {% endfor %}
+</ol>

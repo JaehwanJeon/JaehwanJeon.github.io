@@ -55,8 +55,8 @@ Talks
   
 Teaching
 ======
-  <ul>{% for post in site.teaching reversed %}
-    {% include archive-single-cv.html %}
+  <ul>{% for t in site.data.teaching %}
+    <li><div class="archive__item"><h3 class="archive__item-title">{{ t.role }} — {{ t.term }}</h3><p class="archive__item-excerpt">{{ t.venue }}{% for c in t.courses %}<br/>{{ c }}{% endfor %}</p></div></li>
   {% endfor %}</ul>
   
 Service and leadership
