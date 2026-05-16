@@ -16,8 +16,11 @@ Education
 
 Work experience
 ======
-* 2026–present: Postdoctoral Researcher
+* 2026.05–Present: Postdoctoral Researcher
   * Department of Civil and Mineral Engineering, University of Toronto
+
+* 2026.03–2026.04: Postdoctoral Researcher
+  * Institute of Construction and Environmental Engineering, Seoul National University
   
 Skills
 ======
