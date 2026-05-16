@@ -32,7 +32,7 @@ author_profile: true
           {% else %}
             <p class="pub-venue">Published in <i>{{ p.venue }}</i>, {{ p.date | date: "%Y" }}</p>
           {% endif %}
-          {% if p.excerpt %}
+          {% if p.excerpt and category[0] != 'conferences' %}
             <p class="pub-excerpt">{{ p.excerpt }}</p>
           {% endif %}
           {% if p.citation or p.paperurl or p.slidesurl or p.bibtexurl %}
