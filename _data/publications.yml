@@ -2,18 +2,23 @@
 # Rendered by _pages/publications.html, grouped by site.publication_category.
 # To add a paper: copy a block, edit fields. category must match _config.yml publication_category.
 
+- title: "A unified rate-dependent rheological model for high damping rubber bearings: seismic performance assessment in cold climates"
+  category: underreview
+  date: 2026-05-15
+  venue: "Under review"
+  citation: "Guo, F., J. Song, Y. Liu*, J. Joo, and J. Jeon. &quot;A unified rate-dependent rheological model for high damping rubber bearings: seismic performance assessment in cold climates.&quot; (Under review)."
 - title: Physics-based Encoder-only Transformer for Unified Modeling and Prediction
     of Structural Hysteresis
   category: underreview
   date: 2026-02-07
-  venue: Submitted to Earthquake Engineering & Structural Dynamics
+  venue: "Under review"
   excerpt: This study proposes a Physics-based Encoder-only Transformer (PET) model
     for unified hysteresis modeling. It incorporates relative positional encoding
     and physics-informed learning biases based on Drucker’s postulate to ensure physically
     consistent predictions across diverse structural behaviors.
   citation: Joo, J., Jeon, J., & Song, J. (2026). &quot;Physics-based Encoder-only
     Transformer for Unified Modeling and Prediction of Structural Hysteresis.&quot;
-    <i>Earthquake Engineering & Structural Dynamics (Submitted)</i>.
+    (Under review).
 - title: Ensemble-based Uncertainty Quantification and Decomposition of Probabilistic
     Surrogate Models Using Bayesian Neural Networks
   category: manuscripts
