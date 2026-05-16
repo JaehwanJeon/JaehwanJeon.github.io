@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "Welcome to my Research Website!!"
+title: "Jaehwan Jeon (전재환), PhD"
 author_profile: true
 redirect_from:
   - /about/
@@ -24,5 +24,5 @@ I am a Postdoctoral Researcher in Civil and Mineral Engineering at the Universit
   [Paper/Preprint](#) · [Materials](#)
 
 ## Contact
-- Email: dudesup123@snu.ac.kr  
+- Email: jaehwan.jeon@mail.utoronto.ca  
 - CV: [/files/CV.pdf](/files/CV.pdf) · [Google Scholar](#) · [GitHub](#) · [LinkedIn](#)
