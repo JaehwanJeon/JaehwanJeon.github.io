@@ -29,5 +29,6 @@ main:
   # - title: "CV"
   #   url: /cv-json/
     
-  - title: "Guide"
-    url: /markdown/
+  # Hidden from the header menu (page still lives at /markdown/, just not linked).
+  # - title: "Guide"
+  #   url: /markdown/
