@@ -15,5 +15,18 @@ redirect_from:
     <h2 id="{{ year | slugify }}" class="archive__subtitle">{{ year }}</h2>
     {% capture written_year %}{{ year }}{% endcapture %}
   {% endif %}
-  {% include archive-single.html %}
+
+  {% assign thumb = post.header.teaser | default: post.header.image %}
+  <div class="list__item">
+    <article class="archive__item">
+      {% if thumb %}
+        <div class="archive__item-teaser">
+          <img src="{% if thumb contains '://' %}{{ thumb }}{% else %}{{ thumb | prepend: '/images/' | prepend: base_path }}{% endif %}" alt="{{ post.title | escape }}">
+        </div>
+      {% endif %}
+      <h2 class="archive__item-title"><a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ post.title }}</a></h2>
+      <p class="page__meta"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time></p>
+      {% if post.excerpt %}<p class="archive__item-excerpt">{{ post.excerpt | markdownify }}</p>{% endif %}
+    </article>
+  </div>
 {% endfor %}
