@@ -24,26 +24,14 @@ author_profile: true
     <ol class="pub-list" reversed start="{{ pubs | size }}">
       {% for p in pubs %}
         <li class="pub-item">
-          {% if p.paperurl and category[0] != 'conferences' and category[0] != 'underreview' %}
-            <h3 class="pub-title"><a href="{{ p.paperurl }}">{{ p.title }}</a></h3>
-          {% else %}
-            <h3 class="pub-title">{{ p.title }}</h3>
+          {% assign cit = p.citation %}
+          {% if p.paperurl %}{% capture _tl %}<a href="{{ p.paperurl }}">{{ p.title }}</a>{% endcapture %}{% assign cit = p.citation | replace: p.title, _tl %}{% endif %}
+          <p class="pub-cite">{{ cit }}{% if p.note %} — <span style="text-decoration:underline;font-weight:700;">{{ p.note }}</span>{% endif %}</p>
+          {% if p.presentation %}
+            <p class="pub-presentation" style="color:#888;font-size:0.9em;margin:0.2em 0;"><em>({{ p.presentation }})</em></p>
           {% endif %}
-          {% if category[0] == 'conferences' %}
-            <p class="pub-venue">Presented at <i>{{ p.venue }}</i>, {{ p.date | date: "%Y" }}</p>
-          {% elsif category[0] == 'underreview' or category[0] == 'thesis' %}
-            <p class="pub-venue"><i>{{ p.venue }}</i>, {{ p.date | date: "%Y" }}</p>
-          {% else %}
-            <p class="pub-venue">Published in <i>{{ p.venue }}</i>, {{ p.date | date: "%Y" }}</p>
-          {% endif %}
-          {% if p.excerpt and category[0] != 'conferences' %}
+          {% if p.excerpt %}
             <p class="pub-excerpt">{{ p.excerpt }}</p>
-          {% endif %}
-          {% if p.citation %}
-            <details class="pub-details">
-              <summary>Citation</summary>
-              <p class="pub-citation">{{ p.citation }}</p>
-            </details>
           {% endif %}
         </li>
       {% endfor %}

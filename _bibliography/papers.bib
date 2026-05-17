@@ -1,0 +1,290 @@
+% Single source of truth for publications (standard BibTeX).
+% Rendered by scripts/bib2yaml.rb -> _data/publications.yml (run after edits).
+% Conventions:
+%   type -> section:  @article=manuscripts, @inproceedings=conferences,
+%                      @phdthesis=thesis, @unpublished=underreview
+%   corresponding = {Surname}   -> that author gets * (journals only)
+%   date = {YYYY-MM-DD}         -> ordering key (stable within a year)
+%   note = {...}                -> award/honor, shown at END OF TITLE (visible)
+%   presentation = {...}        -> e.g. "Extended Abstract", shown at title (muted)
+%   abstract = {...}            -> short summary, shown only for @article
+%   eventdate / address         -> conference dates / location
+%   doi or url                  -> becomes the title hyperlink (not in citation)
+
+% ===================== Ph.D. Dissertation =====================
+@phdthesis{jeon2026dissertation,
+  author = {Jeon, Jaehwan},
+  title  = {Prediction and Uncertainty Quantification of Nonlinear Dynamic Response of Structures via Physics-informed Deep Learning},
+  school = {Seoul National University},
+  year   = {2026},
+  date   = {2026-02-01},
+  url    = {https://dcollection.snu.ac.kr/common/orgView/000000196702}
+}
+
+% ===================== Journal Articles =====================
+@article{jeon2026ensemble,
+  author        = {Jeon, Jaehwan and Song, Junho and Kwon, Oh-Sung},
+  title         = {Ensemble-based Uncertainty Quantification and Decomposition of Probabilistic Surrogate Models Using Bayesian Neural Networks},
+  journal       = {Structural Safety},
+  year          = {2026},
+  volume        = {121},
+  articleno     = {102698},
+  date          = {2026-03-13},
+  doi           = {10.1016/j.strusafe.2026.102698},
+  abstract      = {This study presents a new framework for decomposing predictive uncertainty in ensembles of Bayesian neural networks, systematically separating irreducible randomness from reducible model-form and data-induced uncertainties.}
+}
+
+@article{jeon2026unified,
+  author        = {Jeon, Jaehwan and Kwon, Oh-Sung and Song, Junho},
+  title         = {Unified Hysteresis Modeling via Physics-based Deep Learning and Data Augmentation},
+  journal       = {Earthquake Engineering \& Structural Dynamics},
+  year          = {2026},
+  volume        = {55},
+  number        = {2},
+  pages         = {379-396},
+  date          = {2026-01-01},
+  doi           = {10.1002/eqe.70081},
+  url           = {https://onlinelibrary.wiley.com/doi/full/10.1002/eqe.70081},
+  abstract      = {This paper proposes a unified hysteresis modeling framework based on deep learning, leveraging physics-encoded architecture and physics-informed loss functions to capture complex nonlinearities under stochastic excitations.}
+}
+
+@article{jeon2025nnaugmented,
+  author        = {Jeon, Jaehwan and Song, Junho},
+  title         = {Neural Network--Augmented Physics Models Using Modal Truncation for Dynamic MDOF Systems under Response-Dependent Forces},
+  journal       = {Journal of Engineering Mechanics},
+  year          = {2025},
+  volume        = {151},
+  number        = {1},
+  date          = {2025-01-01},
+  doi           = {10.1061/JENMDT.EMENG-7845},
+  abstract      = {This paper develops a neural network-augmented physics model for MDOF systems under response-dependent forces using modal truncation.}
+}
+
+% ===================== Under Review =====================
+@unpublished{guo2026rubber,
+  author = {Guo, Fubao and Song, Junho and Liu, Yanhui and Joo, Jongha and Jeon, Jaehwan},
+  title  = {A Unified Rate-Dependent Rheological Model for High Damping Rubber Bearings: Seismic Performance Assessment in Cold Climates},
+  year   = {2026},
+  date   = {2026-05-15},
+  note   = {Under review}
+}
+
+@unpublished{joo2026pet,
+  author = {Joo, Jongha and Jeon, Jaehwan and Song, Junho},
+  title  = {Physics-based Encoder-only Transformer for Unified Modeling and Prediction of Structural Hysteresis},
+  year   = {2026},
+  date   = {2026-02-07},
+  note   = {Under review}
+}
+
+% ===================== Conference Papers =====================
+@inproceedings{jeon2025coseik,
+  author       = {Jeon, Jaehwan and Song, Junho and Kwon, Oh-Sung},
+  title        = {Uncertainty Quantification of Ensemble Prediction for Structural Hysteretic Behavior using Bayesian Neural Networks},
+  booktitle    = {Computational Structural Engineering Institute of Korea Annual Conference},
+  year         = {2025},
+  eventdate    = {November 28-29},
+  address      = {Daejeon, Korea},
+  date         = {2025-11-28},
+  note         = {COSEIK Best Paper Presentation Award}
+}
+
+@inproceedings{jeon2025cecar,
+  author    = {Jeon, Jaehwan and Song, Junho and Kwon, Oh-Sung},
+  title     = {Enhancing Uncertainty Quantification in Civil Engineering through Bayesian Neural Network Ensembles},
+  booktitle = {Civil Engineering Conference in the Asian Region},
+  year      = {2025},
+  eventdate = {October 21-24},
+  address   = {Jeju, Korea},
+  date      = {2025-10-21}
+}
+
+@inproceedings{joo2025cecar,
+  author    = {Joo, Jongha and Jeon, Jaehwan and Song, Junho},
+  title     = {Dynamic Analysis of Hysteretic Structures Using Transformer Models with Transfer Learning},
+  booktitle = {Civil Engineering Conference in the Asian Region},
+  year      = {2025},
+  eventdate = {October 21-24},
+  address   = {Jeju, Korea},
+  date      = {2025-10-21}
+}
+
+@inproceedings{joo2025kepic,
+  author    = {Joo, Jongha and Jeon, Jaehwan and Song, Junho},
+  title     = {Development of a Transformer-based Unified Hysteretic Behavior Model for Seismic Response Prediction of Nuclear Power Plant Structures},
+  booktitle = {2025 Korea Electric Power Industry Code-Week},
+  year      = {2025},
+  eventdate = {August 11-14},
+  address   = {Busan, Korea},
+  date      = {2025-08-11}
+}
+
+@inproceedings{joo2025icossar,
+  author    = {Joo, Jongha and Jeon, Jaehwan and Song, Junho},
+  title     = {Physics-Based Transformer Model for Predicting Nonlinear Hysteresis in Structures},
+  booktitle = {14th International Conference on Structural Safety and Reliability (ICOSSAR'25)},
+  year      = {2025},
+  eventdate = {June 1-6},
+  address   = {Los Angeles, USA},
+  date      = {2025-06-02}
+}
+
+@inproceedings{jeon2025icossar,
+  author       = {Jeon, Jaehwan and Kwon, Oh-Sung and Song, Junho},
+  title        = {Uncertainty Quantification of Hysteresis Prediction in Structural Dynamics Using Bayesian Neural Networks},
+  booktitle    = {14th International Conference on Structural Safety and Reliability (ICOSSAR'25)},
+  year         = {2025},
+  eventdate    = {June 1-6},
+  address      = {Los Angeles, USA},
+  date         = {2025-06-01},
+  presentation = {Extended Abstract},
+  note         = {Selected as ICOSSAR 2025 student competition finalist}
+}
+
+@inproceedings{jeon2025emi,
+  author       = {Jeon, Jaehwan and Song, Junho and Kwon, Oh-Sung},
+  title        = {Bayesian Neural Network Ensembles for Quantifying Uncertainty in Deep Learning-based Surrogate Models},
+  booktitle    = {Engineering Mechanics Institute Conference 2025},
+  year         = {2025},
+  eventdate    = {May 27-30},
+  address      = {Anaheim, USA},
+  date         = {2025-05-27},
+  presentation = {Extended Abstract}
+}
+
+@inproceedings{jeon2024ksce,
+  author       = {Jeon, Jaehwan and Kwon, Oh-Sung and Song, Junho},
+  title        = {Probabilistic Seismic Hysteresis Modeling Method Using Bayesian Neural Networks},
+  booktitle    = {Korean Society of Civil Engineering 2024 Convention},
+  year         = {2024},
+  eventdate    = {October 16-18},
+  address      = {Jeju, Korea},
+  date         = {2024-10-16},
+  note         = {KSCE Convention Best Paper Award}
+}
+
+@inproceedings{jeon2024apssra,
+  author    = {Jeon, Jaehwan and Kwon, Oh-Sung and Song, Junho},
+  title     = {Uncertainty Quantification of Deep Learning Hysteresis Models Using Bayesian Neural Network with Concrete Dropout},
+  booktitle = {8th Asia-Pacific Symposium on Structural Reliability and Its Applications},
+  year      = {2024},
+  eventdate = {September 29-October 2},
+  address   = {Ulsan, Korea},
+  date      = {2024-09-29}
+}
+
+@inproceedings{jeon2024wcee,
+  author       = {Jeon, Jaehwan and Kwon, Oh-Sung and Song, Junho},
+  title        = {Long Short-term Memory Model for Dynamic Analysis of Hysteretic Structures Subjected to Earthquakes},
+  booktitle    = {18th World Conference on Earthquake Engineering},
+  year         = {2024},
+  eventdate    = {June 30-July 5},
+  address      = {Milan, Italy},
+  date         = {2024-06-30},
+  presentation = {Extended Abstract}
+}
+
+@inproceedings{jeon2024eccomas,
+  author    = {Jeon, Jaehwan and Song, Junho and Kwon, Oh-Sung},
+  title     = {Model Uncertainty Quantification and Selection for Deep Learning-based Simulation of Hysteresis with Stiffness and Strength Degradations},
+  booktitle = {9th European Congress on Computational Methods in Applied Sciences and Engineering},
+  year      = {2024},
+  eventdate = {June 3-7},
+  address   = {Lisbon, Portugal},
+  date      = {2024-06-03}
+}
+
+@inproceedings{jeon2024emipmc,
+  author       = {Jeon, Jaehwan and Song, Junho and Kwon, Oh-Sung},
+  title        = {Integrating Physics-Based Deep Learning Models and Data Augmentation to Reduce Uncertainties in Hysteresis Modeling},
+  booktitle    = {Engineering Mechanics Institute Conference and Probabilistic Mechanics \& Reliability Conference 2024 (EMI/PMC 2024)},
+  year         = {2024},
+  eventdate    = {May 28-31},
+  address      = {Chicago, USA},
+  date         = {2024-05-28},
+  presentation = {Extended Abstract},
+  note         = {Selected as EMI/PMC 2024 student competition finalist}
+}
+
+@inproceedings{jeon2024smirt,
+  author       = {Jeon, Jaehwan and Kwon, Oh-Sung and Song, Junho},
+  title        = {Physics-informed Deep Learning Model for Prediction of Complex Hysteresis},
+  booktitle    = {27th International Conference on Structural Mechanics in Reactor Technology},
+  year         = {2024},
+  eventdate    = {March 3-8},
+  address      = {Yokohama, Japan},
+  date         = {2024-03-03},
+  presentation = {Extended Abstract}
+}
+
+@inproceedings{jeon2023ksce,
+  author    = {Jeon, Jaehwan and Song, Junho},
+  title     = {Generalized Seismic Hysteresis Modeling Method Using Long Short-Term Memory Model},
+  booktitle = {Korean Society of Civil Engineering 2023 Convention},
+  year      = {2023},
+  eventdate = {October 18-20},
+  address   = {Yeosu, Korea},
+  date      = {2023-10-18}
+}
+
+@inproceedings{jeon2023icasp,
+  author       = {Jeon, Jaehwan and Song, Junho},
+  title        = {Deep-Learning-Augmented Physics Models to Predict Nonlinear Dynamic Responses of Multi-Degree-of-Freedom Structures},
+  booktitle    = {14th International Conference on Applications of Statistics and Probability in Civil Engineering},
+  year         = {2023},
+  eventdate    = {July 9-13},
+  address      = {Dublin, Ireland},
+  date         = {2023-07-09},
+  presentation = {Extended Abstract}
+}
+
+@inproceedings{jeon2023emi,
+  author       = {Jeon, Jaehwan and Song, Junho},
+  title        = {Dynamic Response Prediction of Nonlinear MDOF Systems by Neural-Network-Augmented Physics Models},
+  booktitle    = {Engineering Mechanics Institute Conference 2023},
+  year         = {2023},
+  eventdate    = {June 6-9},
+  address      = {Atlanta, USA},
+  date         = {2023-06-06},
+  presentation = {Extended Abstract}
+}
+
+@inproceedings{jeon2022wcacem,
+  author    = {Jeon, Jaehwan and Song, Junho},
+  title     = {Physics-Informed Neural Network for Dynamic Responses of Structures Based on Monitoring Data},
+  booktitle = {The 2022 World Congress on Advances in Civil, Environmental, \& Materials Research},
+  year      = {2022},
+  eventdate = {August 16-19},
+  address   = {Seoul, Korea},
+  date      = {2022-08-16}
+}
+
+@inproceedings{jeon2022coseik,
+  author    = {Jeon, Jaehwan and Song, Junho},
+  title     = {Prediction of Dynamic Responses of Structures Using Neural Network Augmented Physics Model},
+  booktitle = {Computational Structural Engineering Institute of Korea 2022 Annual Conference},
+  year      = {2022},
+  eventdate = {April 13-15},
+  address   = {Jeju, Korea},
+  date      = {2022-04-13}
+}
+
+@inproceedings{jeon2021kibse,
+  author    = {Jeon, Jaehwan and Song, Junho},
+  title     = {Development of Artificial Neural Network to Estimate Nonlinear Damping Force Under Wind Loadings Using Acceleration and Force Data - Focusing on Small Damping Force Identification},
+  booktitle = {Korean Institute of Bridge and Structural Engineers 2021 Conference: Digital Twin Technology in Infrastructure},
+  year      = {2021},
+  eventdate = {November 26},
+  address   = {Virtual conference},
+  date      = {2021-11-26}
+}
+
+@inproceedings{jeon2021ksce,
+  author    = {Jeon, Jaehwan and Song, Junho},
+  title     = {Development of Artificial Neural Network to Estimate Damping Force Under Wind Loadings Using Acceleration and Force Data},
+  booktitle = {Korean Society of Civil Engineers 2021 Convention},
+  year      = {2021},
+  eventdate = {October 20-22},
+  address   = {Gwangju, Korea},
+  date      = {2021-10-20}
+}
