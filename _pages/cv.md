@@ -31,6 +31,7 @@ Honors and Awards (Selected)
 * **May 2024** — Engineering Mechanics Institute (EMI) – Probabilistic Methods Committee (PMC) Award Finalist
 * **June 2022** — Mitacs Globalink Research Award (3,000 CAD ($2,800)), Mitacs, Canada
 
+{% comment %} TODO: write later — Skills section
 Skills
 ======
 * Skill 1
@@ -39,6 +40,7 @@ Skills
   * Sub-skill 2.2
   * Sub-skill 2.3
 * Skill 3
+{% endcomment %}
 
 Publications
 ======
@@ -48,11 +50,13 @@ Publications
 <li><div class="archive__item"><h4 class="archive__item-title">{% if p.paperurl and category[0] != 'underreview' %}<a href="{{ p.paperurl }}">{{ p.title }}</a>{% else %}{{ p.title }}{% endif %}</h4>{% if p.citation %}<p class="archive__item-excerpt">{{ p.citation }}</p>{% endif %}</div></li>{% endfor %}</ul>
 {% endif %}{% endfor %}
   
+{% comment %} TODO: write later — Talks section
 Talks
 ======
   <ul>{% for post in site.talks reversed %}
     {% include archive-single-talk-cv.html  %}
   {% endfor %}</ul>
+{% endcomment %}
   
 Teaching
 ======
@@ -60,6 +64,8 @@ Teaching
     <li><div class="archive__item"><h3 class="archive__item-title">{{ t.role }} — {{ t.term }}</h3><p class="archive__item-excerpt">{{ t.venue }}{% for c in t.courses %}<br/>{{ c }}{% endfor %}</p></div></li>
   {% endfor %}</ul>
   
+{% comment %} TODO: write later — Service and leadership section
 Service and leadership
 ======
 * Currently signed in to 43 different slack teams
+{% endcomment %}

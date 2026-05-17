@@ -14,14 +14,16 @@ main:
   - title: "Publications"
     url: /publications/
 
-  - title: "Talks"
-    url: /talks/
+  # Hidden until written (page still lives at /talks/):
+  # - title: "Talks"
+  #   url: /talks/
 
   - title: "Teaching"
     url: /teaching/
 
-  - title: "Portfolio"
-    url: /portfolio/
+  # Hidden until written (page still lives at /portfolio/):
+  # - title: "Portfolio"
+  #   url: /portfolio/
 
   - title: "CV"
     url: /cv/
