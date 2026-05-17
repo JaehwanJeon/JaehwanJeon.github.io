@@ -2,6 +2,12 @@
 # Rendered by _pages/publications.html, grouped by site.publication_category.
 # To add a paper: copy a block, edit fields. category must match _config.yml publication_category.
 
+- title: "Prediction and Uncertainty Quantification of Nonlinear Dynamic Response of Structures via Physics-informed Deep Learning"
+  category: thesis
+  date: 2026-02-01
+  venue: "Seoul National University"
+  paperurl: https://dcollection.snu.ac.kr/common/orgView/000000196702
+  citation: "Jeon, J. (2026). &quot;Prediction and Uncertainty Quantification of Nonlinear Dynamic Response of Structures via Physics-informed Deep Learning.&quot; <i>Doctoral dissertation</i>, Seoul National University."
 - title: "A unified rate-dependent rheological model for high damping rubber bearings: seismic performance assessment in cold climates"
   category: underreview
   date: 2026-05-15

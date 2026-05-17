@@ -21,10 +21,14 @@ author_profile: true
   {% assign pubs = site.data.publications | where: "category", category[0] %}
   {% if pubs.size > 0 %}
     <h2>{{ category[1].title }}</h2><hr />
-    <ol class="pub-list">
+    <ol class="pub-list" reversed start="{{ pubs | size }}">
       {% for p in pubs %}
         <li class="pub-item">
-          <h3 class="pub-title">{{ p.title }}</h3>
+          {% if p.paperurl and category[0] != 'conferences' and category[0] != 'underreview' %}
+            <h3 class="pub-title"><a href="{{ p.paperurl }}">{{ p.title }}</a></h3>
+          {% else %}
+            <h3 class="pub-title">{{ p.title }}</h3>
+          {% endif %}
           {% if category[0] == 'conferences' %}
             <p class="pub-venue">Presented at <i>{{ p.venue }}</i>, {{ p.date | date: "%Y" }}</p>
           {% elsif category[0] == 'underreview' or category[0] == 'thesis' %}
@@ -35,12 +39,10 @@ author_profile: true
           {% if p.excerpt and category[0] != 'conferences' %}
             <p class="pub-excerpt">{{ p.excerpt }}</p>
           {% endif %}
-          {% if p.citation or p.paperurl or p.slidesurl or p.bibtexurl %}
+          {% if p.citation %}
             <details class="pub-details">
-              <summary>Citation &amp; links</summary>
-              {% if p.citation %}<p class="pub-citation">{{ p.citation }}</p>{% endif %}
-              {% capture links %}{% if p.paperurl %}<a href="{{ p.paperurl }}">Download Paper</a>{% endif %}{% if p.slidesurl %}{% if p.paperurl %} | {% endif %}<a href="{{ p.slidesurl }}">Download Slides</a>{% endif %}{% if p.bibtexurl %}{% if p.paperurl or p.slidesurl %} | {% endif %}<a href="{{ p.bibtexurl }}">Download Bibtex</a>{% endif %}{% endcapture %}
-              {% if links != "" %}<p class="pub-links">{{ links }}</p>{% endif %}
+              <summary>Citation</summary>
+              <p class="pub-citation">{{ p.citation }}</p>
             </details>
           {% endif %}
         </li>

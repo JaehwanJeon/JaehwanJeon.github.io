@@ -45,7 +45,7 @@ Publications
 {% for category in site.publication_category %}{% if category[0] == 'conferences' %}{% continue %}{% endif %}{% assign pubs = site.data.publications | where: "category", category[0] %}{% if pubs.size > 0 %}
 <h3>{{ category[1].title }}</h3>
 <ul>{% for p in pubs %}
-<li><div class="archive__item"><h4 class="archive__item-title">{{ p.title }}</h4>{% if p.citation %}<p class="archive__item-excerpt">{{ p.citation }}</p>{% endif %}</div></li>{% endfor %}</ul>
+<li><div class="archive__item"><h4 class="archive__item-title">{% if p.paperurl and category[0] != 'underreview' %}<a href="{{ p.paperurl }}">{{ p.title }}</a>{% else %}{{ p.title }}{% endif %}</h4>{% if p.citation %}<p class="archive__item-excerpt">{{ p.citation }}</p>{% endif %}</div></li>{% endfor %}</ul>
 {% endif %}{% endfor %}
   
 Talks
