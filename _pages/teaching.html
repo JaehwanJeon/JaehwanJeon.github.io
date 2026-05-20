@@ -8,7 +8,7 @@ author_profile: true
 {% include base_path %}
 
 <!-- Teaching is a single source of truth in _data/teaching.yml (one file). -->
-<ol class="teaching-list">
+<ol class="teaching-list" reversed start="{{ site.data.teaching | size }}">
   {% for t in site.data.teaching %}
     <li class="teaching-item">
       <p class="teaching-role"><strong>{{ t.role }}.</strong> {{ t.venue }} <em>({{ t.term }})</em></p>

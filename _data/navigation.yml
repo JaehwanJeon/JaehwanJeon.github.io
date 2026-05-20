@@ -14,9 +14,8 @@ main:
   - title: "Publications"
     url: /publications/
 
-  # Hidden until written (page still lives at /talks/):
-  # - title: "Talks"
-  #   url: /talks/
+  - title: "Talks"
+    url: /talks/
 
   - title: "Teaching"
     url: /teaching/

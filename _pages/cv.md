@@ -50,13 +50,11 @@ Publications
 <li><div class="archive__item"><h4 class="archive__item-title">{% if p.paperurl and category[0] != 'underreview' %}<a href="{{ p.paperurl }}">{{ p.title }}</a>{% else %}{{ p.title }}{% endif %}</h4>{% if p.citation %}<p class="archive__item-excerpt">{{ p.citation }}</p>{% endif %}</div></li>{% endfor %}</ul>
 {% endif %}{% endfor %}
   
-{% comment %} TODO: write later — Talks section
 Talks
 ======
-  <ul>{% for post in site.talks reversed %}
-    {% include archive-single-talk-cv.html  %}
+  <ul>{% assign talks = site.data.talks | sort: "date" | reverse %}{% for t in talks %}
+    <li><div class="archive__item"><h3 class="archive__item-title">{{ t.title }}</h3><p class="archive__item-excerpt">{{ t.venue }}{% if t.location %} ({{ t.location }}){% endif %}<br/>{{ t.date | date: "%B %-d, %Y" }}</p></div></li>
   {% endfor %}</ul>
-{% endcomment %}
   
 Teaching
 ======
