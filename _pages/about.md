@@ -25,4 +25,4 @@ I am a Postdoctoral Researcher in Civil and Mineral Engineering at the Universit
 
 ## Contact
 - Email: jaehwan.jeon@mail.utoronto.ca  
-- CV: [/files/CV.pdf](/files/CV.pdf) · [Google Scholar](#) · [GitHub](#) · [LinkedIn](#)
+- CV: [/files/CV.pdf](/files/CV.pdf) · [Google Scholar](https://scholar.google.com/citations?user=WHwGlwEAAAAJ&hl=en) · [GitHub](https://github.com/JaehwanJeon) · [LinkedIn](https://www.linkedin.com/in/jaehwan-jeon-138b461b0)
