@@ -3,7 +3,6 @@ title: "[New Paper] Ensemble-based Uncertainty Quantification and Decomposition 
 date: 2026-03-13
 permalink: /posts/2026/03/strusafe-ensemble-uq/
 header:
-  image: posts/2026-03-13-strusafe-ensemble-uq/cover.png    # large image at the top of the post page
   teaser: posts/2026-03-13-strusafe-ensemble-uq/cover.png   # thumbnail shown in the Blog Posts list
 tags:
   - publication
@@ -16,7 +15,7 @@ Our paper **"Ensemble-based Uncertainty Quantification and Decomposition of Prob
 
 The study presents a new framework for decomposing predictive uncertainty in ensembles of Bayesian neural networks, systematically separating irreducible randomness from reducible model-form and data-induced uncertainties.
 
-<!-- Add a figure if you like: ![Uncertainty decomposition](/images/posts/2026-03-13-strusafe-ensemble-uq/fig1.png) -->
+![Ensemble-based uncertainty quantification and decomposition](/images/posts/2026-03-13-strusafe-ensemble-uq/cover.png)
 
 **Citation:** Jeon, J., Song, J., & Kwon, O. (2026). "Ensemble-based Uncertainty Quantification and Decomposition of Probabilistic Surrogate Models Using Bayesian Neural Networks." *Structural Safety*. https://doi.org/10.1016/j.strusafe.2026.102698
 
