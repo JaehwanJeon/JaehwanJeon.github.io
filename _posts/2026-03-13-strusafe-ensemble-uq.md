@@ -2,10 +2,9 @@
 title: "[New Paper] Ensemble-based Uncertainty Quantification and Decomposition of Probabilistic Surrogate Models Using Bayesian Neural Networks"
 date: 2026-03-13
 permalink: /posts/2026/03/strusafe-ensemble-uq/
-# Optional cover image: drop a file in /images/posts/ and uncomment the two lines below.
-# header:
-#   image: posts/2026-03-13-strusafe-ensemble-uq/cover.jpg    # large image at the top of the post page
-#   teaser: posts/2026-03-13-strusafe-ensemble-uq/cover.jpg   # thumbnail shown in the Blog Posts list
+header:
+  image: posts/2026-03-13-strusafe-ensemble-uq/cover.png    # large image at the top of the post page
+  teaser: posts/2026-03-13-strusafe-ensemble-uq/cover.png   # thumbnail shown in the Blog Posts list
 tags:
   - publication
   - journal
