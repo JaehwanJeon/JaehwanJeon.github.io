@@ -1,6 +1,24 @@
 # GENERATED from _bibliography/papers.bib by scripts/bib2yaml.rb — DO NOT EDIT.
 # Edit the .bib and re-run:  ruby scripts/bib2yaml.rb
 
+- title: Uncertainty Quantification in Unified Hysteresis Modeling Using a Partially
+    Bayesian Neural Architecture
+  category: conferences
+  date: '2026-06-02'
+  venue: Engineering Mechanics Institute Conference 2026 (EMI 2026)
+  presentation: Extended Abstract
+  citation: Joo, J., J. Jeon, and J. Song (2026), Uncertainty Quantification in Unified
+    Hysteresis Modeling Using a Partially Bayesian Neural Architecture, Engineering
+    Mechanics Institute Conference 2026 (EMI 2026), June 2-5, Boulder, USA.
+- title: Ensemble-based Uncertainty Quantification for Probabilistic Surrogate Models
+    using SINDy
+  category: conferences
+  date: '2026-06-02'
+  venue: Engineering Mechanics Institute Conference 2026 (EMI 2026)
+  presentation: Extended Abstract
+  citation: Park, S., J. Jeon, and J. Song (2026), Ensemble-based Uncertainty Quantification
+    for Probabilistic Surrogate Models using SINDy, Engineering Mechanics Institute
+    Conference 2026 (EMI 2026), June 2-5, Boulder, USA.
 - title: 'A Unified Rate-Dependent Rheological Model for High Damping Rubber Bearings:
     Seismic Performance Assessment in Cold Climates'
   category: underreview
@@ -14,6 +32,7 @@
   category: manuscripts
   date: '2026-03-13'
   venue: Structural Safety
+  note: Ranked as most downloaded paper
   excerpt: This study presents a new framework for decomposing predictive uncertainty
     in ensembles of Bayesian neural networks, systematically separating irreducible
     randomness from reducible model-form and data-induced uncertainties.
@@ -115,6 +134,7 @@
   category: manuscripts
   date: '2025-01-01'
   venue: Journal of Engineering Mechanics
+  note: Ranked as most read & most cited paper
   excerpt: This paper develops a neural network-augmented physics model for MDOF systems
     under response-dependent forces using modal truncation.
   paperurl: https://doi.org/10.1061/JENMDT.EMENG-7845
