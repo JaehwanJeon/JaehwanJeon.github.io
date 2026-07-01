@@ -4,6 +4,26 @@
 - title: Uncertainty Quantification in Unified Hysteresis Modeling Using a Partially
     Bayesian Neural Architecture
   category: conferences
+  date: '2026-06-28'
+  venue: 10th International Symposium on Reliability Engineering and Risk Management
+    (ISRERM 2026)
+  citation: Joo, J., J. Jeon, and J. Song (2026), Uncertainty Quantification in Unified
+    Hysteresis Modeling Using a Partially Bayesian Neural Architecture, 10th International
+    Symposium on Reliability Engineering and Risk Management (ISRERM 2026), June 28-July
+    1, Sapporo, Japan.
+- title: Ensemble-based Uncertainty Quantification for Probabilistic Surrogate Models
+    using SINDy
+  category: conferences
+  date: '2026-06-28'
+  venue: 10th International Symposium on Reliability Engineering and Risk Management
+    (ISRERM 2026)
+  citation: Park, S., J. Jeon, and J. Song (2026), Ensemble-based Uncertainty Quantification
+    for Probabilistic Surrogate Models using SINDy, 10th International Symposium on
+    Reliability Engineering and Risk Management (ISRERM 2026), June 28-July 1, Sapporo,
+    Japan.
+- title: Uncertainty Quantification in Unified Hysteresis Modeling Using a Partially
+    Bayesian Neural Architecture
+  category: conferences
   date: '2026-06-02'
   venue: Engineering Mechanics Institute Conference 2026 (EMI 2026)
   note: Selected as EMI 2026 PMC student competition finalist
