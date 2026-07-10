@@ -1,16 +1,6 @@
 # GENERATED from _bibliography/papers.bib by scripts/bib2yaml.rb — DO NOT EDIT.
 # Edit the .bib and re-run:  ruby scripts/bib2yaml.rb
 
-- title: Uncertainty Quantification in Unified Hysteresis Modeling Using a Partially
-    Bayesian Neural Architecture
-  category: conferences
-  date: '2026-06-28'
-  venue: 10th International Symposium on Reliability Engineering and Risk Management
-    (ISRERM 2026)
-  citation: Joo, J., J. Jeon, and J. Song (2026), Uncertainty Quantification in Unified
-    Hysteresis Modeling Using a Partially Bayesian Neural Architecture, 10th International
-    Symposium on Reliability Engineering and Risk Management (ISRERM 2026), June 28-July
-    1, Sapporo, Japan.
 - title: Ensemble-based Uncertainty Quantification for Probabilistic Surrogate Models
     using SINDy
   category: conferences
@@ -21,6 +11,16 @@
     for Probabilistic Surrogate Models using SINDy, 10th International Symposium on
     Reliability Engineering and Risk Management (ISRERM 2026), June 28-July 1, Sapporo,
     Japan.
+- title: Uncertainty Quantification in Unified Hysteresis Modeling Using a Partially
+    Bayesian Neural Architecture
+  category: conferences
+  date: '2026-06-28'
+  venue: 10th International Symposium on Reliability Engineering and Risk Management
+    (ISRERM 2026)
+  citation: Joo, J., J. Jeon, and J. Song (2026), Uncertainty Quantification in Unified
+    Hysteresis Modeling Using a Partially Bayesian Neural Architecture, 10th International
+    Symposium on Reliability Engineering and Risk Management (ISRERM 2026), June 28-July
+    1, Sapporo, Japan.
 - title: Uncertainty Quantification in Unified Hysteresis Modeling Using a Partially
     Bayesian Neural Architecture
   category: conferences
@@ -48,6 +48,15 @@
   citation: 'Guo, F., J. Song, Y. Liu, J. Joo, and J. Jeon. A Unified Rate-Dependent
     Rheological Model for High Damping Rubber Bearings: Seismic Performance Assessment
     in Cold Climates. (Under review).'
+- title: Multi-Modal Deep Learning-Based Seismic Damage Identification for Nuclear
+    Power Plant Structures
+  category: conferences
+  date: '2026-05-07'
+  venue: Transactions of the Korean Nuclear Society Spring Meeting
+  note: KNS Spring Meeting Best Paper Award
+  citation: Joo, J., J. Jeon, and J. Song (2026), Multi-Modal Deep Learning-Based
+    Seismic Damage Identification for Nuclear Power Plant Structures, Transactions
+    of the Korean Nuclear Society Spring Meeting, May 7-8, Jeju, Korea.
 - title: Ensemble-based Uncertainty Quantification and Decomposition of Probabilistic
     Surrogate Models Using Bayesian Neural Networks
   category: manuscripts
@@ -98,14 +107,6 @@
     Prediction for Structural Hysteretic Behavior using Bayesian Neural Networks,
     Computational Structural Engineering Institute of Korea Annual Conference, November
     28-29, Daejeon, Korea.
-- title: Dynamic Analysis of Hysteretic Structures Using Transformer Models with Transfer
-    Learning
-  category: conferences
-  date: '2025-10-21'
-  venue: Civil Engineering Conference in the Asian Region
-  citation: Joo, J., J. Jeon, and J. Song (2025), Dynamic Analysis of Hysteretic Structures
-    Using Transformer Models with Transfer Learning, Civil Engineering Conference
-    in the Asian Region, October 21-24, Jeju, Korea.
 - title: Enhancing Uncertainty Quantification in Civil Engineering through Bayesian
     Neural Network Ensembles
   category: conferences
@@ -114,6 +115,14 @@
   citation: Jeon, J., J. Song, and O. Kwon (2025), Enhancing Uncertainty Quantification
     in Civil Engineering through Bayesian Neural Network Ensembles, Civil Engineering
     Conference in the Asian Region, October 21-24, Jeju, Korea.
+- title: Dynamic Analysis of Hysteretic Structures Using Transformer Models with Transfer
+    Learning
+  category: conferences
+  date: '2025-10-21'
+  venue: Civil Engineering Conference in the Asian Region
+  citation: Joo, J., J. Jeon, and J. Song (2025), Dynamic Analysis of Hysteretic Structures
+    Using Transformer Models with Transfer Learning, Civil Engineering Conference
+    in the Asian Region, October 21-24, Jeju, Korea.
 - title: Development of a Transformer-based Unified Hysteretic Behavior Model for
     Seismic Response Prediction of Nuclear Power Plant Structures
   category: conferences
