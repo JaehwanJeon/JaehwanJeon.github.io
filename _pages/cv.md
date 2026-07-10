@@ -25,6 +25,7 @@ Work experience
 
 Honors and Awards (Selected)
 ======
+* **May 2026** — Korean Nuclear Society (KNS) Spring Meeting Best Paper Award
 * **Nov 2025** — Computational Structural Engineering Institute of Korea (COSEIK) Annual Conference Best Paper Presentation Award
 * **May 2025** — International Conference on Structural Safety and Reliability (ICOSSAR'25) Award Finalist
 * **Oct 2024** — Korean Society of Civil Engineers (KSCE 2024) Convention Best Paper Award
