@@ -17,11 +17,11 @@ I am a Postdoctoral Researcher in Civil and Mineral Engineering at the Universit
 
 ## Research highlights
 - **Neural network–augmented physics models for scalable dynamic MDOF systems**  
-  [Paper/Preprint](#) · [Code](#)
+  [Paper](https://doi.org/10.1061/JENMDT.EMENG-7845)
 - **Unified hysteresis modeling via physics-based deep learning and data augmentation**  
-  [Paper/Preprint](#) · [Code](#)
+  [Paper](https://doi.org/10.1002/eqe.70081) · [Code](https://github.com/JaehwanJeon/Testing_torch)
 - **Uncertainty decomposition in probabilistic surrogate ensembles using Bayesian neural networks**  
-  [Paper/Preprint](#) · [Materials](#)
+  [Paper](https://doi.org/10.1016/j.strusafe.2026.102698)
 
 ## Contact
 - Email: jaehwan.jeon@mail.utoronto.ca  
