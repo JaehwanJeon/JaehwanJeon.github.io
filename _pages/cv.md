@@ -17,7 +17,7 @@ Education
 
 Work experience
 ======
-* 2026.05–Present: Postdoctoral Researcher
+* 2026.05–Present: Postdoctoral Fellow
   * Department of Civil and Mineral Engineering, University of Toronto
 
 * 2026.03–2026.04: Postdoctoral Researcher
