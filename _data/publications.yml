@@ -18,6 +18,7 @@
     Hysteresis Modeling Using a Partially Bayesian Neural Architecture, 10th International
     Symposium on Reliability Engineering and Risk Management (ISRERM 2026), June 28-July
     1, Sapporo, Japan.
+  scope: international
 - title: Ensemble-based Uncertainty Quantification for Probabilistic Surrogate Models
     using SINDy
   category: conferences
@@ -28,6 +29,7 @@
     for Probabilistic Surrogate Models using SINDy, 10th International Symposium on
     Reliability Engineering and Risk Management (ISRERM 2026), June 28-July 1, Sapporo,
     Japan.
+  scope: international
 - title: Uncertainty Quantification in Unified Hysteresis Modeling Using a Partially
     Bayesian Neural Architecture
   category: conferences
@@ -38,6 +40,7 @@
   citation: Joo, J., J. Jeon, and J. Song (2026), Uncertainty Quantification in Unified
     Hysteresis Modeling Using a Partially Bayesian Neural Architecture, Engineering
     Mechanics Institute Conference 2026 (EMI 2026), June 2-5, Boulder, USA.
+  scope: international
 - title: Ensemble-based Uncertainty Quantification for Probabilistic Surrogate Models
     using SINDy
   category: conferences
@@ -47,6 +50,7 @@
   citation: Park, S., J. Jeon, and J. Song (2026), Ensemble-based Uncertainty Quantification
     for Probabilistic Surrogate Models using SINDy, Engineering Mechanics Institute
     Conference 2026 (EMI 2026), June 2-5, Boulder, USA.
+  scope: international
 - title: 'A Unified Rate-Dependent Rheological Model for High Damping Rubber Bearings:
     Seismic Performance Assessment in Cold Climates'
   category: underreview
@@ -64,6 +68,7 @@
   citation: Joo, J., J. Jeon, and J. Song (2026), Multi-Modal Deep Learning-Based
     Seismic Damage Identification for Nuclear Power Plant Structures, Transactions
     of the Korean Nuclear Society Spring Meeting, May 7-8, Jeju, Korea.
+  scope: domestic
 - title: Ensemble-based Uncertainty Quantification and Decomposition of Probabilistic
     Surrogate Models Using Bayesian Neural Networks
   category: manuscripts
@@ -114,6 +119,7 @@
     Prediction for Structural Hysteretic Behavior using Bayesian Neural Networks,
     Computational Structural Engineering Institute of Korea Annual Conference, November
     28-29, Daejeon, Korea.
+  scope: domestic
 - title: Dynamic Analysis of Hysteretic Structures Using Transformer Models with Transfer
     Learning
   category: conferences
@@ -122,6 +128,7 @@
   citation: Joo, J., J. Jeon, and J. Song (2025), Dynamic Analysis of Hysteretic Structures
     Using Transformer Models with Transfer Learning, Civil Engineering Conference
     in the Asian Region, October 21-24, Jeju, Korea.
+  scope: international
 - title: Enhancing Uncertainty Quantification in Civil Engineering through Bayesian
     Neural Network Ensembles
   category: conferences
@@ -130,6 +137,7 @@
   citation: Jeon, J., J. Song, and O. Kwon (2025), Enhancing Uncertainty Quantification
     in Civil Engineering through Bayesian Neural Network Ensembles, Civil Engineering
     Conference in the Asian Region, October 21-24, Jeju, Korea.
+  scope: international
 - title: Development of a Transformer-based Unified Hysteretic Behavior Model for
     Seismic Response Prediction of Nuclear Power Plant Structures
   category: conferences
@@ -139,6 +147,7 @@
     Unified Hysteretic Behavior Model for Seismic Response Prediction of Nuclear Power
     Plant Structures, 2025 Korea Electric Power Industry Code-Week, August 11-14,
     Busan, Korea.
+  scope: domestic
 - title: Physics-Based Transformer Model for Predicting Nonlinear Hysteresis in Structures
   category: conferences
   date: '2025-06-02'
@@ -146,6 +155,7 @@
   citation: Joo, J., J. Jeon, and J. Song (2025), Physics-Based Transformer Model
     for Predicting Nonlinear Hysteresis in Structures, 14th International Conference
     on Structural Safety and Reliability (ICOSSAR'25), June 1-6, Los Angeles, USA.
+  scope: international
 - title: Uncertainty Quantification of Hysteresis Prediction in Structural Dynamics
     Using Bayesian Neural Networks
   category: conferences
@@ -157,6 +167,7 @@
     Prediction in Structural Dynamics Using Bayesian Neural Networks, 14th International
     Conference on Structural Safety and Reliability (ICOSSAR'25), June 1-6, Los Angeles,
     USA.
+  scope: international
 - title: Bayesian Neural Network Ensembles for Quantifying Uncertainty in Deep Learning-based
     Surrogate Models
   category: conferences
@@ -166,6 +177,7 @@
   citation: Jeon, J., J. Song, and O. Kwon (2025), Bayesian Neural Network Ensembles
     for Quantifying Uncertainty in Deep Learning-based Surrogate Models, Engineering
     Mechanics Institute Conference 2025, May 27-30, Anaheim, USA.
+  scope: international
 - title: Neural Network–Augmented Physics Models Using Modal Truncation for Dynamic
     MDOF Systems under Response-Dependent Forces
   category: manuscripts
@@ -186,6 +198,7 @@
   citation: Jeon, J., O. Kwon, and J. Song (2024), Probabilistic Seismic Hysteresis
     Modeling Method Using Bayesian Neural Networks, Korean Society of Civil Engineering
     2024 Convention, October 16-18, Jeju, Korea.
+  scope: domestic
 - title: Uncertainty Quantification of Deep Learning Hysteresis Models Using Bayesian
     Neural Network with Concrete Dropout
   category: conferences
@@ -195,6 +208,7 @@
     Learning Hysteresis Models Using Bayesian Neural Network with Concrete Dropout,
     8th Asia-Pacific Symposium on Structural Reliability and Its Applications, September
     29-October 2, Ulsan, Korea.
+  scope: international
 - title: Long Short-term Memory Model for Dynamic Analysis of Hysteretic Structures
     Subjected to Earthquakes
   category: conferences
@@ -204,6 +218,7 @@
   citation: Jeon, J., O. Kwon, and J. Song (2024), Long Short-term Memory Model for
     Dynamic Analysis of Hysteretic Structures Subjected to Earthquakes, 18th World
     Conference on Earthquake Engineering, June 30-July 5, Milan, Italy.
+  scope: international
 - title: Model Uncertainty Quantification and Selection for Deep Learning-based Simulation
     of Hysteresis with Stiffness and Strength Degradations
   category: conferences
@@ -213,6 +228,7 @@
     and Selection for Deep Learning-based Simulation of Hysteresis with Stiffness
     and Strength Degradations, 9th European Congress on Computational Methods in Applied
     Sciences and Engineering, June 3-7, Lisbon, Portugal.
+  scope: international
 - title: Integrating Physics-Based Deep Learning Models and Data Augmentation to Reduce
     Uncertainties in Hysteresis Modeling
   category: conferences
@@ -225,6 +241,7 @@
     Learning Models and Data Augmentation to Reduce Uncertainties in Hysteresis Modeling,
     Engineering Mechanics Institute Conference and Probabilistic Mechanics & Reliability
     Conference 2024 (EMI/PMC 2024), May 28-31, Chicago, USA.
+  scope: international
 - title: Physics-informed Deep Learning Model for Prediction of Complex Hysteresis
   category: conferences
   date: '2024-03-03'
@@ -233,6 +250,7 @@
   citation: Jeon, J., O. Kwon, and J. Song (2024), Physics-informed Deep Learning
     Model for Prediction of Complex Hysteresis, 27th International Conference on Structural
     Mechanics in Reactor Technology, March 3-8, Yokohama, Japan.
+  scope: international
 - title: Generalized Seismic Hysteresis Modeling Method Using Long Short-Term Memory
     Model
   category: conferences
@@ -241,6 +259,7 @@
   citation: Jeon, J., and J. Song (2023), Generalized Seismic Hysteresis Modeling
     Method Using Long Short-Term Memory Model, Korean Society of Civil Engineering
     2023 Convention, October 18-20, Yeosu, Korea.
+  scope: domestic
 - title: Deep-Learning-Augmented Physics Models to Predict Nonlinear Dynamic Responses
     of Multi-Degree-of-Freedom Structures
   category: conferences
@@ -252,6 +271,7 @@
     Predict Nonlinear Dynamic Responses of Multi-Degree-of-Freedom Structures, 14th
     International Conference on Applications of Statistics and Probability in Civil
     Engineering, July 9-13, Dublin, Ireland.
+  scope: international
 - title: Dynamic Response Prediction of Nonlinear MDOF Systems by Neural-Network-Augmented
     Physics Models
   category: conferences
@@ -261,6 +281,7 @@
   citation: Jeon, J., and J. Song (2023), Dynamic Response Prediction of Nonlinear
     MDOF Systems by Neural-Network-Augmented Physics Models, Engineering Mechanics
     Institute Conference 2023, June 6-9, Atlanta, USA.
+  scope: international
 - title: Physics-Informed Neural Network for Dynamic Responses of Structures Based
     on Monitoring Data
   category: conferences
@@ -270,6 +291,7 @@
   citation: Jeon, J., and J. Song (2022), Physics-Informed Neural Network for Dynamic
     Responses of Structures Based on Monitoring Data, The 2022 World Congress on Advances
     in Civil, Environmental, & Materials Research, August 16-19, Seoul, Korea.
+  scope: international
 - title: Prediction of Dynamic Responses of Structures Using Neural Network Augmented
     Physics Model
   category: conferences
@@ -278,6 +300,7 @@
   citation: Jeon, J., and J. Song (2022), Prediction of Dynamic Responses of Structures
     Using Neural Network Augmented Physics Model, Computational Structural Engineering
     Institute of Korea 2022 Annual Conference, April 13-15, Jeju, Korea.
+  scope: domestic
 - title: Development of Artificial Neural Network to Estimate Nonlinear Damping Force
     Under Wind Loadings Using Acceleration and Force Data - Focusing on Small Damping
     Force Identification
@@ -290,6 +313,7 @@
     Force Data - Focusing on Small Damping Force Identification, Korean Institute
     of Bridge and Structural Engineers 2021 Conference: Digital Twin Technology in
     Infrastructure, November 26, Virtual conference.'
+  scope: domestic
 - title: Development of Artificial Neural Network to Estimate Damping Force Under
     Wind Loadings Using Acceleration and Force Data
   category: conferences
@@ -298,3 +322,4 @@
   citation: Jeon, J., and J. Song (2021), Development of Artificial Neural Network
     to Estimate Damping Force Under Wind Loadings Using Acceleration and Force Data,
     Korean Society of Civil Engineers 2021 Convention, October 20-22, Gwangju, Korea.
+  scope: domestic

@@ -77,7 +77,9 @@ entries = parse_bib(File.read(BIB)).map do |e|
     'presentation' => f['presentation'],
     # short summary shown only for journal articles (via .bib `abstract`)
     'excerpt' => (cat == 'manuscripts' ? tex(f['abstract']) : nil),
-    'paperurl' => paperurl, 'citation' => citation
+    'paperurl' => paperurl, 'citation' => citation,
+    # international | domestic — used by scripts/build_cv_pdf.rb to split conference sections
+    'scope' => f['scope']
   }.compact
 end
 

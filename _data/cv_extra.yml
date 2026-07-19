@@ -1,0 +1,70 @@
+# PDF-CV-only data — single source of truth for sections that do NOT appear
+# on the website (personal details, full scholarship list, patents, etc.).
+# Consumed by scripts/build_cv_pdf.rb. Everything else in the PDF comes from
+# _pages/cv.md, _data/publications.yml, _data/talks.yml, _data/teaching.yml.
+
+personal:
+  name: "Jaehwan Jeon, Ph.D."
+  affiliation_lines:
+    - "Department of Civil and Mineral Engineering"
+    - "University of Toronto"
+  date_of_birth: "March 29, 1994"
+  citizenship: "South Korea"
+  addresses:
+    - label: "Office"
+      text: "35 St. George Street, #213B, Toronto, ON, M5S 1A4, Canada (Department of Civil and Mineral Engineering, University of Toronto). C.P. +1(437) 435-3701"
+  email: "jaehwan.jeon@utoronto.ca"
+  current_rank: "Postdoctoral Fellow, University of Toronto"
+  photo: "images/profile.jpg.jpg"
+
+research_interests: >-
+  Physics-informed deep learning, Structural hysteresis, Constitutive models,
+  Earthquake engineering, Wind engineering, Reliability analysis, Uncertainty
+  quantification, Bayesian neural networks, Ensemble learning
+
+# Non-academic professional experience (merged chronologically with the
+# postdoc positions from _pages/cv.md and the TA terms from teaching.yml).
+experience:
+  - date: "Nov 2014"
+    sort: 2014-11-01
+    title: "Korean Army Augmented to the U.S. Army (KATUSA), Sergeant, Nov 2014 – Aug 2016."
+    detail: "S3 (Operations), 8th Brigade Engineer Battalion, 1st Cavalry Division, U.S. Army. Served as a primary liaison between ROK and U.S. forces."
+
+# Scholarships — merged with the awards from _pages/cv.md into
+# "E. Honors and Awards", sorted newest first.
+scholarships:
+  - date: "March 2021"
+    sort: 2021-03-01
+    text: "Brain Korea 21 Scholarship (4,200,000 KRW ($3,800)), Ministry of Education, Korea"
+  - date: "September 2020"
+    sort: 2020-09-01
+    text: "Merit-based scholarship (382,800 KRW ($350)), Seoul National University, Korea"
+  - date: "March 2020"
+    sort: 2020-03-01
+    text: "Lecture & research scholarship (5,197,000 KRW ($4,700)), Seoul National University, Korea"
+  - date: "September 2019"
+    sort: 2019-09-01
+    text: "Merit-based scholarship (1,499,000 KRW ($1,400)), Seoul National University, Korea"
+  - date: "September 2018"
+    sort: 2018-09-01
+    text: "Merit-based scholarship (1,499,000 KRW ($1,400)), Seoul National University, Korea"
+  - date: "March 2018"
+    sort: 2018-03-01
+    text: "Merit-based scholarship (1,199,200 KRW ($1,100)), Seoul National University, Korea"
+  - date: "September 2017"
+    sort: 2017-09-01
+    text: "Academic scholarship (2,998,000 KRW ($2,700)), Kwanak Corporation, Korea"
+  - date: "March 2017"
+    sort: 2017-03-01
+    text: "Academic scholarship (2,998,000 KRW ($2,700)), Kwanak Corporation, Korea"
+  - date: "March 2013"
+    sort: 2013-03-01
+    text: "Goal achievements scholarship (3,000,000 KRW ($2,700)), Megastudy Scholarship Foundation, Korea"
+
+patents:
+  - "Jeon, J., J. Song, Kim, D., Lee, Y., Lee, J. (2024), Method, System, and Computer-Readable Recording Medium for Predicting Seismic Response and Non-stationarity of Structures (Patent application No. 1020240192098, South Korea)"
+  - "J. Song, Jeon, J., Kim, D. (2024), Method, System, and Computer-Readable Recording Medium for Predicting Seismic Response and Non-stationarity of Structures based on a 1D Convolutional Neural Network Model (Patent application No. 1020240192098, South Korea)"
+
+open_source:
+  - name: "UQpy"
+    text: "UQpy (Python Library for UQ): Implemented SVI-based BNN trainer, added documentation, and improved containerized development workflows. https://github.com/SURGroup/UQpy/pull/274"
