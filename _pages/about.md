@@ -24,5 +24,5 @@ I am a Postdoctoral Fellow in Civil and Mineral Engineering at the University of
   [Paper](https://doi.org/10.1016/j.strusafe.2026.102698)
 
 ## Contact
-- Email: jaehwan.jeon@mail.utoronto.ca  
+- Email: jaehwan.jeon@utoronto.ca  
 - CV: [/files/CV.pdf](/files/CV.pdf) · [Google Scholar](https://scholar.google.com/citations?user=WHwGlwEAAAAJ&hl=en) · [GitHub](https://github.com/JaehwanJeon) · [LinkedIn](https://www.linkedin.com/in/jaehwan-jeon-138b461b0)

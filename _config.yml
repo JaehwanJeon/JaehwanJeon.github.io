@@ -23,14 +23,14 @@ repository               : "JaehwanJeon/JaehwanJeon.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.jpg.jpg"
+  avatar           : "profile.jpg"
   name             : "Jaehwan Jeon"
   pronouns         : # example: "she/her"  
   bio              : "Jaehwan Jeon is a Postdoctoral Fellow in Civil and Mineral Engineering at the University of Toronto. He works on physics-informed deep learning and uncertainty quantification for nonlinear structural dynamics."
   location         : "Toronto, Canada"
   employer         : "University of Toronto"
   uri              : # URL
-  email            : "jaehwan.jeon@mail.utoronto.ca"
+  email            : "jaehwan.jeon@utoronto.ca"
 
   # Academic websites
   academia         : # URL
