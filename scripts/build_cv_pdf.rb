@@ -206,6 +206,7 @@ tex << "\\textbf{Citizenship} & #{esc(p_['citizenship'])} \\\\\n" if p_['citizen
   tex << "#{label} & #{esc(a['label'])}: #{esc(a['text'])} \\\\\n"
 end
 tex << "\\textbf{E-mail Address} & \\href{mailto:#{p_['email']}}{#{esc(p_['email'])}} \\\\\n" if p_['email']
+tex << "\\textbf{Homepage} & \\url{#{p_['website']}} \\\\\n" if p_['website']
 tex << "\\textbf{Current Rank} & #{esc(p_['current_rank'])} \\\\\n" if p_['current_rank']
 tex << "\\end{tabular}\n\\end{minipage}"
 if photo
