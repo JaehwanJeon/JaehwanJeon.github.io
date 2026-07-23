@@ -6,6 +6,7 @@
   category: underreview
   date: '2026-07-17'
   venue: Under review
+  paperurl: https://doi.org/10.48550/arXiv.2607.16580
   citation: Jeon, J., C. H. Lee, and T. Kim. Automating Structural Reliability Analysis
     with a Multi-Agent Large Language Model Framework. (Under review).
 - title: Uncertainty Quantification in Unified Hysteresis Modeling Using a Partially

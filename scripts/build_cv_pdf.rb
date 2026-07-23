@@ -142,7 +142,7 @@ warn "WARNING: #{untagged.size} conference entries lack a scope tag and were EXC
 def pub_body(p)
   body = esc(p['citation'])
   body += " (#{esc(p['presentation'])})" if p['presentation']
-  body += " \\url{#{p['paperurl']}}" if p['paperurl'] && %w[manuscripts thesis].include?(p['category'])
+  body += " \\url{#{p['paperurl']}}" if p['paperurl'] && %w[manuscripts thesis underreview].include?(p['category'])
   body += " \\textbf{#{esc(p['note'])}}" if p['note']
   body
 end
