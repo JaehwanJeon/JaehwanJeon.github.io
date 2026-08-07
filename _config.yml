@@ -26,7 +26,7 @@ author:
   avatar           : "profile.jpg"
   name             : "Jaehwan Jeon"
   pronouns         : # example: "she/her"  
-  bio              : "Jaehwan Jeon is a Postdoctoral Fellow in Civil and Mineral Engineering at the University of Toronto. He works on physics-informed deep learning and uncertainty quantification for nonlinear structural dynamics."
+  bio              : "Jaehwan Jeon is a Postdoctoral Fellow in Civil and Mineral Engineering at the University of Toronto. His research tackles the two bottlenecks of structural safety prediction — computation and expertise — scaling both with AI while making that AI trustworthy."
   location         : "Toronto, Canada"
   employer         : "University of Toronto"
   uri              : # URL

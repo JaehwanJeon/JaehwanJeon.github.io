@@ -8,14 +8,17 @@ redirect_from:
 ---
 
 ## About
-I am a Postdoctoral Fellow in Civil and Mineral Engineering at the University of Toronto, working on **physics-informed machine learning** for **nonlinear structural dynamics** with an emphasis on **uncertainty quantification (UQ)** and **trustworthy prediction**.
+I am a Postdoctoral Fellow in Civil and Mineral Engineering at the University of Toronto. Structures are never crash-tested — a building is built once, and people move in the next day. Its safety exists only as a prediction. My research tackles the two bottlenecks of that prediction, **computation** and **expertise**, scaling both with AI while making that AI **trustworthy**: physics-informed deep learning to overcome the computational cost of nonlinear response analysis, uncertainty quantification to keep predictions honest, and multi-agent LLM frameworks to lower the expertise barrier to structural reliability analysis.
 
 ## Research interests
-- Scientific Machine Learning (physics-informed / physics-encoded learning) for nonlinear structural response
-- Probabilistic modeling: Bayesian deep learning, ensemble-based UQ, reliability-oriented diagnostics
-- Data-efficient digital twins for real-time monitoring and decision support
+- Nonlinear structural response prediction with physics-informed deep learning — fast, physics-consistent surrogates for probabilistic safety assessment
+- Uncertainty quantification and decomposition for probabilistic surrogate models of structural behavior — using Bayesian neural networks
+- Automating structural reliability analysis with trustworthy multi-agent LLM frameworks
+- Reliability and resilience of structural and energy infrastructure systems under multi-hazard risks *(ongoing)*
 
 ## Research highlights
+- **Automating structural reliability analysis with a multi-agent large language model framework**  
+  [Preprint](https://arxiv.org/abs/2607.16580)
 - **Neural network–augmented physics models for scalable dynamic MDOF systems**  
   [Paper](https://doi.org/10.1061/JENMDT.EMENG-7845)
 - **Unified hysteresis modeling via physics-based deep learning and data augmentation**  
