@@ -9,6 +9,12 @@
 #   venue    : host(s)
 #   location : (optional) e.g. "Online", "Toronto, Canada"
 
+- title: "Trustworthy AI for the Built Environment: A Multi-Agent LLM Framework for Structural Reliability Analysis"
+  date: 2026-08-11
+  type: "Invited Workshop Presentation"
+  venue: "Future of the Building Industry (FoBI) Workshop, Durham School of Architectural Engineering and Construction, University of Nebraska–Lincoln"
+  location: "Omaha, NE, USA"
+
 - title: "Prediction and Uncertainty Quantification of Complex Structural System's Dynamic Response via Physics-informed Deep Learning"
   date: 2025-12-19
   type: "Joint Seminar"

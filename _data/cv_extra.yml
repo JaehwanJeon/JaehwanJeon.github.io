@@ -19,9 +19,9 @@ personal:
   photo: "images/profile.jpg"
 
 research_interests: >-
-  Physics-informed deep learning, Structural hysteresis, Constitutive models,
-  Earthquake engineering, Wind engineering, Reliability analysis, Uncertainty
-  quantification, Bayesian neural networks, Ensemble learning
+  Structural reliability analysis, Uncertainty quantification, Trustworthy AI
+  for structural safety, Physics-informed deep learning, Surrogate modeling,
+  Bayesian neural networks, Earthquake engineering
 
 # Non-academic professional experience (merged chronologically with the
 # postdoc positions from _pages/cv.md and the TA terms from teaching.yml).
