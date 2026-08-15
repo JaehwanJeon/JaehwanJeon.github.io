@@ -1,6 +1,16 @@
 # GENERATED from _bibliography/papers.bib by scripts/bib2yaml.rb — DO NOT EDIT.
 # Edit the .bib and re-run:  ruby scripts/bib2yaml.rb
 
+- title: 'A Unified Rate-Dependent Rheological Model for High Damping Rubber Bearings:
+    Seismic Performance Assessment in Cold Climates'
+  category: manuscripts
+  date: '2026-08-14'
+  venue: Engineering Structures
+  note: In press
+  excerpt: ''
+  citation: 'Guo, F., J. Song, Y. Liu, J. Joo, and J. Jeon (2026). A Unified Rate-Dependent
+    Rheological Model for High Damping Rubber Bearings: Seismic Performance Assessment
+    in Cold Climates. Engineering Structures.'
 - title: Automating Structural Reliability Analysis with a Multi-Agent Large Language
     Model Framework
   category: underreview
@@ -52,14 +62,6 @@
     for Probabilistic Surrogate Models using SINDy, Engineering Mechanics Institute
     Conference 2026 (EMI 2026), June 2-5, Boulder, USA.
   scope: international
-- title: 'A Unified Rate-Dependent Rheological Model for High Damping Rubber Bearings:
-    Seismic Performance Assessment in Cold Climates'
-  category: underreview
-  date: '2026-05-15'
-  venue: Under review
-  citation: 'Guo, F., J. Song, Y. Liu, J. Joo, and J. Jeon. A Unified Rate-Dependent
-    Rheological Model for High Damping Rubber Bearings: Seismic Performance Assessment
-    in Cold Climates. (Under review).'
 - title: Multi-Modal Deep Learning-Based Seismic Damage Identification for Nuclear
     Power Plant Structures
   category: conferences
