@@ -6,11 +6,11 @@
   category: manuscripts
   date: '2026-08-14'
   venue: Engineering Structures
-  note: In press
   excerpt: ''
+  paperurl: https://doi.org/10.1016/j.engstruct.2026.123564
   citation: 'Guo, F., J. Song, Y. Liu, J. Joo, and J. Jeon (2026). A Unified Rate-Dependent
     Rheological Model for High Damping Rubber Bearings: Seismic Performance Assessment
-    in Cold Climates. Engineering Structures.'
+    in Cold Climates. Engineering Structures. Vol. 367, 123564.'
 - title: Automating Structural Reliability Analysis with a Multi-Agent Large Language
     Model Framework
   category: underreview
