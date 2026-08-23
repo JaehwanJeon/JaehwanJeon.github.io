@@ -280,6 +280,15 @@ unless talks.empty?
   tex << "\\end{publist}\n\n"
 end
 
+# ----- J. Professional Service
+unless (extra['service'] || []).empty?
+  tex << "\\section{Professional Service}\n\\begin{publist}\n"
+  extra['service'].each do |s|
+    tex << "& #{esc(s['role'])}, \\textit{#{esc(s['venue'])}} \\\\[3pt]\n"
+  end
+  tex << "\\end{publist}\n\n"
+end
+
 tex << "\\end{document}\n"
 
 FileUtils.mkdir_p(File.dirname(OUT))

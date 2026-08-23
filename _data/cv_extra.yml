@@ -69,3 +69,9 @@ patents:
 open_source:
   - name: "UQpy"
     text: "UQpy (Python Library for UQ): Implemented SVI-based BNN trainer, added documentation, and improved containerized development workflows. https://github.com/SURGroup/UQpy/pull/274"
+
+service:
+  - role: "Journal Reviewer"
+    venue: "Earthquake Engineering & Structural Dynamics"
+  - role: "Journal Reviewer"
+    venue: "Structural Safety"

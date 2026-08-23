@@ -63,8 +63,7 @@ Teaching
     <li><div class="archive__item"><h3 class="archive__item-title">{{ t.role }} — {{ t.term }}</h3><p class="archive__item-excerpt">{{ t.venue }}{% for c in t.courses %}<br/>{{ c }}{% endfor %}</p></div></li>
   {% endfor %}</ul>
   
-{% comment %} TODO: write later — Service and leadership section
-Service and leadership
+Professional Service
 ======
-* Currently signed in to 43 different slack teams
-{% endcomment %}
+* **Journal Reviewer**, *Earthquake Engineering & Structural Dynamics*
+* **Journal Reviewer**, *Structural Safety*
