@@ -75,3 +75,5 @@ service:
     venue: "Earthquake Engineering & Structural Dynamics"
   - role: "Journal Reviewer"
     venue: "Structural Safety"
+  - role: "Journal Reviewer"
+    venue: "ASCE-ASME Journal of Risk and Uncertainty in Engineering Systems, Part A: Civil Engineering"
