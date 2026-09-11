@@ -1,6 +1,16 @@
 # GENERATED from _bibliography/papers.bib by scripts/bib2yaml.rb — DO NOT EDIT.
 # Edit the .bib and re-run:  ruby scripts/bib2yaml.rb
 
+- title: Physics-based Encoder-only Transformer for Structural Hysteresis Prediction
+    and Dynamic Analysis
+  category: manuscripts
+  date: '2026-09-11'
+  venue: Earthquake Engineering & Structural Dynamics
+  note: In press
+  excerpt: ''
+  citation: Joo, J., J. Jeon, and J. Song (2026). Physics-based Encoder-only Transformer
+    for Structural Hysteresis Prediction and Dynamic Analysis. Earthquake Engineering
+    & Structural Dynamics.
 - title: 'A Unified Rate-Dependent Rheological Model for High Damping Rubber Bearings:
     Seismic Performance Assessment in Cold Climates'
   category: manuscripts
@@ -85,13 +95,6 @@
   citation: Jeon, J., J. Song, and O. Kwon (2026). Ensemble-based Uncertainty Quantification
     and Decomposition of Probabilistic Surrogate Models Using Bayesian Neural Networks.
     Structural Safety. Vol. 121, 102698.
-- title: Physics-based Encoder-only Transformer for Unified Modeling and Prediction
-    of Structural Hysteresis
-  category: underreview
-  date: '2026-02-07'
-  venue: Under review
-  citation: Joo, J., J. Jeon, and J. Song. Physics-based Encoder-only Transformer
-    for Unified Modeling and Prediction of Structural Hysteresis. (Under review).
 - title: Prediction and Uncertainty Quantification of Nonlinear Dynamic Response of
     Structures via Physics-informed Deep Learning
   category: thesis
@@ -123,15 +126,6 @@
     Computational Structural Engineering Institute of Korea Annual Conference, November
     28-29, Daejeon, Korea.
   scope: domestic
-- title: Dynamic Analysis of Hysteretic Structures Using Transformer Models with Transfer
-    Learning
-  category: conferences
-  date: '2025-10-21'
-  venue: Civil Engineering Conference in the Asian Region
-  citation: Joo, J., J. Jeon, and J. Song (2025), Dynamic Analysis of Hysteretic Structures
-    Using Transformer Models with Transfer Learning, Civil Engineering Conference
-    in the Asian Region, October 21-24, Jeju, Korea.
-  scope: international
 - title: Enhancing Uncertainty Quantification in Civil Engineering through Bayesian
     Neural Network Ensembles
   category: conferences
@@ -140,6 +134,15 @@
   citation: Jeon, J., J. Song, and O. Kwon (2025), Enhancing Uncertainty Quantification
     in Civil Engineering through Bayesian Neural Network Ensembles, Civil Engineering
     Conference in the Asian Region, October 21-24, Jeju, Korea.
+  scope: international
+- title: Dynamic Analysis of Hysteretic Structures Using Transformer Models with Transfer
+    Learning
+  category: conferences
+  date: '2025-10-21'
+  venue: Civil Engineering Conference in the Asian Region
+  citation: Joo, J., J. Jeon, and J. Song (2025), Dynamic Analysis of Hysteretic Structures
+    Using Transformer Models with Transfer Learning, Civil Engineering Conference
+    in the Asian Region, October 21-24, Jeju, Korea.
   scope: international
 - title: Development of a Transformer-based Unified Hysteretic Behavior Model for
     Seismic Response Prediction of Nuclear Power Plant Structures
