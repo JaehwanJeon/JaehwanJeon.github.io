@@ -21,6 +21,18 @@
   citation: 'Guo, F., J. Song, Y. Liu, J. Joo, and J. Jeon (2026). A Unified Rate-Dependent
     Rheological Model for High Damping Rubber Bearings: Seismic Performance Assessment
     in Cold Climates. Engineering Structures. Vol. 367, 123564.'
+- title: Probabilistic SINDy Surrogate Model for Ensembled Uncertainty-Quantification
+    of Hysteretic Structures
+  category: conferences
+  date: '2026-07-24'
+  venue: 17th International Workshop on Advanced Smart Materials and Smart Structures
+    Technology (ANCRiSST 2026)
+  presentation: Abstract
+  citation: Park, S., J. Jeon, and J. Song (2026), Probabilistic SINDy Surrogate Model
+    for Ensembled Uncertainty-Quantification of Hysteretic Structures, 17th International
+    Workshop on Advanced Smart Materials and Smart Structures Technology (ANCRiSST
+    2026), July 24-25, Turin, Italy.
+  scope: international
 - title: Automating Structural Reliability Analysis with a Multi-Agent Large Language
     Model Framework
   category: underreview
@@ -29,17 +41,6 @@
   paperurl: https://doi.org/10.48550/arXiv.2607.16580
   citation: Jeon, J., C. H. Lee, and T. Kim. Automating Structural Reliability Analysis
     with a Multi-Agent Large Language Model Framework. (Under review).
-- title: Uncertainty Quantification in Unified Hysteresis Modeling Using a Partially
-    Bayesian Neural Architecture
-  category: conferences
-  date: '2026-06-28'
-  venue: 10th International Symposium on Reliability Engineering and Risk Management
-    (ISRERM 2026)
-  citation: Joo, J., J. Jeon, and J. Song (2026), Uncertainty Quantification in Unified
-    Hysteresis Modeling Using a Partially Bayesian Neural Architecture, 10th International
-    Symposium on Reliability Engineering and Risk Management (ISRERM 2026), June 28-July
-    1, Sapporo, Japan.
-  scope: international
 - title: Ensemble-based Uncertainty Quantification for Probabilistic Surrogate Models
     using SINDy
   category: conferences
@@ -50,6 +51,17 @@
     for Probabilistic Surrogate Models using SINDy, 10th International Symposium on
     Reliability Engineering and Risk Management (ISRERM 2026), June 28-July 1, Sapporo,
     Japan.
+  scope: international
+- title: Uncertainty Quantification in Unified Hysteresis Modeling Using a Partially
+    Bayesian Neural Architecture
+  category: conferences
+  date: '2026-06-28'
+  venue: 10th International Symposium on Reliability Engineering and Risk Management
+    (ISRERM 2026)
+  citation: Joo, J., J. Jeon, and J. Song (2026), Uncertainty Quantification in Unified
+    Hysteresis Modeling Using a Partially Bayesian Neural Architecture, 10th International
+    Symposium on Reliability Engineering and Risk Management (ISRERM 2026), June 28-July
+    1, Sapporo, Japan.
   scope: international
 - title: Uncertainty Quantification in Unified Hysteresis Modeling Using a Partially
     Bayesian Neural Architecture
@@ -126,15 +138,6 @@
     Computational Structural Engineering Institute of Korea Annual Conference, November
     28-29, Daejeon, Korea.
   scope: domestic
-- title: Enhancing Uncertainty Quantification in Civil Engineering through Bayesian
-    Neural Network Ensembles
-  category: conferences
-  date: '2025-10-21'
-  venue: Civil Engineering Conference in the Asian Region
-  citation: Jeon, J., J. Song, and O. Kwon (2025), Enhancing Uncertainty Quantification
-    in Civil Engineering through Bayesian Neural Network Ensembles, Civil Engineering
-    Conference in the Asian Region, October 21-24, Jeju, Korea.
-  scope: international
 - title: Dynamic Analysis of Hysteretic Structures Using Transformer Models with Transfer
     Learning
   category: conferences
@@ -143,6 +146,15 @@
   citation: Joo, J., J. Jeon, and J. Song (2025), Dynamic Analysis of Hysteretic Structures
     Using Transformer Models with Transfer Learning, Civil Engineering Conference
     in the Asian Region, October 21-24, Jeju, Korea.
+  scope: international
+- title: Enhancing Uncertainty Quantification in Civil Engineering through Bayesian
+    Neural Network Ensembles
+  category: conferences
+  date: '2025-10-21'
+  venue: Civil Engineering Conference in the Asian Region
+  citation: Jeon, J., J. Song, and O. Kwon (2025), Enhancing Uncertainty Quantification
+    in Civil Engineering through Bayesian Neural Network Ensembles, Civil Engineering
+    Conference in the Asian Region, October 21-24, Jeju, Korea.
   scope: international
 - title: Development of a Transformer-based Unified Hysteretic Behavior Model for
     Seismic Response Prediction of Nuclear Power Plant Structures
