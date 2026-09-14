@@ -67,4 +67,5 @@ Professional Service
 ======
 * **Journal Reviewer**, *Earthquake Engineering & Structural Dynamics*
 * **Journal Reviewer**, *Structural Safety*
+* **Journal Reviewer**, *Scientific Reports*
 * **Journal Reviewer**, *ASCE-ASME Journal of Risk and Uncertainty in Engineering Systems, Part A: Civil Engineering*
