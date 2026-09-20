@@ -9,10 +9,6 @@ RUN apt-get update && apt-get install -y \
     git \
     && rm -rf /var/lib/apt/lists/*
 
-# Install Claude Code globally (as root, before switching to non-root user)
-RUN npm install -g @anthropic-ai/claude-code
-
-
 # Create a non-root user with UID 1000
 RUN groupadd -g 1000 vscode && \
     useradd -m -u 1000 -g vscode vscode

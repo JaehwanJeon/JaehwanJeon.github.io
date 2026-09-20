@@ -4,7 +4,6 @@ services:
     build: .
     volumes:
       - .:/usr/src/app
-      - ${HOME}/.claude:/home/vscode/.claude   # share host Claude Code auth/config
     ports: [ 4000:4000 ]
     user: 1000:1000
     environment: [ JEKYLL_ENV=docker ]

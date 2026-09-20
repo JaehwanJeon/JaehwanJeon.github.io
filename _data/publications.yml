@@ -21,13 +21,32 @@
   citation: 'Guo, F., J. Song, Y. Liu, J. Joo, and J. Jeon (2026). A Unified Rate-Dependent
     Rheological Model for High Damping Rubber Bearings: Seismic Performance Assessment
     in Cold Climates. Engineering Structures. Vol. 367, 123564.'
+- title: Physics-based Transformer Model for Data-efficient Prediction of Nonlinear Hysteresis
+    across Varying Structural Properties
+  category: conferences
+  date: '2026-09-17'
+  venue: IABSE Congress Incheon 2026
+  presentation: Extended Abstract
+  citation: Park, J., J. Joo, J. Jeon, and J. Song (2026), Physics-based Transformer
+    Model for Data-efficient Prediction of Nonlinear Hysteresis across Varying Structural
+    Properties, IABSE Congress Incheon 2026, September 16-18, Incheon, Korea.
+  scope: international
+- title: A Generalized SINDy Framework for Force Reconstruction of Hysteretic Systems
+    under Stochastic Excitations
+  category: conferences
+  date: '2026-09-17'
+  venue: IABSE Congress Incheon 2026
+  presentation: Extended Abstract
+  citation: Park, S., J. Jeon, and J. Song (2026), A Generalized SINDy Framework for
+    Force Reconstruction of Hysteretic Systems under Stochastic Excitations, IABSE
+    Congress Incheon 2026, September 16-18, Incheon, Korea.
+  scope: international
 - title: Probabilistic SINDy Surrogate Model for Ensembled Uncertainty-Quantification
     of Hysteretic Structures
   category: conferences
   date: '2026-07-24'
   venue: 17th International Workshop on Advanced Smart Materials and Smart Structures
     Technology (ANCRiSST 2026)
-  presentation: Abstract
   citation: Park, S., J. Jeon, and J. Song (2026), Probabilistic SINDy Surrogate Model
     for Ensembled Uncertainty-Quantification of Hysteretic Structures, 17th International
     Workshop on Advanced Smart Materials and Smart Structures Technology (ANCRiSST
