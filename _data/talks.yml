@@ -9,6 +9,24 @@
 #   venue    : host(s)
 #   location : (optional) e.g. "Online", "Toronto, Canada"
 
+- title: "Trustworthy AI for Structural Safety: Physics, Uncertainty, and Automation"
+  date: 2026-10-01
+  type: "BK Invited Seminar"
+  venue: "BK Invited Seminar, Department of Naval Architecture & Ocean Engineering, Seoul National University"
+  location: "Seoul, Korea"
+
+- title: "Trustworthy AI for Nonlinear Structural Dynamics: Physics, Uncertainty, and Automation"
+  date: 2026-09-30
+  type: "BK Invited Seminar"
+  venue: "BK Invited Seminar, Department of Civil & Environmental Engineering, Yonsei University"
+  location: "Seoul, Korea"
+
+- title: "Toward a Consistent Integration of Gaussian Mixture ELM and Poisson Branching Process First-Passage Analysis"
+  date: 2026-09-30
+  type: "Joint Seminar"
+  venue: "Joint seminar with Guangzhou University and SSRG, Seoul National University"
+  location: "Seoul, Korea"
+
 - title: "Trustworthy AI for the Built Environment: A Multi-Agent LLM Framework for Structural Reliability Analysis"
   date: 2026-08-11
   type: "Invited Workshop Presentation"

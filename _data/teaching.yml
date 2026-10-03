@@ -2,6 +2,14 @@
 # Rendered by _pages/teaching.html and the Teaching section of _pages/cv.md.
 # To add: copy a block, edit fields. `date` is used only for ordering.
 
+- term: "September 30, 2026"
+  date: 2026-09-30
+  role: "Invited Guest Lecturer"
+  venue: "Department of Civil & Environmental Engineering, Yonsei University"
+  courses:
+    - "Research Innovation Technology Seminar"
+    - "Lecture: Trustworthy AI for Nonlinear Structural Dynamics: Physics, Uncertainty, and Automation"
+
 - term: "Spring 2024"
   date: 2024-03-01
   role: "Graduate Teaching Assistant"

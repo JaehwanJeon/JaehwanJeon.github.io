@@ -8,8 +8,17 @@ author_profile: true
 {% include base_path %}
 
 <!-- Teaching is a single source of truth in _data/teaching.yml (one file). -->
-<ol class="teaching-list" reversed start="{{ site.data.teaching | size }}">
-  {% for t in site.data.teaching %}
+{% assign teaching_groups = site.data.teaching | group_by: "role" %}
+{% for group in teaching_groups %}
+{% if group.name == "Invited Guest Lecturer" %}
+<h2>Invited Guest Lectures</h2>
+{% elsif group.name == "Graduate Teaching Assistant" %}
+<h2>Teaching Assistantships</h2>
+{% else %}
+<h2>{{ group.name }}</h2>
+{% endif %}
+<ol class="teaching-list" reversed start="{{ group.items | size }}">
+  {% for t in group.items %}
     <li class="teaching-item">
       <p class="teaching-role"><strong>{{ t.role }}.</strong> {{ t.venue }} <em>({{ t.term }})</em></p>
       {% if t.courses %}
@@ -20,3 +29,4 @@ author_profile: true
     </li>
   {% endfor %}
 </ol>
+{% endfor %}

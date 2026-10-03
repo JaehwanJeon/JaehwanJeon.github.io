@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # One-click PDF CV build: homepage data -> LaTeX -> files/CV.pdf
-# Requires: host ruby (stdlib only) + MacTeX (latexmk/pdflatex).
+# Requires: Ruby (stdlib only) + TeX Live/MacTeX (latexmk/pdflatex).
 # Note: run scripts/bib2yaml.rb (in the dev container) first if papers.bib changed.
 set -euo pipefail
 cd "$(dirname "$0")/.."
@@ -10,7 +10,7 @@ mkdir -p "$BUILD"
 
 ruby scripts/build_cv_pdf.rb "$BUILD/cv.tex"
 
-PHOTO=$(ruby -ryaml -e 'puts YAML.load_file("_data/cv_extra.yml").dig("personal","photo").to_s')
+PHOTO=$(ruby -ryaml -rdate -e 'puts YAML.safe_load(File.read("_data/cv_extra.yml"), permitted_classes: [Date]).dig("personal","photo").to_s')
 if [[ -n "$PHOTO" && -f "$PHOTO" ]]; then
   cp "$PHOTO" "$BUILD/photo.jpg"
 fi

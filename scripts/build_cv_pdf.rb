@@ -18,10 +18,10 @@ require 'fileutils'
 ROOT = File.expand_path(File.join(__dir__, '..'))
 OUT  = ARGV[0] || File.join(ROOT, '.cv_build', 'cv.tex')
 
-extra    = YAML.load_file(File.join(ROOT, '_data', 'cv_extra.yml'))
-pubs     = YAML.load_file(File.join(ROOT, '_data', 'publications.yml'))
-talks    = YAML.load_file(File.join(ROOT, '_data', 'talks.yml')) || []
-teaching = YAML.load_file(File.join(ROOT, '_data', 'teaching.yml')) || []
+extra    = YAML.safe_load(File.read(File.join(ROOT, '_data', 'cv_extra.yml')), permitted_classes: [Date])
+pubs     = YAML.safe_load(File.read(File.join(ROOT, '_data', 'publications.yml')), permitted_classes: [Date])
+talks    = YAML.safe_load(File.read(File.join(ROOT, '_data', 'talks.yml')), permitted_classes: [Date]) || []
+teaching = YAML.safe_load(File.read(File.join(ROOT, '_data', 'teaching.yml')), permitted_classes: [Date]) || []
 cvmd     = File.read(File.join(ROOT, '_pages', 'cv.md'))
 
 # ---------------------------------------------------------------- helpers ---
