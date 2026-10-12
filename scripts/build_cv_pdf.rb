@@ -104,7 +104,7 @@ sections.fetch('Honors and Awards (Selected)', []).each do |l|
 end
 
 # --------------------------------------------------------- assemble data ----
-# D. Professional Experience: KATUSA + TA terms + postdoc positions, oldest first
+# D. Professional Experience: KATUSA + TA terms + postdoc positions, newest first
 experience = []
 (extra['experience'] || []).each do |e|
   experience << { sort: to_date(e['sort']), label: e['date'],
@@ -119,7 +119,7 @@ work.each do |w|
   experience << { sort: parse_when(w['label']), label: w['label'],
                   body: "\\textbf{#{esc(w['title'])}.} #{esc(w['detail'])}" }
 end
-experience.sort_by! { |e| e[:sort] }
+experience = experience.each_with_index.sort_by { |(e, i)| [-e[:sort].jd, i] }.map(&:first)
 
 # E. Honors and Awards: selected awards + full scholarship list, newest first
 honor_rows = honors.map { |h| { sort: parse_when(h['date']), label: h['date'], body: esc(h['text']) } }
@@ -131,7 +131,9 @@ honor_rows = honor_rows.sort_by { |h| h[:sort] }.reverse
 # F. Publications
 by_cat = Hash.new { |h, k| h[k] = [] }
 pubs.each { |p| by_cat[p['category']] << p }
-%w[manuscripts underreview conferences thesis].each { |c| by_cat[c].sort_by! { |p| p['date'].to_s } }
+%w[manuscripts underreview conferences thesis].each do |c|
+  by_cat[c] = by_cat[c].each_with_index.sort_by { |(p, i)| [-Date.parse(p['date'].to_s).jd, i] }.map(&:first)
+end
 
 journals  = by_cat['manuscripts'] + by_cat['underreview'] # published first, then under review
 conf_intl = by_cat['conferences'].select { |p| p['scope'] == 'international' }
@@ -270,7 +272,7 @@ end
 # ----- I. Invited Talks and Seminars
 unless talks.empty?
   tex << "\\section{Invited Talks and Seminars}\n\\begin{publist}\n"
-  talks.sort_by { |t| to_date(t['date']) }.each_with_index do |t, i|
+  talks.each_with_index.sort_by { |(t, i)| [-to_date(t['date']).jd, i] }.map(&:first).each_with_index do |t, i|
     date_str = to_date(t['date']).strftime('%B %-d, %Y')
     body = "#{esc(t['title'])}. \\textit{#{esc(t['type'])}}, #{esc(t['venue'])}"
     body += ", #{esc(t['location'])}" if t['location']
