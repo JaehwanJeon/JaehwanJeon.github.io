@@ -30,7 +30,7 @@ Honors and Awards (Selected)
 * **May 2025** — International Conference on Structural Safety and Reliability (ICOSSAR'25) Award Finalist
 * **Oct 2024** — Korean Society of Civil Engineers (KSCE 2024) Convention Best Paper Award
 * **May 2024** — Engineering Mechanics Institute (EMI) – Probabilistic Methods Committee (PMC) Award Finalist
-* **June 2022** — Mitacs Globalink Research Award (3,000 CAD ($2,800)), Mitacs, Canada
+* **June 2022** — Globalink Research Award (NRF–Mitacs Partnership; 15,000,000 KRW + 3,000 CAD), National Research Foundation of Korea (NRF) and Mitacs, Korea and Canada
 
 {% comment %} TODO: write later — Skills section
 Skills
