@@ -64,7 +64,7 @@ scholarships:
 
 patents:
   - "Jeon, J., J. Song, Kim, D., Lee, Y., Lee, J. (2024), Method, System, and Computer-Readable Recording Medium for Predicting Seismic Response and Non-stationarity of Structures (Patent application No. 1020240192098, South Korea)"
-  - "J. Song, Jeon, J., Kim, D. (2024), Method, System, and Computer-Readable Recording Medium for Predicting Seismic Response and Non-stationarity of Structures based on a 1D Convolutional Neural Network Model (Patent application No. 1020240192098, South Korea)"
+  - "J. Song, Jeon, J., Kim, D. (2024), Method, System, and Computer-Readable Recording Medium for Predicting Seismic Response and Non-stationarity of Structures based on a 1D Convolutional Neural Network Model (Patent application No. 1020240192097, South Korea)"
 
 open_source:
   - name: "UQpy"
