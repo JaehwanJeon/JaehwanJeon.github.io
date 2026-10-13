@@ -1,12 +1,12 @@
 #!/usr/bin/env ruby
 # Generate the LaTeX source for the PDF CV from homepage data.
-# Layout mirrors the hand-made CV.pdf (sections A–I, J#/C-I#/C-D# numbering).
+# Layout mirrors the hand-made CV.pdf (sections A–K, J#/C-I#/C-D# numbering).
 #
 # Sources:
 #   _pages/cv.md            -> Education / Work experience / Honors (Selected)
 #   _data/publications.yml  -> dissertation, journals, under review, conferences
 #   _data/talks.yml         -> invited talks & seminars
-#   _data/teaching.yml      -> TA terms (merged into Professional Experience)
+#   _data/teaching.yml      -> guest lectures & TA terms (Teaching Experience)
 #   _data/cv_extra.yml      -> personal details, KATUSA, scholarships, patents, OSS
 #
 # Runs on stock macOS ruby (2.6, stdlib only). Usage:
@@ -104,16 +104,11 @@ sections.fetch('Honors and Awards (Selected)', []).each do |l|
 end
 
 # --------------------------------------------------------- assemble data ----
-# D. Professional Experience: KATUSA + TA terms + postdoc positions, newest first
+# D. Professional Experience: KATUSA + postdoc positions, newest first
 experience = []
 (extra['experience'] || []).each do |e|
   experience << { sort: to_date(e['sort']), label: e['date'],
                   body: "\\textbf{#{esc(e['title'])}} #{esc(e['detail'])}" }
-end
-teaching.each do |t|
-  courses = (t['courses'] || []).map { |c| "\\newline \\hspace*{1.5em}-- #{esc(c)}" }.join
-  experience << { sort: to_date(t['date']), label: t['term'],
-                  body: "\\textbf{#{esc(t['role'])}.} #{esc(t['venue'])}#{courses}" }
 end
 work.each do |w|
   experience << { sort: parse_when(w['label']), label: w['label'],
@@ -121,14 +116,22 @@ work.each do |w|
 end
 experience = experience.each_with_index.sort_by { |(e, i)| [-e[:sort].jd, i] }.map(&:first)
 
-# E. Honors and Awards: selected awards + full scholarship list, newest first
+# E. Teaching Experience: guest lectures + TA terms, newest first
+teaching_rows = teaching.map do |t|
+  courses = (t['courses'] || []).map { |c| "\\newline \\hspace*{1.5em}-- #{esc(c)}" }.join
+  { sort: to_date(t['date']), label: t['term'],
+    body: "\\textbf{#{esc(t['role'])}.} #{esc(t['venue'])}#{courses}" }
+end
+teaching_rows = teaching_rows.each_with_index.sort_by { |(e, i)| [-e[:sort].jd, i] }.map(&:first)
+
+# F. Honors and Awards: selected awards + full scholarship list, newest first
 honor_rows = honors.map { |h| { sort: parse_when(h['date']), label: h['date'], body: esc(h['text']) } }
 (extra['scholarships'] || []).each do |s|
   honor_rows << { sort: to_date(s['sort']), label: s['date'], body: esc(s['text']) }
 end
 honor_rows = honor_rows.sort_by { |h| h[:sort] }.reverse
 
-# F. Publications
+# G. Publications
 by_cat = Hash.new { |h, k| h[k] = [] }
 pubs.each { |p| by_cat[p['category']] << p }
 %w[manuscripts underreview conferences thesis].each do |c|
@@ -233,12 +236,19 @@ tex << "\\section{Professional Experience}\n\\begin{datedlist}\n"
 experience.each { |e| tex << "#{esc(e[:label])} & #{e[:body]} \\\\[3pt]\n" }
 tex << "\\end{datedlist}\n\n"
 
-# ----- E. Honors and Awards
+# ----- E. Teaching Experience
+unless teaching_rows.empty?
+  tex << "\\clearpage\n\\section{Teaching Experience}\n\\begin{datedlist}\n"
+  teaching_rows.each { |t| tex << "#{esc(t[:label])} & #{t[:body]} \\\\[3pt]\n" }
+  tex << "\\end{datedlist}\n\n"
+end
+
+# ----- F. Honors and Awards
 tex << "\\section{Honors and Awards}\n\\begin{datedlist}\n"
 honor_rows.each { |h| tex << "#{esc(h[:label])} & #{h[:body]} \\\\[3pt]\n" }
 tex << "\\end{datedlist}\n\n"
 
-# ----- F. Publications
+# ----- G. Publications
 tex << "\\section{Publications}\n"
 unless by_cat['thesis'].empty?
   tex << "\\subsection{Ph.D. Dissertation}\n\\begin{publist}\n"
@@ -255,21 +265,21 @@ tex << "\\subsection{Conferences (Domestic -- South Korea)}\n\\begin{publist}\n"
 conf_dom.each_with_index { |p, i| tex << "C-D#{i + 1}. & #{pub_body(p)} \\\\[3pt]\n" }
 tex << "\\end{publist}\n\n"
 
-# ----- G. Patents
+# ----- H. Patents
 unless (extra['patents'] || []).empty?
   tex << "\\section{Patents}\n\\begin{publist}\n"
   extra['patents'].each_with_index { |p, i| tex << "G#{i + 1}. & #{esc_url(p)} \\\\[3pt]\n" }
   tex << "\\end{publist}\n\n"
 end
 
-# ----- H. Open-Source Software Contributions
+# ----- I. Open-Source Software Contributions
 unless (extra['open_source'] || []).empty?
   tex << "\\section{Open-Source Software Contributions}\n\\begin{publist}\n"
   extra['open_source'].each_with_index { |o, i| tex << "H#{i + 1}. & #{esc_url(o['text'])} \\\\[3pt]\n" }
   tex << "\\end{publist}\n\n"
 end
 
-# ----- I. Invited Talks and Seminars
+# ----- J. Invited Talks and Seminars
 unless talks.empty?
   tex << "\\section{Invited Talks and Seminars}\n\\begin{publist}\n"
   talks.each_with_index.sort_by { |(t, i)| [-to_date(t['date']).jd, i] }.map(&:first).each_with_index do |t, i|
@@ -282,7 +292,7 @@ unless talks.empty?
   tex << "\\end{publist}\n\n"
 end
 
-# ----- J. Professional Service
+# ----- K. Professional Service
 unless (extra['service'] || []).empty?
   tex << "\\section{Professional Service}\n\\begin{publist}\n"
   extra['service'].each do |s|
