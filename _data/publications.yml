@@ -4,33 +4,14 @@
 - title: Physics-based Encoder-only Transformer for Structural Hysteresis Prediction
     and Dynamic Analysis
   category: manuscripts
-  date: '2026-09-11'
+  date: '2026-09-29'
   venue: Earthquake Engineering & Structural Dynamics
-  note: In press
+  note: Published online September 29, 2026
   excerpt: ''
+  paperurl: https://doi.org/10.1002/eqe.70298
   citation: Joo, J., J. Jeon, and J. Song (2026). Physics-based Encoder-only Transformer
     for Structural Hysteresis Prediction and Dynamic Analysis. Earthquake Engineering
     & Structural Dynamics.
-- title: 'A Unified Rate-Dependent Rheological Model for High Damping Rubber Bearings:
-    Seismic Performance Assessment in Cold Climates'
-  category: manuscripts
-  date: '2026-08-14'
-  venue: Engineering Structures
-  excerpt: ''
-  paperurl: https://doi.org/10.1016/j.engstruct.2026.123564
-  citation: 'Guo, F., J. Song, Y. Liu, J. Joo, and J. Jeon (2026). A Unified Rate-Dependent
-    Rheological Model for High Damping Rubber Bearings: Seismic Performance Assessment
-    in Cold Climates. Engineering Structures. Vol. 367, 123564.'
-- title: Physics-based Transformer Model for Data-efficient Prediction of Nonlinear Hysteresis
-    across Varying Structural Properties
-  category: conferences
-  date: '2026-09-17'
-  venue: IABSE Congress Incheon 2026
-  presentation: Extended Abstract
-  citation: Park, J., J. Joo, J. Jeon, and J. Song (2026), Physics-based Transformer
-    Model for Data-efficient Prediction of Nonlinear Hysteresis across Varying Structural
-    Properties, IABSE Congress Incheon 2026, September 16-18, Incheon, Korea.
-  scope: international
 - title: A Generalized SINDy Framework for Force Reconstruction of Hysteretic Systems
     under Stochastic Excitations
   category: conferences
@@ -41,6 +22,26 @@
     Force Reconstruction of Hysteretic Systems under Stochastic Excitations, IABSE
     Congress Incheon 2026, September 16-18, Incheon, Korea.
   scope: international
+- title: Physics-based Transformer Model for Data-efficient Prediction of Nonlinear
+    Hysteresis across Varying Structural Properties
+  category: conferences
+  date: '2026-09-17'
+  venue: IABSE Congress Incheon 2026
+  presentation: Extended Abstract
+  citation: Park, J., J. Joo, J. Jeon, and J. Song (2026), Physics-based Transformer
+    Model for Data-efficient Prediction of Nonlinear Hysteresis across Varying Structural
+    Properties, IABSE Congress Incheon 2026, September 16-18, Incheon, Korea.
+  scope: international
+- title: 'A Unified Rate-Dependent Rheological Model for High Damping Rubber Bearings:
+    Seismic Performance Assessment in Cold Climates'
+  category: manuscripts
+  date: '2026-08-14'
+  venue: Engineering Structures
+  excerpt: ''
+  paperurl: https://doi.org/10.1016/j.engstruct.2026.123564
+  citation: 'Guo, F., J. Song, Y. Liu, J. Joo, and J. Jeon (2026). A Unified Rate-Dependent
+    Rheological Model for High Damping Rubber Bearings: Seismic Performance Assessment
+    in Cold Climates. Engineering Structures. Vol. 367, 123564.'
 - title: Probabilistic SINDy Surrogate Model for Ensembled Uncertainty-Quantification
     of Hysteretic Structures
   category: conferences
@@ -60,17 +61,6 @@
   paperurl: https://doi.org/10.48550/arXiv.2607.16580
   citation: Jeon, J., C. H. Lee, and T. Kim. Automating Structural Reliability Analysis
     with a Multi-Agent Large Language Model Framework. (Under review).
-- title: Ensemble-based Uncertainty Quantification for Probabilistic Surrogate Models
-    using SINDy
-  category: conferences
-  date: '2026-06-28'
-  venue: 10th International Symposium on Reliability Engineering and Risk Management
-    (ISRERM 2026)
-  citation: Park, S., J. Jeon, and J. Song (2026), Ensemble-based Uncertainty Quantification
-    for Probabilistic Surrogate Models using SINDy, 10th International Symposium on
-    Reliability Engineering and Risk Management (ISRERM 2026), June 28-July 1, Sapporo,
-    Japan.
-  scope: international
 - title: Uncertainty Quantification in Unified Hysteresis Modeling Using a Partially
     Bayesian Neural Architecture
   category: conferences
@@ -81,6 +71,17 @@
     Hysteresis Modeling Using a Partially Bayesian Neural Architecture, 10th International
     Symposium on Reliability Engineering and Risk Management (ISRERM 2026), June 28-July
     1, Sapporo, Japan.
+  scope: international
+- title: Ensemble-based Uncertainty Quantification for Probabilistic Surrogate Models
+    using SINDy
+  category: conferences
+  date: '2026-06-28'
+  venue: 10th International Symposium on Reliability Engineering and Risk Management
+    (ISRERM 2026)
+  citation: Park, S., J. Jeon, and J. Song (2026), Ensemble-based Uncertainty Quantification
+    for Probabilistic Surrogate Models using SINDy, 10th International Symposium on
+    Reliability Engineering and Risk Management (ISRERM 2026), June 28-July 1, Sapporo,
+    Japan.
   scope: international
 - title: Uncertainty Quantification in Unified Hysteresis Modeling Using a Partially
     Bayesian Neural Architecture
