@@ -1,6 +1,14 @@
 # GENERATED from _bibliography/papers.bib by scripts/bib2yaml.rb — DO NOT EDIT.
 # Edit the .bib and re-run:  ruby scripts/bib2yaml.rb
 
+- title: Data-informed operator-prior-anchored deep ensembles for hysteresis prediction
+    and uncertainty propagation to nonlinear dynamic response
+  category: underreview
+  date: '2026-10-01'
+  venue: Under review
+  citation: Joo, J., J. Jeon, and J. Song*. Data-informed operator-prior-anchored
+    deep ensembles for hysteresis prediction and uncertainty propagation to nonlinear
+    dynamic response. (Under review).
 - title: Physics-based Encoder-only Transformer for Structural Hysteresis Prediction
     and Dynamic Analysis
   category: manuscripts
