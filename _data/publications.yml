@@ -155,6 +155,15 @@
   citation: Jeon, J., O. Kwon, and J. Song (2026). Unified Hysteresis Modeling via
     Physics-based Deep Learning and Data Augmentation. Earthquake Engineering & Structural
     Dynamics. Vol. 55, No. 2, 379-396.
+- title: Physics-informed Transformer for Predicting Nonlinear Hysteretic Responses
+    of Structures
+  category: conferences
+  date: '2025-11-28'
+  venue: Computational Structural Engineering Institute of Korea Annual Conference
+  citation: Joo, J., J. Jeon, and J. Song (2025), Physics-informed Transformer for
+    Predicting Nonlinear Hysteretic Responses of Structures, Computational Structural
+    Engineering Institute of Korea Annual Conference, November 28-29, Daejeon, Korea.
+  scope: domestic
 - title: Uncertainty Quantification of Ensemble Prediction for Structural Hysteretic
     Behavior using Bayesian Neural Networks
   category: conferences
