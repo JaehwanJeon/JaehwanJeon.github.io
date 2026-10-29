@@ -67,8 +67,8 @@
   date: '2026-07-17'
   venue: Under review
   paperurl: https://doi.org/10.48550/arXiv.2607.16580
-  citation: Jeon, J., C. H. Lee, and T. Kim. Automating Structural Reliability Analysis
-    with a Multi-Agent Large Language Model Framework. (Under review).
+  citation: Jeon, J., C. H. Lee, J. Choo, and T. Kim. Automating Structural Reliability
+    Analysis with a Multi-Agent Large Language Model Framework. (Under review).
 - title: Uncertainty Quantification in Unified Hysteresis Modeling Using a Partially
     Bayesian Neural Architecture
   category: conferences
@@ -378,3 +378,16 @@
     to Estimate Damping Force Under Wind Loadings Using Acceleration and Force Data,
     Korean Society of Civil Engineers 2021 Convention, October 20-22, Gwangju, Korea.
   scope: domestic
+- title: An automated framework for substation topology extraction and ice and wind
+    fragility assessment using vision-language models
+  category: inpreparation
+  venue: In preparation
+  citation: Jeon, J., T. Kim*, J. E. Tate, and O. Kwon. An automated framework for
+    substation topology extraction and ice and wind fragility assessment using vision-language
+    models. (In preparation).
+- title: Modal-basis spatio-temporal Fourier neural operator for virtual sensing of
+    structural seismic responses
+  category: inpreparation
+  venue: In preparation
+  citation: Jeon, J., and J. Kim*. Modal-basis spatio-temporal Fourier neural operator
+    for virtual sensing of structural seismic responses. (In preparation).

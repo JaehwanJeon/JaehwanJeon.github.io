@@ -2,9 +2,11 @@
 % Rendered by scripts/bib2yaml.rb -> _data/publications.yml (run after edits).
 % Conventions:
 %   type -> section:  @article=manuscripts, @inproceedings=conferences,
-%                      @phdthesis=thesis, @unpublished=underreview
+%                      @phdthesis=thesis, @unpublished=underreview,
+%                      @unpublished + note = {In preparation} = inpreparation
 %   corresponding = {Surname}   -> that author gets * (journals only)
-%   date = {YYYY-MM-DD}         -> ordering key (stable within a year)
+%   date = {YYYY-MM-DD}         -> ordering key (stable within a year);
+%                                  omit when unknown -> listed last, in .bib order
 %   note = {...}                -> award/honor, shown at END OF TITLE (visible)
 %   presentation = {...}        -> e.g. "Extended Abstract", shown at title (muted)
 %   abstract = {...}            -> short summary, shown only for @article
@@ -96,12 +98,28 @@
 }
 
 @unpublished{jeon2026llm,
-  author = {Jeon, Jaehwan and Lee, Chang Hee and Kim, Taeyong},
+  author = {Jeon, Jaehwan and Lee, Chang Hee and Choo, Jinhyun and Kim, Taeyong},
   title  = {Automating Structural Reliability Analysis with a Multi-Agent Large Language Model Framework},
   year   = {2026},
   date   = {2026-07-17},
   doi    = {10.48550/arXiv.2607.16580},
   note   = {Under review}
+}
+
+% ===================== Manuscripts in Preparation =====================
+% No year/date/venue/link on purpose: listed after dated entries, in this order.
+@unpublished{jeon2026substation,
+  author        = {Jeon, Jaehwan and Kim, Taeyong and Tate, Joseph Euzebe and Kwon, Oh-Sung},
+  title         = {An automated framework for substation topology extraction and ice and wind fragility assessment using vision-language models},
+  corresponding = {Kim},
+  note          = {In preparation}
+}
+
+@unpublished{jeon2026modalfno,
+  author        = {Jeon, Jaehwan and Kim, Jungho},
+  title         = {Modal-basis spatio-temporal Fourier neural operator for virtual sensing of structural seismic responses},
+  corresponding = {Kim},
+  note          = {In preparation}
 }
 
 % ===================== Conference Papers =====================

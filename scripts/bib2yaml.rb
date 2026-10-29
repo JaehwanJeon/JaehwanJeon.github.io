@@ -43,11 +43,14 @@ end
 entries = parse_bib(File.read(BIB)).map do |e|
   f = e['fields']
   cat = TYPE_TO_CATEGORY[e['type']] || 'manuscripts'
+  # @unpublished defaults to under review; note = {In preparation} selects its own section
+  cat = 'inpreparation' if cat == 'underreview' && f['note'].to_s =~ /\Ain preparation\z/i
   authors = format_authors(f['author'], f['corresponding'])
   year = f['year']
   title = tex(f['title'])
   venue = tex(f['journal'] || f['booktitle'] || f['school'])
   venue = 'Under review' if cat == 'underreview'
+  venue = 'In preparation' if cat == 'inpreparation'
   paperurl = f['doi'] ? "https://doi.org/#{f['doi']}" : f['url']
 
   citation =
@@ -68,12 +71,15 @@ entries = parse_bib(File.read(BIB)).map do |e|
       "#{authors} (#{year}). #{title}. Doctoral dissertation, #{venue}."
     when 'underreview'
       "#{authors}. #{title}. (Under review)."
+    when 'inpreparation'
+      "#{authors}. #{title}. (In preparation)."
     end
 
   {
     'title' => title, 'category' => cat, 'date' => f['date'],
     'venue' => venue,
-    'note' => (cat == 'underreview' ? nil : f['note']),
+    # status already ends the citation; don't repeat it as a note
+    'note' => (%w[underreview inpreparation].include?(cat) ? nil : f['note']),
     'presentation' => f['presentation'],
     # short summary shown only for journal articles (via .bib `abstract`)
     'excerpt' => (cat == 'manuscripts' ? tex(f['abstract']) : nil),
@@ -83,9 +89,10 @@ entries = parse_bib(File.read(BIB)).map do |e|
   }.compact
 end
 
-# newest first by date (stable within a year via the ISO date field)
-entries.sort_by! { |x| x['date'].to_s }
-entries.reverse!
+# newest first by ISO date; same-date entries keep their established order
+# (later .bib entry first). Undated entries (in preparation) follow in .bib order.
+dated, undated = entries.partition { |x| x['date'] }
+entries = dated.each_with_index.sort_by { |x, i| [x['date'], i] }.reverse.map(&:first) + undated
 
 header = "# GENERATED from _bibliography/papers.bib by scripts/bib2yaml.rb — DO NOT EDIT.\n" \
          "# Edit the .bib and re-run:  ruby scripts/bib2yaml.rb\n\n"

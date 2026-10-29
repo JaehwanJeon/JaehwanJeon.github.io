@@ -41,3 +41,46 @@
     "vendor/font-awesome/solid",
     "vendor/font-awesome/brands"
 ;
+
+/* Home is a regular navigation item, not a separate brand. */
+.greedy-nav .masthead__menu-item--lg > a {
+    font-weight: 400;
+    color: var(--global-masthead-link-color);
+}
+
+/* Avoid a second heading-sized top gap when the page title is hidden. */
+.page--without-title .page__content > h2:first-child {
+    margin-top: 0;
+}
+
+/* Keep the wide-screen navigation together at the content start. */
+@include breakpoint($x-large) {
+    .greedy-nav .visible-links {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        padding-left: span(wide 2.5 of 12);
+    }
+    .greedy-nav .visible-links > li {
+        display: block;
+        flex-shrink: 0;
+    }
+    .greedy-nav .visible-links > .masthead__menu-item--lg {
+        flex-basis: auto;
+        padding-right: 0;
+    }
+    .greedy-nav .visible-links > .masthead__menu-item--lg > a {
+        width: fit-content;
+    }
+    .greedy-nav .visible-links > li > a {
+        margin-left: 0;
+        margin-right: 2rem;
+    }
+    .greedy-nav .visible-links > #theme-toggle {
+        margin-left: auto;
+        margin-right: span(wide 2 of 12);
+    }
+    .greedy-nav .visible-links > #theme-toggle > a {
+        margin-right: 0;
+    }
+}

@@ -4,7 +4,7 @@
 #
 # Sources:
 #   _pages/cv.md            -> Education / Work experience / Honors (Selected)
-#   _data/publications.yml  -> dissertation, journals, under review, conferences
+#   _data/publications.yml  -> dissertation, journals, under review, in preparation, conferences
 #   _data/talks.yml         -> invited talks & seminars
 #   _data/teaching.yml      -> guest lectures & TA terms (Teaching Experience)
 #   _data/cv_extra.yml      -> personal details, KATUSA, scholarships, patents, OSS
@@ -137,6 +137,7 @@ pubs.each { |p| by_cat[p['category']] << p }
 %w[manuscripts underreview conferences thesis].each do |c|
   by_cat[c] = by_cat[c].each_with_index.sort_by { |(p, i)| [-Date.parse(p['date'].to_s).jd, i] }.map(&:first)
 end
+# in-preparation entries are undated on purpose: keep publications.yml order
 
 journals  = by_cat['manuscripts'] + by_cat['underreview'] # published first, then under review
 conf_intl = by_cat['conferences'].select { |p| p['scope'] == 'international' }
@@ -150,6 +151,14 @@ def pub_body(p)
   body += " \\url{#{p['paperurl']}}" if p['paperurl'] && %w[manuscripts thesis underreview].include?(p['category'])
   body += " \\textbf{#{esc(p['note'])}}" if p['note']
   body
+end
+
+# publist rows under a heading: first row stays with the heading, the rest may break
+def publist(rows)
+  out = "\\begin{publistfirst}\n#{rows.first} \\\\[3pt]\n\\end{publistfirst}\n"
+  return out + "\\vspace{\\LTpost}\n" if rows.size == 1
+  out + "{\\setlength{\\LTpre}{0pt}\\begin{publist}\n" +
+    rows.drop(1).map { |r| "#{r} \\\\[3pt]\n" }.join + "\\end{publist}}\n"
 end
 
 # ------------------------------------------------------------- LaTeX out ----
@@ -187,6 +196,11 @@ tex << <<~'PREAMBLE'
   \newenvironment{publist}
     {\begin{longtable}{@{}p{1.4cm}@{\hspace{0.4cm}}p{\dimexpr\textwidth-1.8cm\relax}@{}}}
     {\end{longtable}}
+  % first publist row as an unbreakable tabular, so a heading never ends a page alone
+  % (longtable allows a page break right after the heading)
+  \newenvironment{publistfirst}
+    {\par\nobreak\vspace{\LTpre}\nobreak\begin{tabular}{@{}p{1.4cm}@{\hspace{0.4cm}}p{\dimexpr\textwidth-1.8cm\relax}@{}}}
+    {\end{tabular}\par}
 PREAMBLE
 
 tex << "\\fancyhead[L]{\\small #{header_name} -- CV, updated #{updated}}\n"
@@ -251,19 +265,19 @@ tex << "\\end{datedlist}\n\n"
 # ----- G. Publications
 tex << "\\section{Publications}\n"
 unless by_cat['thesis'].empty?
-  tex << "\\subsection{Ph.D. Dissertation}\n\\begin{publist}\n"
-  by_cat['thesis'].each_with_index { |p, i| tex << "T#{i + 1}. & #{pub_body(p)} \\\\[3pt]\n" }
-  tex << "\\end{publist}\n"
+  tex << "\\subsection{Ph.D. Dissertation}\n"
+  tex << publist(by_cat['thesis'].each_with_index.map { |p, i| "T#{i + 1}. & #{pub_body(p)}" })
 end
-tex << "\\subsection{Journal Publications}\n\\begin{publist}\n"
-journals.each_with_index { |p, i| tex << "J#{i + 1}. & #{pub_body(p)} \\\\[3pt]\n" }
-tex << "\\end{publist}\n"
-tex << "\\subsection{Conferences (International)}\n\\begin{publist}\n"
-conf_intl.each_with_index { |p, i| tex << "C-I#{i + 1}. & #{pub_body(p)} \\\\[3pt]\n" }
-tex << "\\end{publist}\n"
-tex << "\\subsection{Conferences (Domestic -- South Korea)}\n\\begin{publist}\n"
-conf_dom.each_with_index { |p, i| tex << "C-D#{i + 1}. & #{pub_body(p)} \\\\[3pt]\n" }
-tex << "\\end{publist}\n\n"
+tex << "\\subsection{Journal Publications}\n"
+tex << publist(journals.each_with_index.map { |p, i| "J#{i + 1}. & #{pub_body(p)}" })
+unless by_cat['inpreparation'].empty?
+  tex << "\\subsection{Manuscripts in Preparation}\n"
+  tex << publist(by_cat['inpreparation'].each_with_index.map { |p, i| "P#{i + 1}. & #{pub_body(p)}" })
+end
+tex << "\\subsection{Conferences (International)}\n"
+tex << publist(conf_intl.each_with_index.map { |p, i| "C-I#{i + 1}. & #{pub_body(p)}" })
+tex << "\\subsection{Conferences (Domestic -- South Korea)}\n"
+tex << publist(conf_dom.each_with_index.map { |p, i| "C-D#{i + 1}. & #{pub_body(p)}" }) << "\n"
 
 # ----- H. Patents
 unless (extra['patents'] || []).empty?
@@ -305,4 +319,4 @@ tex << "\\end{document}\n"
 
 FileUtils.mkdir_p(File.dirname(OUT))
 File.write(OUT, tex)
-puts "Wrote #{OUT} (#{journals.size} journal, #{conf_intl.size} intl conf, #{conf_dom.size} domestic conf, #{talks.size} talks)"
+puts "Wrote #{OUT} (#{journals.size} journal, #{by_cat['inpreparation'].size} in preparation, #{conf_intl.size} intl conf, #{conf_dom.size} domestic conf, #{talks.size} talks)"

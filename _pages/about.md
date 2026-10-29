@@ -1,6 +1,7 @@
 ---
 permalink: /
 title: "Jaehwan Jeon (전재환), PhD"
+hide_title: true
 author_profile: true
 redirect_from:
   - /about/
