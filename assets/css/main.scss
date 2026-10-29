@@ -53,6 +53,22 @@
     margin-top: 0;
 }
 
+/* Group phone controls at the right, clear of the menu button. */
+@media (max-width: 767px) {
+    .greedy-nav .visible-links {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        padding-right: 3.5rem;
+    }
+    .greedy-nav .visible-links > li {
+        display: block;
+    }
+    .greedy-nav .visible-links > #theme-toggle {
+        margin-left: auto;
+    }
+}
+
 /* Keep the wide-screen navigation together at the content start. */
 @include breakpoint($x-large) {
     .greedy-nav .visible-links {
