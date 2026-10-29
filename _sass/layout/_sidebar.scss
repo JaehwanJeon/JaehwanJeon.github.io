@@ -13,7 +13,7 @@
   @include clearfix();
   margin-bottom: 1em;
 
-  @media (orientation: portrait) {
+  @media (orientation: portrait) and (max-width: $sidebar-screen-min-width - 0.02px) {
     margin-top: 1em;
   }
 
@@ -24,7 +24,7 @@
     padding-top: $masthead-height;
   }
 
-  @include breakpoint($large) {
+  @include breakpoint($sidebar-screen-min-width) {
     @include span(2 of 12);
     opacity: 1;
     -webkit-transition: opacity 0.2s ease-in-out;
@@ -147,7 +147,7 @@
   // set width only, for non-square avatars
   // height: 36px;
 
-  @include breakpoint($large) {
+  @include breakpoint($sidebar-screen-min-width) {
     display: block;
     width: auto;
     height: auto;
@@ -157,7 +157,7 @@
     max-width: 175px;
     border-radius: 0;
 
-    @include breakpoint($large) {
+    @include breakpoint($sidebar-screen-min-width) {
       padding: 0;
       border: 0;
     }
@@ -171,7 +171,7 @@
   padding-right: 25px;
   line-height: 1;
 
-  @include breakpoint($large) {
+  @include breakpoint($sidebar-screen-min-width) {
     display: block;
     width: 100%;
     padding-left: 0;
@@ -182,7 +182,7 @@
 .author__name {
   margin: 0;
 
-  @include breakpoint($large) {
+  @include breakpoint($sidebar-screen-min-width) {
     margin-top: 10px;
     margin-bottom: 20px;
   }
@@ -191,22 +191,28 @@
   font-family: $sans-serif;
   font-size: $type-size-5;
 
-  @include breakpoint($large) {
+  @include breakpoint($sidebar-screen-min-width) {
     margin-bottom: 20px;
   }
 }
 
-.sidebar .author__desktop {
-  display: none;
-  @media screen and (min-width: 1024px) {
-    display: block;
+.author__facts {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  line-height: 1.5;
+
+  @include breakpoint($sidebar-screen-min-width) {
+    li {
+      white-space: nowrap;
+    }
   }
 }
 
 .author__pronouns {
   margin: 0;
 
-  @include breakpoint($large) {
+  @include breakpoint($sidebar-screen-min-width) {
     margin-top: 10px;
     margin-bottom: 10px;
   }
@@ -215,7 +221,7 @@
 .author__bio {
   margin: 0;
 
-  @include breakpoint($large) {
+  @include breakpoint($sidebar-screen-min-width) {
     margin-top: 10px;
     margin-bottom: 20px;
   }
@@ -236,14 +242,14 @@
     }
   }
 
-  @include breakpoint($large) {
+  @include breakpoint($sidebar-screen-min-width) {
     display: block;
   }
 
   button {
     margin-bottom: 0;
 
-    @include breakpoint($large) {
+    @include breakpoint($sidebar-screen-min-width) {
       display: none;
     }
   }
@@ -263,7 +269,7 @@
   box-shadow: 0 0 10px rgba(#000, 0.25);
   cursor: default;
 
-  @include breakpoint($large) {
+  @include breakpoint($sidebar-screen-min-width) {
     display: block;
     position: relative;
     margin: 0;
@@ -285,7 +291,7 @@
     border-color: var(--global-border-color) transparent;
     z-index: 0;
 
-    @include breakpoint($large) {
+    @include breakpoint($sidebar-screen-min-width) {
       display: none;
     }
   }
@@ -302,7 +308,7 @@
     border-color: #fff transparent;
     z-index: 1;
 
-    @include breakpoint($large) {
+    @include breakpoint($sidebar-screen-min-width) {
       display: none;
     }
   }
@@ -323,6 +329,59 @@
 
     &:hover {
       text-decoration: underline;
+    }
+  }
+}
+
+/* Below the fixed-sidebar breakpoint: photo beside name and facts, contact links
+   wrapping underneath. Same markup and data as the desktop sidebar. */
+@media screen and (max-width: $sidebar-screen-min-width - 0.02px) {
+  .sidebar [itemtype="http://schema.org/Person"] {
+    display: grid;
+    grid-template-columns: 84px minmax(0, 1fr);
+    column-gap: 15px;
+    align-items: center;
+  }
+
+  .author__avatar {
+    display: block;
+    width: 84px;
+  }
+
+  .author__content {
+    display: block;
+    padding: 0;
+    line-height: 1.5;
+  }
+
+  .sidebar .author__name {
+    margin: 0 0 5px;
+  }
+
+  .author__urls-wrapper {
+    display: block;
+    grid-column: 1 / -1;
+    margin-top: 10px;
+  }
+
+  .author__urls {
+    display: flex;
+    flex-wrap: wrap;
+    position: static;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+
+    &:before,
+    &:after {
+      display: none;
+    }
+
+    a {
+      margin-bottom: 0;
+      padding-right: 15px;
     }
   }
 }
