@@ -314,8 +314,8 @@ end
 # ----- K. Professional Service
 unless (extra['service'] || []).empty?
   tex << "\\section{Professional Service}\n\\begin{publist}\n"
-  extra['service'].each do |s|
-    tex << "& #{esc(s['role'])}, \\textit{#{esc(s['venue'])}} \\\\[3pt]\n"
+  extra['service'].each_with_index do |s, i|
+    tex << "K#{i + 1}. & #{esc(s['role'])}, \\textit{#{esc(s['venue'])}} \\\\[3pt]\n"
   end
   tex << "\\end{publist}\n\n"
 end
