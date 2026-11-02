@@ -139,7 +139,8 @@ pubs.each { |p| by_cat[p['category']] << p }
 end
 # in-preparation entries are undated on purpose: keep publications.yml order
 
-journals  = by_cat['manuscripts'] + by_cat['underreview'] # published first, then under review
+# Published articles: oldest first, with ascending J numbers.
+journals = by_cat['manuscripts'].each_with_index.sort_by { |(p, i)| [Date.parse(p['date'].to_s).jd, i] }.map(&:first)
 conf_intl = by_cat['conferences'].select { |p| p['scope'] == 'international' }
 conf_dom  = by_cat['conferences'].select { |p| p['scope'] == 'domestic' }
 untagged  = by_cat['conferences'].reject { |p| %w[international domestic].include?(p['scope']) }
@@ -268,8 +269,12 @@ unless by_cat['thesis'].empty?
   tex << "\\subsection{Ph.D. Dissertation}\n"
   tex << publist(by_cat['thesis'].each_with_index.map { |p, i| "T#{i + 1}. & #{pub_body(p)}" })
 end
-tex << "\\subsection{Journal Publications}\n"
+tex << "\\subsection{Published Journal Articles}\n"
 tex << publist(journals.each_with_index.map { |p, i| "J#{i + 1}. & #{pub_body(p)}" })
+unless by_cat['underreview'].empty?
+  tex << "\\subsection{Manuscripts under Review}\n"
+  tex << publist(by_cat['underreview'].each_with_index.map { |p, i| "R#{i + 1}. & #{pub_body(p)}" })
+end
 unless by_cat['inpreparation'].empty?
   tex << "\\subsection{Manuscripts in Preparation}\n"
   tex << publist(by_cat['inpreparation'].each_with_index.map { |p, i| "P#{i + 1}. & #{pub_body(p)}" })

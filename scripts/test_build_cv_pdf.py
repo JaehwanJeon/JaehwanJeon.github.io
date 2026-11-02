@@ -51,7 +51,7 @@ class CVGenerationTest(unittest.TestCase):
         pubs = data("publications.yml")
         groups = {
             "F2": sorted([p for p in pubs if p["category"] == "manuscripts"],
-                         key=lambda p: p["date"], reverse=True)
+                         key=lambda p: p["date"])
                   + sorted([p for p in pubs if p["category"] == "underreview"],
                            key=lambda p: p["date"], reverse=True),
             "F3": sorted([p for p in pubs if p["category"] == "conferences" and p.get("scope") == "international"],
