@@ -9,6 +9,11 @@
   citation: Joo, J., J. Jeon, and J. Song*. Data-informed operator-prior-anchored
     deep ensembles for hysteresis prediction and uncertainty propagation to nonlinear
     dynamic response. (Under review).
+  authors: Joo, J., J. Jeon, and J. Song*
+  year: '2026'
+  directions:
+  - physics
+  - uq
 - title: Physics-based Encoder-only Transformer for Structural Hysteresis Prediction
     and Dynamic Analysis
   category: manuscripts
@@ -20,6 +25,10 @@
   citation: Joo, J., J. Jeon, and J. Song (2026). Physics-based Encoder-only Transformer
     for Structural Hysteresis Prediction and Dynamic Analysis. Earthquake Engineering
     & Structural Dynamics.
+  authors: Joo, J., J. Jeon, and J. Song
+  year: '2026'
+  directions:
+  - physics
 - title: A Generalized SINDy Framework for Force Reconstruction of Hysteretic Systems
     under Stochastic Excitations
   category: conferences
@@ -30,6 +39,11 @@
     Force Reconstruction of Hysteretic Systems under Stochastic Excitations, IABSE
     Congress Incheon 2026, September 16-18, Incheon, Korea.
   scope: international
+  authors: Park, S., J. Jeon, and J. Song
+  year: '2026'
+  details: September 16–18, Incheon, Korea
+  directions:
+  - physics
 - title: Physics-based Transformer Model for Data-efficient Prediction of Nonlinear
     Hysteresis across Varying Structural Properties
   category: conferences
@@ -40,6 +54,11 @@
     Model for Data-efficient Prediction of Nonlinear Hysteresis across Varying Structural
     Properties, IABSE Congress Incheon 2026, September 16-18, Incheon, Korea.
   scope: international
+  authors: Park, J., J. Joo, J. Jeon, and J. Song
+  year: '2026'
+  details: September 16–18, Incheon, Korea
+  directions:
+  - physics
 - title: 'A Unified Rate-Dependent Rheological Model for High Damping Rubber Bearings:
     Seismic Performance Assessment in Cold Climates'
   category: manuscripts
@@ -50,6 +69,11 @@
   citation: 'Guo, F., J. Song, Y. Liu, J. Joo, and J. Jeon (2026). A Unified Rate-Dependent
     Rheological Model for High Damping Rubber Bearings: Seismic Performance Assessment
     in Cold Climates. Engineering Structures. Vol. 367, 123564.'
+  authors: Guo, F., J. Song, Y. Liu, J. Joo, and J. Jeon
+  year: '2026'
+  details: 367, 123564
+  directions:
+  - physics
 - title: Probabilistic SINDy Surrogate Model for Ensembled Uncertainty-Quantification
     of Hysteretic Structures
   category: conferences
@@ -61,6 +85,11 @@
     Workshop on Advanced Smart Materials and Smart Structures Technology (ANCRiSST
     2026), July 24-25, Turin, Italy.
   scope: international
+  authors: Park, S., J. Jeon, and J. Song
+  year: '2026'
+  details: July 24–25, Turin, Italy
+  directions:
+  - uq
 - title: Automating Structural Reliability Analysis with a Multi-Agent Large Language
     Model Framework
   category: underreview
@@ -69,6 +98,11 @@
   paperurl: https://doi.org/10.48550/arXiv.2607.16580
   citation: Jeon, J., C. H. Lee, J. Choo, and T. Kim. Automating Structural Reliability
     Analysis with a Multi-Agent Large Language Model Framework. (Under review).
+  authors: Jeon, J., C. H. Lee, J. Choo, and T. Kim
+  year: '2026'
+  directions:
+  - automation
+  selected: 4
 - title: Uncertainty Quantification in Unified Hysteresis Modeling Using a Partially
     Bayesian Neural Architecture
   category: conferences
@@ -80,6 +114,11 @@
     Symposium on Reliability Engineering and Risk Management (ISRERM 2026), June 28-July
     1, Sapporo, Japan.
   scope: international
+  authors: Joo, J., J. Jeon, and J. Song
+  year: '2026'
+  details: June 28–July 1, Sapporo, Japan
+  directions:
+  - uq
 - title: Ensemble-based Uncertainty Quantification for Probabilistic Surrogate Models
     using SINDy
   category: conferences
@@ -91,6 +130,11 @@
     Reliability Engineering and Risk Management (ISRERM 2026), June 28-July 1, Sapporo,
     Japan.
   scope: international
+  authors: Park, S., J. Jeon, and J. Song
+  year: '2026'
+  details: June 28–July 1, Sapporo, Japan
+  directions:
+  - uq
 - title: Uncertainty Quantification in Unified Hysteresis Modeling Using a Partially
     Bayesian Neural Architecture
   category: conferences
@@ -102,6 +146,11 @@
     Hysteresis Modeling Using a Partially Bayesian Neural Architecture, Engineering
     Mechanics Institute Conference 2026 (EMI 2026), June 2-5, Boulder, USA.
   scope: international
+  authors: Joo, J., J. Jeon, and J. Song
+  year: '2026'
+  details: June 2–5, Boulder, USA
+  directions:
+  - uq
 - title: Ensemble-based Uncertainty Quantification for Probabilistic Surrogate Models
     using SINDy
   category: conferences
@@ -112,6 +161,11 @@
     for Probabilistic Surrogate Models using SINDy, Engineering Mechanics Institute
     Conference 2026 (EMI 2026), June 2-5, Boulder, USA.
   scope: international
+  authors: Park, S., J. Jeon, and J. Song
+  year: '2026'
+  details: June 2–5, Boulder, USA
+  directions:
+  - uq
 - title: Multi-Modal Deep Learning-Based Seismic Damage Identification for Nuclear
     Power Plant Structures
   category: conferences
@@ -122,6 +176,11 @@
     Seismic Damage Identification for Nuclear Power Plant Structures, Transactions
     of the Korean Nuclear Society Spring Meeting, May 7-8, Jeju, Korea.
   scope: domestic
+  authors: Joo, J., J. Jeon, and J. Song
+  year: '2026'
+  details: May 7–8, Jeju, Korea
+  directions:
+  - physics
 - title: Ensemble-based Uncertainty Quantification and Decomposition of Probabilistic
     Surrogate Models Using Bayesian Neural Networks
   category: manuscripts
@@ -135,6 +194,12 @@
   citation: Jeon, J., J. Song, and O. Kwon (2026). Ensemble-based Uncertainty Quantification
     and Decomposition of Probabilistic Surrogate Models Using Bayesian Neural Networks.
     Structural Safety. Vol. 121, 102698.
+  authors: Jeon, J., J. Song, and O. Kwon
+  year: '2026'
+  details: 121, 102698
+  directions:
+  - uq
+  selected: 3
 - title: Prediction and Uncertainty Quantification of Nonlinear Dynamic Response of
     Structures via Physics-informed Deep Learning
   category: thesis
@@ -144,6 +209,11 @@
   citation: Jeon, J. (2026). Prediction and Uncertainty Quantification of Nonlinear
     Dynamic Response of Structures via Physics-informed Deep Learning. Doctoral dissertation,
     Seoul National University.
+  authors: Jeon, J.
+  year: '2026'
+  directions:
+  - physics
+  - uq
 - title: Unified Hysteresis Modeling via Physics-based Deep Learning and Data Augmentation
   category: manuscripts
   date: '2026-01-01'
@@ -155,6 +225,13 @@
   citation: Jeon, J., O. Kwon, and J. Song (2026). Unified Hysteresis Modeling via
     Physics-based Deep Learning and Data Augmentation. Earthquake Engineering & Structural
     Dynamics. Vol. 55, No. 2, 379-396.
+  authors: Jeon, J., O. Kwon, and J. Song
+  year: '2026'
+  details: 55(2), 379–396
+  directions:
+  - physics
+  selected: 2
+  code: https://github.com/JaehwanJeon/Testing_torch
 - title: Physics-informed Transformer for Predicting Nonlinear Hysteretic Responses
     of Structures
   category: conferences
@@ -164,6 +241,11 @@
     Predicting Nonlinear Hysteretic Responses of Structures, Computational Structural
     Engineering Institute of Korea Annual Conference, November 28-29, Daejeon, Korea.
   scope: domestic
+  authors: Joo, J., J. Jeon, and J. Song
+  year: '2025'
+  details: November 28–29, Daejeon, Korea
+  directions:
+  - physics
 - title: Uncertainty Quantification of Ensemble Prediction for Structural Hysteretic
     Behavior using Bayesian Neural Networks
   category: conferences
@@ -175,6 +257,11 @@
     Computational Structural Engineering Institute of Korea Annual Conference, November
     28-29, Daejeon, Korea.
   scope: domestic
+  authors: Jeon, J., J. Song, and O. Kwon
+  year: '2025'
+  details: November 28–29, Daejeon, Korea
+  directions:
+  - uq
 - title: Dynamic Analysis of Hysteretic Structures Using Transformer Models with Transfer
     Learning
   category: conferences
@@ -184,6 +271,11 @@
     Using Transformer Models with Transfer Learning, Civil Engineering Conference
     in the Asian Region, October 21-24, Jeju, Korea.
   scope: international
+  authors: Joo, J., J. Jeon, and J. Song
+  year: '2025'
+  details: October 21–24, Jeju, Korea
+  directions:
+  - physics
 - title: Enhancing Uncertainty Quantification in Civil Engineering through Bayesian
     Neural Network Ensembles
   category: conferences
@@ -193,6 +285,11 @@
     in Civil Engineering through Bayesian Neural Network Ensembles, Civil Engineering
     Conference in the Asian Region, October 21-24, Jeju, Korea.
   scope: international
+  authors: Jeon, J., J. Song, and O. Kwon
+  year: '2025'
+  details: October 21–24, Jeju, Korea
+  directions:
+  - uq
 - title: Development of a Transformer-based Unified Hysteretic Behavior Model for
     Seismic Response Prediction of Nuclear Power Plant Structures
   category: conferences
@@ -203,6 +300,11 @@
     Plant Structures, 2025 Korea Electric Power Industry Code-Week, August 11-14,
     Busan, Korea.
   scope: domestic
+  authors: Joo, J., J. Jeon, and J. Song
+  year: '2025'
+  details: August 11–14, Busan, Korea
+  directions:
+  - physics
 - title: Physics-Based Transformer Model for Predicting Nonlinear Hysteresis in Structures
   category: conferences
   date: '2025-06-02'
@@ -211,6 +313,11 @@
     for Predicting Nonlinear Hysteresis in Structures, 14th International Conference
     on Structural Safety and Reliability (ICOSSAR'25), June 1-6, Los Angeles, USA.
   scope: international
+  authors: Joo, J., J. Jeon, and J. Song
+  year: '2025'
+  details: June 1–6, Los Angeles, USA
+  directions:
+  - physics
 - title: Uncertainty Quantification of Hysteresis Prediction in Structural Dynamics
     Using Bayesian Neural Networks
   category: conferences
@@ -223,6 +330,11 @@
     Conference on Structural Safety and Reliability (ICOSSAR'25), June 1-6, Los Angeles,
     USA.
   scope: international
+  authors: Jeon, J., O. Kwon, and J. Song
+  year: '2025'
+  details: June 1–6, Los Angeles, USA
+  directions:
+  - uq
 - title: Bayesian Neural Network Ensembles for Quantifying Uncertainty in Deep Learning-based
     Surrogate Models
   category: conferences
@@ -233,6 +345,11 @@
     for Quantifying Uncertainty in Deep Learning-based Surrogate Models, Engineering
     Mechanics Institute Conference 2025, May 27-30, Anaheim, USA.
   scope: international
+  authors: Jeon, J., J. Song, and O. Kwon
+  year: '2025'
+  details: May 27–30, Anaheim, USA
+  directions:
+  - uq
 - title: Neural Network–Augmented Physics Models Using Modal Truncation for Dynamic
     MDOF Systems under Response-Dependent Forces
   category: manuscripts
@@ -245,6 +362,12 @@
   citation: Jeon, J., and J. Song (2025). Neural Network–Augmented Physics Models
     Using Modal Truncation for Dynamic MDOF Systems under Response-Dependent Forces.
     Journal of Engineering Mechanics. Vol. 151, No. 1.
+  authors: Jeon, J., and J. Song
+  year: '2025'
+  details: 151(1)
+  directions:
+  - physics
+  selected: 1
 - title: Probabilistic Seismic Hysteresis Modeling Method Using Bayesian Neural Networks
   category: conferences
   date: '2024-10-16'
@@ -254,6 +377,11 @@
     Modeling Method Using Bayesian Neural Networks, Korean Society of Civil Engineering
     2024 Convention, October 16-18, Jeju, Korea.
   scope: domestic
+  authors: Jeon, J., O. Kwon, and J. Song
+  year: '2024'
+  details: October 16–18, Jeju, Korea
+  directions:
+  - uq
 - title: Uncertainty Quantification of Deep Learning Hysteresis Models Using Bayesian
     Neural Network with Concrete Dropout
   category: conferences
@@ -264,6 +392,11 @@
     8th Asia-Pacific Symposium on Structural Reliability and Its Applications, September
     29-October 2, Ulsan, Korea.
   scope: international
+  authors: Jeon, J., O. Kwon, and J. Song
+  year: '2024'
+  details: September 29–October 2, Ulsan, Korea
+  directions:
+  - uq
 - title: Long Short-term Memory Model for Dynamic Analysis of Hysteretic Structures
     Subjected to Earthquakes
   category: conferences
@@ -274,6 +407,11 @@
     Dynamic Analysis of Hysteretic Structures Subjected to Earthquakes, 18th World
     Conference on Earthquake Engineering, June 30-July 5, Milan, Italy.
   scope: international
+  authors: Jeon, J., O. Kwon, and J. Song
+  year: '2024'
+  details: June 30–July 5, Milan, Italy
+  directions:
+  - physics
 - title: Model Uncertainty Quantification and Selection for Deep Learning-based Simulation
     of Hysteresis with Stiffness and Strength Degradations
   category: conferences
@@ -284,6 +422,11 @@
     and Strength Degradations, 9th European Congress on Computational Methods in Applied
     Sciences and Engineering, June 3-7, Lisbon, Portugal.
   scope: international
+  authors: Jeon, J., J. Song, and O. Kwon
+  year: '2024'
+  details: June 3–7, Lisbon, Portugal
+  directions:
+  - uq
 - title: Integrating Physics-Based Deep Learning Models and Data Augmentation to Reduce
     Uncertainties in Hysteresis Modeling
   category: conferences
@@ -297,6 +440,12 @@
     Engineering Mechanics Institute Conference and Probabilistic Mechanics & Reliability
     Conference 2024 (EMI/PMC 2024), May 28-31, Chicago, USA.
   scope: international
+  authors: Jeon, J., J. Song, and O. Kwon
+  year: '2024'
+  details: May 28–31, Chicago, USA
+  directions:
+  - physics
+  - uq
 - title: Physics-informed Deep Learning Model for Prediction of Complex Hysteresis
   category: conferences
   date: '2024-03-03'
@@ -306,6 +455,11 @@
     Model for Prediction of Complex Hysteresis, 27th International Conference on Structural
     Mechanics in Reactor Technology, March 3-8, Yokohama, Japan.
   scope: international
+  authors: Jeon, J., O. Kwon, and J. Song
+  year: '2024'
+  details: March 3–8, Yokohama, Japan
+  directions:
+  - physics
 - title: Generalized Seismic Hysteresis Modeling Method Using Long Short-Term Memory
     Model
   category: conferences
@@ -315,6 +469,11 @@
     Method Using Long Short-Term Memory Model, Korean Society of Civil Engineering
     2023 Convention, October 18-20, Yeosu, Korea.
   scope: domestic
+  authors: Jeon, J., and J. Song
+  year: '2023'
+  details: October 18–20, Yeosu, Korea
+  directions:
+  - physics
 - title: Deep-Learning-Augmented Physics Models to Predict Nonlinear Dynamic Responses
     of Multi-Degree-of-Freedom Structures
   category: conferences
@@ -327,6 +486,11 @@
     International Conference on Applications of Statistics and Probability in Civil
     Engineering, July 9-13, Dublin, Ireland.
   scope: international
+  authors: Jeon, J., and J. Song
+  year: '2023'
+  details: July 9–13, Dublin, Ireland
+  directions:
+  - physics
 - title: Dynamic Response Prediction of Nonlinear MDOF Systems by Neural-Network-Augmented
     Physics Models
   category: conferences
@@ -337,6 +501,11 @@
     MDOF Systems by Neural-Network-Augmented Physics Models, Engineering Mechanics
     Institute Conference 2023, June 6-9, Atlanta, USA.
   scope: international
+  authors: Jeon, J., and J. Song
+  year: '2023'
+  details: June 6–9, Atlanta, USA
+  directions:
+  - physics
 - title: Physics-Informed Neural Network for Dynamic Responses of Structures Based
     on Monitoring Data
   category: conferences
@@ -347,6 +516,11 @@
     Responses of Structures Based on Monitoring Data, The 2022 World Congress on Advances
     in Civil, Environmental, & Materials Research, August 16-19, Seoul, Korea.
   scope: international
+  authors: Jeon, J., and J. Song
+  year: '2022'
+  details: August 16–19, Seoul, Korea
+  directions:
+  - physics
 - title: Prediction of Dynamic Responses of Structures Using Neural Network Augmented
     Physics Model
   category: conferences
@@ -356,6 +530,11 @@
     Using Neural Network Augmented Physics Model, Computational Structural Engineering
     Institute of Korea 2022 Annual Conference, April 13-15, Jeju, Korea.
   scope: domestic
+  authors: Jeon, J., and J. Song
+  year: '2022'
+  details: April 13–15, Jeju, Korea
+  directions:
+  - physics
 - title: Development of Artificial Neural Network to Estimate Nonlinear Damping Force
     Under Wind Loadings Using Acceleration and Force Data - Focusing on Small Damping
     Force Identification
@@ -369,6 +548,11 @@
     of Bridge and Structural Engineers 2021 Conference: Digital Twin Technology in
     Infrastructure, November 26, Virtual conference.'
   scope: domestic
+  authors: Jeon, J., and J. Song
+  year: '2021'
+  details: November 26, Virtual conference
+  directions:
+  - physics
 - title: Development of Artificial Neural Network to Estimate Damping Force Under
     Wind Loadings Using Acceleration and Force Data
   category: conferences
@@ -378,6 +562,11 @@
     to Estimate Damping Force Under Wind Loadings Using Acceleration and Force Data,
     Korean Society of Civil Engineers 2021 Convention, October 20-22, Gwangju, Korea.
   scope: domestic
+  authors: Jeon, J., and J. Song
+  year: '2021'
+  details: October 20–22, Gwangju, Korea
+  directions:
+  - physics
 - title: An automated framework for substation topology extraction and ice and wind
     fragility assessment using vision-language models
   category: inpreparation
@@ -385,9 +574,15 @@
   citation: Jeon, J., T. Kim*, J. E. Tate, and O. Kwon. An automated framework for
     substation topology extraction and ice and wind fragility assessment using vision-language
     models. (In preparation).
+  authors: Jeon, J., T. Kim*, J. E. Tate, and O. Kwon
+  directions:
+  - automation
 - title: Modal-basis spatio-temporal Fourier neural operator for virtual sensing of
     structural seismic responses
   category: inpreparation
   venue: In preparation
   citation: Jeon, J., and J. Kim*. Modal-basis spatio-temporal Fourier neural operator
     for virtual sensing of structural seismic responses. (In preparation).
+  authors: Jeon, J., and J. Kim*
+  directions:
+  - physics

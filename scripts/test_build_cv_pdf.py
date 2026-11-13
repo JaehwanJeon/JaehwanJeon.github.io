@@ -95,7 +95,7 @@ class CVGenerationTest(unittest.TestCase):
         self.assertEqual(titles[titles.index("Professional Experience") + 1], "Teaching Experience")
 
         teaching = data("teaching.yml")
-        self.assertEqual(len(teaching), 3)
+        self.assertEqual(len(teaching), 4)
         expected_teaching = [
             f"{escaped(t['term'])} & \\textbf{{{escaped(t['role'])}.}} {escaped(t['venue'])}"
             + "".join(f"\\newline \\hspace*{{1.5em}}-- {escaped(c)}" for c in t.get("courses", []))
@@ -104,15 +104,17 @@ class CVGenerationTest(unittest.TestCase):
 
         experience = section("Professional Experience")
         for t in teaching:
-            self.assertNotIn(escaped(t["venue"]), experience)
+            # a lecture venue can match a position's department, so check the whole teaching row
+            self.assertNotIn(f"\\textbf{{{escaped(t['role'])}.}} {escaped(t['venue'])}", experience)
             self.assertNotIn(escaped(t["role"]), experience)
             for course in t.get("courses", []):
                 self.assertNotIn(escaped(course), experience)
-            self.assertEqual(text.count(escaped(t["courses"][0])), 1)
+            # course lines are printed as "-- <course>"; a course name may also occur inside other titles
+            self.assertEqual(text.count("-- " + escaped(t["courses"][0])), 1)
 
-        cvmd = (ROOT / "_pages" / "cv.md").read_text()
-        work_md = re.split(r"\n[^\s*][^\n]*\n=+\n", cvmd.split("Work experience\n", 1)[1], maxsplit=1)[0]
-        work = re.findall(r"^\* (.+?):\s*(.+)\n\s+\* (.+)$", work_md, re.M)
+        # work experience comes from _data/positions.yml (shared with the home page)
+        work = [(p["dates"], p["title"], ", ".join(x for x in (p.get("unit"), p["institution"]) if x))
+                for p in data("positions.yml") if p["section"] == "work"]
         self.assertEqual(len(work), 2)
         extra = data("cv_extra.yml")["experience"]
         expected_experience = [

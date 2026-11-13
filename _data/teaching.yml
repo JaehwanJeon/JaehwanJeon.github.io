@@ -1,6 +1,16 @@
 # Teaching experience — single source of truth (newest first).
 # Rendered by _pages/teaching.html and the Teaching section of _pages/cv.md.
 # To add: copy a block, edit fields. `date` is used only for ordering.
+# Optional `upcoming: true` adds "(upcoming)" on the website; remove it once the lecture has taken place.
+
+- term: "December 2026"
+  date: 2026-12-01
+  role: "Guest Lecturer"
+  venue: "Department of Civil and Mineral Engineering, University of Toronto"
+  courses:
+    - "Structural Dynamics"
+    - "Lecture: Numerical Time Integration Methods for MDOF Systems"
+  upcoming: true
 
 - term: "September 30, 2026"
   date: 2026-09-30

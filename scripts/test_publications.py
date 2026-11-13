@@ -43,6 +43,14 @@ EXISTING_ORDER = [
 ]
 
 
+# keys bib2yaml.rb adds for the website only; the PDF CV ignores them
+WEBSITE_ONLY = {"authors", "year", "details", "directions", "selected", "code"}
+
+
+def cv_fields(entry):
+    return {k: v for k, v in entry.items() if k not in WEBSITE_ONLY}
+
+
 def load_yaml(path):
     result = subprocess.run([
         "ruby", "-ryaml", "-rdate", "-rjson", "-e",
@@ -81,11 +89,11 @@ class PublicationDataTest(unittest.TestCase):
             self.assertEqual(output.read_text(), (ROOT / "_data" / "publications.yml").read_text())
 
     def test_in_preparation_entries_are_exact_and_undated(self):
-        self.assertEqual([p for p in self.pubs if p["category"] == "inpreparation"], PREPARATION)
-        self.assertEqual(self.pubs[-len(PREPARATION):], PREPARATION)
+        self.assertEqual([cv_fields(p) for p in self.pubs if p["category"] == "inpreparation"], PREPARATION)
+        self.assertEqual([cv_fields(p) for p in self.pubs[-len(PREPARATION):]], PREPARATION)
 
     def test_llm_has_choo_third_author(self):
-        llm = [p for p in self.pubs if p["title"] == LLM_TITLE]
+        llm = [cv_fields(p) for p in self.pubs if p["title"] == LLM_TITLE]
         self.assertEqual(llm, [{
             "title": LLM_TITLE,
             "category": "underreview",
@@ -94,6 +102,16 @@ class PublicationDataTest(unittest.TestCase):
             "paperurl": "https://doi.org/10.48550/arXiv.2607.16580",
             "citation": f"Jeon, J., C. H. Lee, J. Choo, and T. Kim. {LLM_TITLE}. (Under review).",
         }])
+
+    def test_website_fields(self):
+        directions = {"physics", "uq", "automation"}
+        for p in self.pubs:
+            self.assertTrue(p.get("directions"), p["title"])
+            self.assertLessEqual(set(p["directions"]), directions, p["title"])
+            self.assertTrue(p.get("authors"), p["title"])
+        selected = sorted((p for p in self.pubs if "selected" in p), key=lambda p: p["selected"])
+        self.assertEqual([p["selected"] for p in selected], [1, 2, 3, 4])
+        self.assertEqual(selected[-1]["title"], LLM_TITLE)
 
     def test_existing_entries_keep_their_order(self):
         keys = bib_keys()

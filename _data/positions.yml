@@ -1,0 +1,53 @@
+# Positions and education — single source of truth (newest first).
+# Rendered by the home page (Positions and education), the Education and
+# Work experience sections of _pages/cv.md, and scripts/build_cv_pdf.rb.
+#
+# To add: copy a block and edit the fields.
+#   section     : education | work           (CV section)
+#   logo        : uoft | snu                 (logo on the home page; images/logos/logo-<logo>.png)
+#   title       : degree or position
+#   unit        : (optional) department or institute
+#   institution : university or organisation
+#   place       : (optional) city, country — printed in the CV education line
+#   dates       : dates exactly as printed in the CV
+#   period      : short dates for the home page
+#   note        : (optional) home page only, e.g. the advisor
+
+- section: work
+  logo: uoft
+  title: Postdoctoral Fellow
+  unit: Department of Civil and Mineral Engineering
+  institution: University of Toronto
+  dates: 2026.05–Present
+  period: 2026 – present
+
+- section: work
+  logo: snu
+  title: Postdoctoral Researcher
+  unit: Institute of Construction and Environmental Engineering
+  institution: Seoul National University
+  dates: 2026.03–2026.04
+  period: Mar – Apr 2026
+
+- section: education
+  logo: snu
+  title: M.S./Ph.D. in Civil and Environmental Engineering
+  institution: Seoul National University
+  dates: 2020.03 – 2026.02
+  period: 2020 – 2026
+  note: "Advisor: Prof. Junho Song"
+
+- section: education
+  logo: uoft
+  title: Visiting Graduate Student
+  institution: University of Toronto
+  place: Toronto, Canada
+  dates: September 1, 2022 – February 16, 2023
+  period: 2022 – 2023
+
+- section: education
+  logo: snu
+  title: B.S. in Civil and Environmental Engineering
+  institution: Seoul National University
+  dates: 2013.03 – 2020.02
+  period: 2013 – 2020

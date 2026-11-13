@@ -3,7 +3,8 @@
 # Layout mirrors the hand-made CV.pdf (sections A–K, J#/C-I#/C-D# numbering).
 #
 # Sources:
-#   _pages/cv.md            -> Education / Work experience / Honors (Selected)
+#   _data/positions.yml     -> Education / Work experience (also on the home page)
+#   _pages/cv.md            -> Honors (Selected)
 #   _data/publications.yml  -> dissertation, journals, under review, in preparation, conferences
 #   _data/talks.yml         -> invited talks & seminars
 #   _data/teaching.yml      -> guest lectures & TA terms (Teaching Experience)
@@ -23,6 +24,7 @@ pubs     = YAML.safe_load(File.read(File.join(ROOT, '_data', 'publications.yml')
 talks    = YAML.safe_load(File.read(File.join(ROOT, '_data', 'talks.yml')), permitted_classes: [Date]) || []
 teaching = YAML.safe_load(File.read(File.join(ROOT, '_data', 'teaching.yml')), permitted_classes: [Date]) || []
 cvmd     = File.read(File.join(ROOT, '_pages', 'cv.md'))
+positions = YAML.safe_load(File.read(File.join(ROOT, '_data', 'positions.yml')), permitted_classes: [Date]) || []
 
 # ---------------------------------------------------------------- helpers ---
 def esc(s)
@@ -84,16 +86,13 @@ lines.each_with_index do |line, i|
   end
 end
 
-education = sections.fetch('Education', []).grep(/\A\* /).map { |l| l.sub(/\A\* /, '') }
+# education: one line per entry, "Title, Institution, Place, Dates"
+education = positions.select { |p| p['section'] == 'education' }
+                     .map { |p| [p['title'], p['unit'], p['institution'], p['place'], p['dates']].compact.join(', ') }
 
-# work experience: "* 2026.05–Present: Postdoctoral Researcher" + indented org
-work = []
-sections.fetch('Work experience', []).each do |l|
-  if l =~ /\A\* (.+?):\s*(.+)\z/
-    work << { 'label' => Regexp.last_match(1), 'title' => Regexp.last_match(2), 'detail' => nil }
-  elsif l =~ /\A\s+\* (.+)\z/ && work.last
-    work.last['detail'] = [work.last['detail'], Regexp.last_match(1)].compact.join('; ')
-  end
+# work experience: CV dates as the label, "Unit, Institution" as the detail
+work = positions.select { |p| p['section'] == 'work' }.map do |p|
+  { 'label' => p['dates'], 'title' => p['title'], 'detail' => [p['unit'], p['institution']].compact.join(', ') }
 end
 
 # honors: "* **May 2026** — text"

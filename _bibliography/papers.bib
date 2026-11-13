@@ -13,6 +13,9 @@
 %   eventdate / address         -> conference dates / location
 %   doi or url                  -> becomes the title hyperlink (not in citation)
 %   scope = {international|domestic} -> conference section split in the PDF CV
+%   direction = {physics, uq, automation} -> research-direction filter on the Publications page
+%   selected = {N}              -> listed on the home page under Selected publications, in order N
+%   code = {url}                -> adds a [Code] link on the website
 
 % ===================== Ph.D. Dissertation =====================
 @phdthesis{jeon2026dissertation,
@@ -21,7 +24,8 @@
   school = {Seoul National University},
   year   = {2026},
   date   = {2026-02-01},
-  url    = {https://dcollection.snu.ac.kr/common/orgView/000000196702}
+  url    = {https://dcollection.snu.ac.kr/common/orgView/000000196702},
+  direction     = {physics, uq}
 }
 
 % ===================== Journal Articles =====================
@@ -32,7 +36,8 @@
   year          = {2026},
   date          = {2026-09-29},
   doi           = {10.1002/eqe.70298},
-  note          = {Published online September 29, 2026}
+  note          = {Published online September 29, 2026},
+  direction     = {physics}
 }
 
 @article{guo2026rubber,
@@ -43,7 +48,8 @@
   volume        = {367},
   articleno     = {123564},
   date          = {2026-08-14},
-  doi           = {10.1016/j.engstruct.2026.123564}
+  doi           = {10.1016/j.engstruct.2026.123564},
+  direction     = {physics}
 }
 
 @article{jeon2026ensemble,
@@ -56,7 +62,9 @@
   date          = {2026-03-13},
   doi           = {10.1016/j.strusafe.2026.102698},
   note          = {Ranked as most downloaded paper},
-  abstract      = {This study presents a new framework for decomposing predictive uncertainty in ensembles of Bayesian neural networks, systematically separating irreducible randomness from reducible model-form and data-induced uncertainties.}
+  abstract      = {This study presents a new framework for decomposing predictive uncertainty in ensembles of Bayesian neural networks, systematically separating irreducible randomness from reducible model-form and data-induced uncertainties.},
+  direction     = {uq},
+  selected      = {3}
 }
 
 @article{jeon2026unified,
@@ -70,7 +78,10 @@
   date          = {2026-01-01},
   doi           = {10.1002/eqe.70081},
   url           = {https://onlinelibrary.wiley.com/doi/full/10.1002/eqe.70081},
-  abstract      = {This paper proposes a unified hysteresis modeling framework based on deep learning, leveraging physics-encoded architecture and physics-informed loss functions to capture complex nonlinearities under stochastic excitations.}
+  abstract      = {This paper proposes a unified hysteresis modeling framework based on deep learning, leveraging physics-encoded architecture and physics-informed loss functions to capture complex nonlinearities under stochastic excitations.},
+  direction     = {physics},
+  selected      = {2},
+  code          = {https://github.com/JaehwanJeon/Testing_torch}
 }
 
 @article{jeon2025nnaugmented,
@@ -83,7 +94,9 @@
   date          = {2025-01-01},
   doi           = {10.1061/JENMDT.EMENG-7845},
   note          = {Ranked as most read & most cited paper},
-  abstract      = {This paper develops a neural network-augmented physics model for MDOF systems under response-dependent forces using modal truncation.}
+  abstract      = {This paper develops a neural network-augmented physics model for MDOF systems under response-dependent forces using modal truncation.},
+  direction     = {physics},
+  selected      = {1}
 }
 
 % ===================== Under Review =====================
@@ -94,7 +107,8 @@
   corresponding = {Song},
   year          = {2026},
   date          = {2026-10-01},
-  note          = {Under review}
+  note          = {Under review},
+  direction     = {physics, uq}
 }
 
 @unpublished{jeon2026llm,
@@ -103,7 +117,9 @@
   year   = {2026},
   date   = {2026-07-17},
   doi    = {10.48550/arXiv.2607.16580},
-  note   = {Under review}
+  note   = {Under review},
+  direction     = {automation},
+  selected      = {4}
 }
 
 % ===================== Manuscripts in Preparation =====================
@@ -112,14 +128,16 @@
   author        = {Jeon, Jaehwan and Kim, Taeyong and Tate, Joseph Euzebe and Kwon, Oh-Sung},
   title         = {An automated framework for substation topology extraction and ice and wind fragility assessment using vision-language models},
   corresponding = {Kim},
-  note          = {In preparation}
+  note          = {In preparation},
+  direction     = {automation}
 }
 
 @unpublished{jeon2026modalfno,
   author        = {Jeon, Jaehwan and Kim, Jungho},
   title         = {Modal-basis spatio-temporal Fourier neural operator for virtual sensing of structural seismic responses},
   corresponding = {Kim},
-  note          = {In preparation}
+  note          = {In preparation},
+  direction     = {physics}
 }
 
 % ===================== Conference Papers =====================
@@ -132,7 +150,8 @@
   address   = {Incheon, Korea},
   date      = {2026-09-17},
   presentation = {Extended Abstract},
-  scope     = {international}
+  scope     = {international},
+  direction     = {physics}
 }
 
 @inproceedings{park2026iabsesindy,
@@ -144,7 +163,8 @@
   address   = {Incheon, Korea},
   date      = {2026-09-17},
   presentation = {Extended Abstract},
-  scope     = {international}
+  scope     = {international},
+  direction     = {physics}
 }
 
 @inproceedings{park2026ancrisst,
@@ -155,7 +175,8 @@
   eventdate    = {July 24-25},
   address      = {Turin, Italy},
   date         = {2026-07-24},
-  scope        = {international}
+  scope        = {international},
+  direction     = {uq}
 }
 
 @inproceedings{park2026isrerm,
@@ -166,7 +187,8 @@
   eventdate = {June 28-July 1},
   address   = {Sapporo, Japan},
   date      = {2026-06-28},
-  scope     = {international}
+  scope     = {international},
+  direction     = {uq}
 }
 
 @inproceedings{joo2026isrerm,
@@ -177,7 +199,8 @@
   eventdate = {June 28-July 1},
   address   = {Sapporo, Japan},
   date      = {2026-06-28},
-  scope     = {international}
+  scope     = {international},
+  direction     = {uq}
 }
 
 @inproceedings{park2026emi,
@@ -189,7 +212,8 @@
   address      = {Boulder, USA},
   date         = {2026-06-02},
   presentation = {Extended Abstract},
-  scope     = {international}
+  scope     = {international},
+  direction     = {uq}
 }
 
 @inproceedings{joo2026emi,
@@ -202,7 +226,8 @@
   date         = {2026-06-02},
   presentation = {Extended Abstract},
   note         = {Selected as EMI 2026 PMC student competition finalist},
-  scope     = {international}
+  scope     = {international},
+  direction     = {uq}
 }
 
 @inproceedings{joo2026kns,
@@ -214,7 +239,8 @@
   address   = {Jeju, Korea},
   date      = {2026-05-07},
   note      = {KNS Spring Meeting Best Paper Award},
-  scope     = {domestic}
+  scope     = {domestic},
+  direction     = {physics}
 }
 
 @inproceedings{jeon2025coseik,
@@ -226,7 +252,8 @@
   address      = {Daejeon, Korea},
   date         = {2025-11-28},
   note         = {COSEIK Best Paper Presentation Award},
-  scope     = {domestic}
+  scope     = {domestic},
+  direction     = {uq}
 }
 
 @inproceedings{joo2025coseik,
@@ -237,7 +264,8 @@
   eventdate = {November 28-29},
   address   = {Daejeon, Korea},
   date      = {2025-11-28},
-  scope     = {domestic}
+  scope     = {domestic},
+  direction     = {physics}
 }
 
 @inproceedings{jeon2025cecar,
@@ -248,7 +276,8 @@
   eventdate = {October 21-24},
   address   = {Jeju, Korea},
   date      = {2025-10-21},
-  scope     = {international}
+  scope     = {international},
+  direction     = {uq}
 }
 
 @inproceedings{joo2025cecar,
@@ -259,7 +288,8 @@
   eventdate = {October 21-24},
   address   = {Jeju, Korea},
   date      = {2025-10-21},
-  scope     = {international}
+  scope     = {international},
+  direction     = {physics}
 }
 
 @inproceedings{joo2025kepic,
@@ -270,7 +300,8 @@
   eventdate = {August 11-14},
   address   = {Busan, Korea},
   date      = {2025-08-11},
-  scope     = {domestic}
+  scope     = {domestic},
+  direction     = {physics}
 }
 
 @inproceedings{joo2025icossar,
@@ -281,7 +312,8 @@
   eventdate = {June 1-6},
   address   = {Los Angeles, USA},
   date      = {2025-06-02},
-  scope     = {international}
+  scope     = {international},
+  direction     = {physics}
 }
 
 @inproceedings{jeon2025icossar,
@@ -294,7 +326,8 @@
   date         = {2025-06-01},
   presentation = {Extended Abstract},
   note         = {Selected as ICOSSAR 2025 student competition finalist},
-  scope     = {international}
+  scope     = {international},
+  direction     = {uq}
 }
 
 @inproceedings{jeon2025emi,
@@ -306,7 +339,8 @@
   address      = {Anaheim, USA},
   date         = {2025-05-27},
   presentation = {Extended Abstract},
-  scope     = {international}
+  scope     = {international},
+  direction     = {uq}
 }
 
 @inproceedings{jeon2024ksce,
@@ -318,7 +352,8 @@
   address      = {Jeju, Korea},
   date         = {2024-10-16},
   note         = {KSCE Convention Best Paper Award},
-  scope     = {domestic}
+  scope     = {domestic},
+  direction     = {uq}
 }
 
 @inproceedings{jeon2024apssra,
@@ -329,7 +364,8 @@
   eventdate = {September 29-October 2},
   address   = {Ulsan, Korea},
   date      = {2024-09-29},
-  scope     = {international}
+  scope     = {international},
+  direction     = {uq}
 }
 
 @inproceedings{jeon2024wcee,
@@ -341,7 +377,8 @@
   address      = {Milan, Italy},
   date         = {2024-06-30},
   presentation = {Extended Abstract},
-  scope     = {international}
+  scope     = {international},
+  direction     = {physics}
 }
 
 @inproceedings{jeon2024eccomas,
@@ -352,7 +389,8 @@
   eventdate = {June 3-7},
   address   = {Lisbon, Portugal},
   date      = {2024-06-03},
-  scope     = {international}
+  scope     = {international},
+  direction     = {uq}
 }
 
 @inproceedings{jeon2024emipmc,
@@ -365,7 +403,8 @@
   date         = {2024-05-28},
   presentation = {Extended Abstract},
   note         = {Selected as EMI/PMC 2024 student competition finalist},
-  scope     = {international}
+  scope     = {international},
+  direction     = {physics, uq}
 }
 
 @inproceedings{jeon2024smirt,
@@ -377,7 +416,8 @@
   address      = {Yokohama, Japan},
   date         = {2024-03-03},
   presentation = {Extended Abstract},
-  scope     = {international}
+  scope     = {international},
+  direction     = {physics}
 }
 
 @inproceedings{jeon2023ksce,
@@ -388,7 +428,8 @@
   eventdate = {October 18-20},
   address   = {Yeosu, Korea},
   date      = {2023-10-18},
-  scope     = {domestic}
+  scope     = {domestic},
+  direction     = {physics}
 }
 
 @inproceedings{jeon2023icasp,
@@ -400,7 +441,8 @@
   address      = {Dublin, Ireland},
   date         = {2023-07-09},
   presentation = {Extended Abstract},
-  scope     = {international}
+  scope     = {international},
+  direction     = {physics}
 }
 
 @inproceedings{jeon2023emi,
@@ -412,7 +454,8 @@
   address      = {Atlanta, USA},
   date         = {2023-06-06},
   presentation = {Extended Abstract},
-  scope     = {international}
+  scope     = {international},
+  direction     = {physics}
 }
 
 @inproceedings{jeon2022wcacem,
@@ -423,7 +466,8 @@
   eventdate = {August 16-19},
   address   = {Seoul, Korea},
   date      = {2022-08-16},
-  scope     = {international}
+  scope     = {international},
+  direction     = {physics}
 }
 
 @inproceedings{jeon2022coseik,
@@ -434,7 +478,8 @@
   eventdate = {April 13-15},
   address   = {Jeju, Korea},
   date      = {2022-04-13},
-  scope     = {domestic}
+  scope     = {domestic},
+  direction     = {physics}
 }
 
 @inproceedings{jeon2021kibse,
@@ -445,7 +490,8 @@
   eventdate = {November 26},
   address   = {Virtual conference},
   date      = {2021-11-26},
-  scope     = {domestic}
+  scope     = {domestic},
+  direction     = {physics}
 }
 
 @inproceedings{jeon2021ksce,
@@ -456,5 +502,6 @@
   eventdate = {October 20-22},
   address   = {Gwangju, Korea},
   date      = {2021-10-20},
-  scope     = {domestic}
+  scope     = {domestic},
+  direction     = {physics}
 }

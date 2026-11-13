@@ -1,0 +1,21 @@
+# Research mentoring — rendered by the Mentoring section of _pages/teaching.html (website only; not in the PDF CV).
+# To add a student: copy a block and edit the fields. Items may use Markdown (*italics*).
+
+intro: "Research mentoring of graduate students at Seoul National University as co-advisor with Prof. Junho Song (ongoing): weekly meetings, research topic setting, code review and manuscript review."
+
+students:
+  - name: Jongha Joo
+    program: Integrated M.S./Ph.D. student
+    since: 2024
+    items:
+      - "Topic: physics-based Transformer for structural hysteresis and its uncertainty"
+      - "First-author paper in *Earthquake Engineering & Structural Dynamics*; one more under review"
+      - "7 conference papers, including ICOSSAR’25, CECAR’25, COSEIK’25, EMI’26 and ISRERM’26"
+
+  - name: Soyeon Park
+    program: Ph.D. student
+    since: 2025
+    items:
+      - "Topic: interpretable hysteretic force reconstruction with SINDy and ensemble-based UQ"
+      - "First-author journal paper in preparation"
+      - "4 conference papers in 2026: IABSE Congress, ANCRiSST, ISRERM and EMI"

@@ -40,6 +40,22 @@ def format_authors(raw, corresponding)
   formatted[0..-2].join(', ') + ', and ' + formatted[-1]
 end
 
+# Website-only volume/pages or conference date/place string, e.g. "55(2), 379–396" or
+# "June 1–6, Los Angeles, USA". Not used by the PDF CV build.
+def web_details(cat, f)
+  dash = ->(s) { tex(s).gsub(/(\d)-(?=\w)/) { "#{Regexp.last_match(1)}–" } }
+  case cat
+  when 'manuscripts'
+    return nil unless f['volume']
+    vol = f['volume'] + (f['number'] ? "(#{f['number']})" : '')
+    pg = f['pages'] || f['articleno']
+    [vol, pg && dash.(pg)].compact.join(', ')
+  when 'conferences'
+    parts = [f['eventdate'], f['address']].compact.map { |x| dash.(x) }
+    parts.empty? ? nil : parts.join(', ')
+  end
+end
+
 entries = parse_bib(File.read(BIB)).map do |e|
   f = e['fields']
   cat = TYPE_TO_CATEGORY[e['type']] || 'manuscripts'
@@ -85,7 +101,13 @@ entries = parse_bib(File.read(BIB)).map do |e|
     'excerpt' => (cat == 'manuscripts' ? tex(f['abstract']) : nil),
     'paperurl' => paperurl, 'citation' => citation,
     # international | domestic — used by scripts/build_cv_pdf.rb to split conference sections
-    'scope' => f['scope']
+    'scope' => f['scope'],
+    # website-only fields (the PDF CV build ignores them)
+    'authors' => authors, 'year' => year,
+    'details' => web_details(cat, f),
+    'directions' => (f['direction'] ? f['direction'].split(/\s*,\s*/) : nil),
+    'selected' => (f['selected'] ? f['selected'].to_i : nil),
+    'code' => f['code']
   }.compact
 end
 

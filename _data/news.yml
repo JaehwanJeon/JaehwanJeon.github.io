@@ -1,0 +1,36 @@
+# News on the home page — newest first; the home page shows the first 6.
+# To add: copy a block to the top and edit it.
+#   date  : YYYY-MM or YYYY-MM-DD (shown as "Oct 2026")
+#   label : short tag shown in brackets
+#   icon  : talk | paper | briefcase | cap
+#   text  : one line; Markdown allowed (links, *italics*)
+
+- date: 2026-10-01
+  label: Seminars
+  icon: talk
+  text: "[Research talks at Yonsei University and Seoul National University](/posts/2026/10/korea-seminars/)"
+
+- date: 2026-09-29
+  label: New paper
+  icon: paper
+  text: "[Physics-based encoder-only Transformer for structural hysteresis prediction and dynamic analysis](https://doi.org/10.1002/eqe.70298), led by Jongha Joo, in *Earthquake Engineering & Structural Dynamics*"
+
+- date: 2026-08-11
+  label: Talk
+  icon: talk
+  text: "Multi-agent LLM framework for structural reliability analysis, presented at the Future of the Building Industry Workshop, University of Nebraska–Lincoln"
+
+- date: 2026-05-01
+  label: Appointment
+  icon: briefcase
+  text: "[Joined the University of Toronto as a Postdoctoral Fellow](/posts/2026/05/postdoc-uoft/)"
+
+- date: 2026-03-13
+  label: New paper
+  icon: paper
+  text: "[Ensemble-based uncertainty quantification and decomposition of probabilistic surrogate models](/posts/2026/03/strusafe-ensemble-uq/), in *Structural Safety*"
+
+- date: 2026-02-01
+  label: Degree
+  icon: cap
+  text: "Ph.D. in Civil and Environmental Engineering, Seoul National University"
