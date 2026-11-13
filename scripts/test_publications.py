@@ -137,18 +137,24 @@ class CVPreparationSectionTest(unittest.TestCase):
         def subsection(name):
             return text.split(r"\subsection{" + name + "}", 1)[1].split("\\end{publist}", 1)[0]
 
+        # since 524ce4a the CV splits journal work into published articles and manuscripts under review
         titles = re.findall(r"\\subsection\{([^}]+)\}", text)
-        self.assertEqual(titles[titles.index("Journal Publications") + 1], "Manuscripts in Preparation")
+        self.assertEqual(titles[titles.index("Published Journal Articles") + 1], "Manuscripts under Review")
+        self.assertEqual(titles[titles.index("Manuscripts under Review") + 1], "Manuscripts in Preparation")
         self.assertEqual(titles[titles.index("Manuscripts in Preparation") + 1], "Conferences (International)")
 
         rows = re.findall(r"^(.+?) \\\\\[3pt\]$", subsection("Manuscripts in Preparation"), re.M)
         self.assertEqual(rows, [f"P{i}. & {escaped(p['citation'])}" for i, p in enumerate(PREPARATION, 1)])
 
-        journals = subsection("Journal Publications")
+        journals = subsection("Published Journal Articles")
+        review = subsection("Manuscripts under Review")
         for p in PREPARATION:
             self.assertNotIn(escaped(p["title"]), journals)
+            self.assertNotIn(escaped(p["title"]), review)
             self.assertEqual(text.count(escaped(p["title"])), 1)
-        self.assertIn(escaped(f"Jeon, J., C. H. Lee, J. Choo, and T. Kim. {LLM_TITLE}. (Under review)."), journals)
+        llm = escaped(f"Jeon, J., C. H. Lee, J. Choo, and T. Kim. {LLM_TITLE}. (Under review).")
+        self.assertIn(llm, review)
+        self.assertNotIn(llm, journals)
 
 
 if __name__ == "__main__":
