@@ -46,6 +46,9 @@
 
 * { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; }
+/* On wide windows the whole page scales up, like zooming in: every size is in rem.
+   100% up to 1100px wide, about 125% at 1440px, at most 137.5% (from 1600px). Percentages keep the reader's own text size setting. */
+@media (min-width: 68.75em) { html { font-size: clamp(100%, calc(100% + (100vw - 68.75em) * 0.012), 137.5%); } }
 body {
   margin: 0; background: var(--bg); color: var(--text);
   font-family: var(--font-body); font-size: var(--body-size); line-height: var(--lh);
@@ -95,7 +98,7 @@ h3 { font-family: var(--font-head); font-weight: var(--h3-weight); font-size: 1.
 .nav a[aria-current="page"] { text-decoration: underline; text-decoration-color: var(--accent); text-decoration-thickness: 2px; text-underline-offset: 0.4em; }
 .theme-btn { width: 2rem; height: 2rem; display: inline-grid; place-items: center; border: 0; background: transparent; color: var(--muted); cursor: pointer; padding: 0; }
 .theme-btn:hover { color: var(--heading); }
-.theme-btn svg { width: 17px; height: 17px; }
+.theme-btn svg { width: 1.0625rem; height: 1.0625rem; }
 
 main { padding-block: 2.75rem 3.5rem; }
 main > div > :first-child { margin-top: 0; }
@@ -162,13 +165,13 @@ td.num { font-variant-numeric: tabular-nums; }
 @media (max-width: 36rem) { .head-logo { height: 2.25rem; } }
 .aside { float: right; width: 34%; max-width: 12rem; margin: 0.3rem 0 1rem 1.75rem; }
 .aside .portrait { float: none; width: 100%; max-width: none; margin: 0; }
-.icon-row { list-style: none; padding: 0; margin: 0.6rem 0 0; display: grid; grid-template-columns: repeat(6, 28px); justify-content: space-between; gap: 0.25rem 0; }
-@media (max-width: 36rem) { .icon-row { grid-template-columns: repeat(3, 28px); } }
+.icon-row { list-style: none; padding: 0; margin: 0.6rem 0 0; display: grid; grid-template-columns: repeat(6, 1.75rem); justify-content: space-between; gap: 0.25rem 0; }
+@media (max-width: 36rem) { .icon-row { grid-template-columns: repeat(3, 1.75rem); } }
 .icon-row li { margin: 0; }
-.icon-row a { color: var(--muted); display: inline-grid; place-items: center; width: 28px; height: 28px; text-decoration: none; }
+.icon-row a { color: var(--muted); display: inline-grid; place-items: center; width: 1.75rem; height: 1.75rem; text-decoration: none; }
 .status:empty { min-height: 0; margin: 0; }
 .icon-row a:hover { color: var(--accent); }
-.icon-row .icon { width: 19px; height: 19px; }
+.icon-row .icon { width: 1.1875rem; height: 1.1875rem; }
 .directions { list-style: none; padding-left: 0; }
 .directions li { display: grid; grid-template-columns: 1.75rem minmax(0, 1fr); gap: 0 0.4rem; }
 .directions .icon { color: var(--accent); width: 1.25rem; height: 1.25rem; margin-top: 0.28rem; }
