@@ -1,0 +1,75 @@
+---
+permalink: /
+title: "Jaehwan Jeon, PhD"
+layout: jj
+description: "Jaehwan Jeon, Ph.D. — Postdoctoral Fellow, University of Toronto. Physics-informed AI, uncertainty quantification, and analysis automation for structural engineering."
+redirect_from:
+  - /about/
+  - /about.html
+---
+{% include base_path %}
+{% comment %}
+  Data-driven sections: Selected publications (papers.bib `selected`), News (_data/news.yml),
+  Positions and education (_data/positions.yml). The text above them is written here.
+{% endcomment %}
+  <div class="intro">
+    <h1>From efficient structural analysis to trustworthy and autonomous structural engineering</h1>
+    <div class="aside">
+      <img class="portrait" src="{{ base_path }}/images/profile.jpg" alt="Portrait of Jaehwan Jeon" width="413" height="531">
+      <ul class="icon-row" aria-label="Profiles">
+        <li><a href="{{ base_path }}/files/CV.pdf" rel="noopener" aria-label="Curriculum vitae (PDF)" title="CV (PDF)"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-pdf"></use></svg></a></li>
+        <li><a href="https://scholar.google.com/citations?user=WHwGlwEAAAAJ&amp;hl=en" rel="noopener" aria-label="Google Scholar" title="Google Scholar"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-scholar"></use></svg></a></li>
+        <li><a href="https://orcid.org/0000-0003-3293-4986" rel="noopener" aria-label="ORCID" title="ORCID"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-orcid"></use></svg></a></li>
+        <li><a href="https://www.scopus.com/authid/detail.uri?authorId=59396565800" rel="noopener" aria-label="Scopus" title="Scopus"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-scopus"></use></svg></a></li>
+        <li><a href="https://github.com/JaehwanJeon" rel="noopener" aria-label="GitHub" title="GitHub"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-github"></use></svg></a></li>
+        <li><a href="https://www.linkedin.com/in/jaehwan-jeon-138b461b0" rel="noopener" aria-label="LinkedIn" title="LinkedIn"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-linkedin"></use></svg></a></li>
+      </ul>
+    </div>
+    <p>I am a Postdoctoral Fellow in the Department of Civil and Mineral Engineering at the University of Toronto. I received my Ph.D. in Civil and Environmental Engineering from Seoul National University in 2026, advised by Prof.&nbsp;Junho Song.</p>
+    <p>Structures are never crash-tested. A building is built once, and people move in the next day, so its safety exists only as a prediction. My research makes that prediction fast and trustworthy, in three directions:</p>
+    <ul class="directions">
+      <li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-atom"></use></svg><span><b>Physics-informed AI</b>: building mechanics into deep learning so that response predictions are fast and constrained by physics.</span></li>
+      <li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-sigma"></use></svg><span><b>Uncertainty quantification</b>: measuring how much each prediction can be trusted, and separating what more data or better models can reduce.</span></li>
+      <li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-workflow"></use></svg><span><b>Analysis automation</b>: LLM agents that choose a model, run validated solvers, and check the result.</span></li>
+    </ul>
+    <p><a href="{{ base_path }}/research/">More about my research</a></p>
+  </div>
+
+  <h2>Selected publications</h2>
+  <ul class="plain">
+    {% assign selected = site.data.publications | where_exp: "p", "p.selected" | sort: "selected" %}{% for p in selected %}{% include jj/pub.html p=p %}{% endfor %}
+  </ul>
+  <p><a href="{{ base_path }}/publications/">All publications</a></p>
+
+  <h2>News</h2>
+  <ul class="plain news">
+    {% for n in site.data.news limit: 6 %}
+    <li><time datetime="{{ n.date | date: '%Y-%m-%d' }}">{{ n.date | date: "%b %Y" }}</time><span><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-{{ n.icon | default: 'paper' }}"></use></svg>[{{ n.label }}] {{ n.text | markdownify | remove: "<p>" | remove: "</p>" | strip }}</span></li>{% endfor %}
+  </ul>
+  <p><a href="{{ base_path }}/year-archive/">All posts</a></p>
+
+  <h2>Positions and education</h2>
+  <ul class="affil">
+    {% for e in site.data.positions %}
+    <li>
+      {% if e.logo == "snu" %}<img class="logo wordmark" src="{{ base_path }}/images/logos/logo-snu.png" alt="Seoul National University" width="250" height="64" loading="lazy">{% else %}<img class="logo" src="{{ base_path }}/images/logos/logo-uoft.png" alt="University of Toronto" width="960" height="360" loading="lazy">{% endif %}
+      <ul>
+        <li><span class="when">{{ e.period }}</span><span class="what">{{ e.title }}</span>{% if e.unit %}, {{ e.unit }}{% endif %}{% if e.note %}. {{ e.note | replace: "Prof. ", "Prof.&nbsp;" }}{% endif %}</li>
+      </ul>
+    </li>{% endfor %}
+  </ul>
+
+  <h2>Contact</h2>
+  <ul class="contact-list">
+    <li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-location"></use></svg><span>Department of Civil and Mineral Engineering, University of Toronto, Toronto, Canada</span></li>
+    <li><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-envelope"></use></svg><span><span id="email">jaehwan.jeon@utoronto.ca</span><button class="btn-text" type="button" id="copy-email">Copy</button></span></li>
+  </ul>
+  <p class="status" id="copy-status" role="status" aria-live="polite"></p>
+  <ul class="inline-links" aria-label="Profiles">
+    <li><a href="{{ base_path }}/files/CV.pdf" rel="noopener"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-pdf"></use></svg>CV</a></li>
+    <li><a href="https://scholar.google.com/citations?user=WHwGlwEAAAAJ&amp;hl=en" rel="noopener"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-scholar"></use></svg>Google Scholar</a></li>
+    <li><a href="https://orcid.org/0000-0003-3293-4986" rel="noopener"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-orcid"></use></svg>ORCID</a></li>
+    <li><a href="https://www.scopus.com/authid/detail.uri?authorId=59396565800" rel="noopener"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-scopus"></use></svg>Scopus</a></li>
+    <li><a href="https://github.com/JaehwanJeon" rel="noopener"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-github"></use></svg>GitHub</a></li>
+    <li><a href="https://www.linkedin.com/in/jaehwan-jeon-138b461b0" rel="noopener"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-linkedin"></use></svg>LinkedIn</a></li>
+  </ul>

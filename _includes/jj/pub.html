@@ -1,0 +1,5 @@
+{% comment %}
+  One publication from _data/publications.yml (generated from _bibliography/papers.bib).
+  include.p : the entry.  The author's own name is bolded; data-p carries the research directions for the filter.
+{% endcomment %}{% assign p = include.p %}{% assign authors = p.authors | default: "" | replace: "Jeon, J.", "<b>Jeon, J.</b>" | replace: "J. Jeon", "<b>J. Jeon</b>" %}
+<li class="cite" data-p="{{ p.directions | join: ' ' }}">{{ authors }}{% if p.year and p.category != "underreview" and p.category != "inpreparation" %} ({{ p.year }}){% endif %}. {% if p.paperurl %}<a href="{{ p.paperurl }}" rel="noopener">{{ p.title }}</a>{% else %}{{ p.title }}{% endif %}. {% case p.category %}{% when "underreview" %}Under review.{% when "inpreparation" %}In preparation.{% when "thesis" %}Doctoral dissertation, <i>{{ p.venue }}</i>.{% else %}<i>{{ p.venue }}</i>{% if p.details %}, {{ p.details }}{% endif %}.{% endcase %}{% if p.code %} <a href="{{ p.code }}" rel="noopener">[Code]</a>{% endif %}{% if p.paperurl contains "arXiv" %} <span class="note">[Preprint]</span>{% endif %}{% if p.note %} <span class="note">[{{ p.note }}]</span>{% endif %}</li>

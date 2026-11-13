@@ -1,0 +1,64 @@
+---
+# 2026 redesign: one quiet column, PT Serif headings over Ubuntu text, WCAG 2.2 AA.
+# Pages set `layout: jj`; posts use `jj-post`. Styles: assets/css/jj.css, script: assets/js/jj.js.
+---
+{% include base_path %}<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+{% include seo.html %}
+<link rel="alternate" type="application/atom+xml" href="{{ base_path }}/feed.xml" title="{{ site.title }} Feed">
+<script>try { if (localStorage.getItem("jj-theme") === "dark") document.documentElement.setAttribute("data-theme", "dark"); } catch (e) {}</script>
+<link rel="preload" href="{{ base_path }}/assets/fonts/jj/ubuntu-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="{{ base_path }}/assets/fonts/jj/ptserif-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="{{ base_path }}/assets/css/jj.css">
+<link rel="apple-touch-icon" sizes="180x180" href="{{ base_path }}/images/apple-touch-icon-180x180.png">
+<link rel="icon" type="image/svg+xml" href="{{ base_path }}/images/favicon.svg">
+<link rel="icon" type="image/png" href="{{ base_path }}/images/favicon-32x32.png" sizes="32x32">
+<link rel="manifest" href="{{ base_path }}/images/manifest.json">
+<meta name="theme-color" content="#ffffff">
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+{% include jj/icons.html %}
+<header class="masthead">
+  <div class="container">
+    <div class="head-row">
+      <a class="site-title" href="{{ base_path }}/">Jaehwan Jeon</a>
+      <img class="head-logo" src="{{ base_path }}/images/logos/logo-uoft.png" alt="University of Toronto" width="960" height="360">
+    </div>
+    <div class="subhead">
+      <p class="site-description">Postdoctoral Fellow, Civil and Mineral Engineering, University of Toronto</p>
+      <div class="navwrap">
+        <nav class="nav" aria-label="Main">
+          <ul>
+            {% for item in site.data.navigation.jj %}{% assign current = false %}{% if page.url == item.url %}{% assign current = true %}{% elsif item.url == "/research/" and page.url contains "/research/" %}{% assign current = true %}{% endif %}
+            <li><a href="{{ base_path }}{{ item.url }}"{% if current %} aria-current="page"{% endif %}>{{ item.title }}</a></li>{% endfor %}
+          </ul>
+        </nav>
+        <button class="theme-btn" id="theme-btn" type="button" aria-label="Use dark theme">
+          <svg id="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+          <svg id="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" hidden><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+<div class="container{% if page.body_class %} {{ page.body_class }}{% endif %}">
+{{ content }}
+</div>
+</main>
+
+<footer class="foot">
+  <div class="container">
+    <p>© {{ site.time | date: "%Y" }} Jaehwan Jeon</p>
+    <p>Last updated {{ site.time | date: "%B %Y" }}</p>
+  </div>
+</footer>
+<script src="{{ base_path }}/assets/js/jj.js"></script>
+{% include analytics.html %}
+</body>
+</html>

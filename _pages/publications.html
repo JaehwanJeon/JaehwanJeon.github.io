@@ -1,40 +1,39 @@
 ---
-layout: archive
+layout: jj
 title: "Publications"
 permalink: /publications/
-author_profile: true
 ---
-
-{% if site.author.googlescholar %}
-  <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
-{% endif %}
-
 {% include base_path %}
-
-<!--
-  Publications are a single source of truth in _data/publications.yml
-  (one file, not one .md per paper). This page only renders it.
-  Grouped by site.publication_category; each paper's long citation + links
-  are tucked into a collapsible <details> so the list stays scannable.
--->
-{% for category in site.publication_category %}
-  {% assign pubs = site.data.publications | where: "category", category[0] %}
-  {% if pubs.size > 0 %}
-    <h2>{{ category[1].title }}</h2><hr />
-    <ol class="pub-list" reversed start="{{ pubs | size }}">
-      {% for p in pubs %}
-        <li class="pub-item">
-          {% assign cit = p.citation %}
-          {% if p.paperurl %}{% capture _tl %}<a href="{{ p.paperurl }}">{{ p.title }}</a>{% endcapture %}{% assign cit = p.citation | replace: p.title, _tl %}{% endif %}
-          <p class="pub-cite">{{ cit }}{% if p.note %} — <span style="text-decoration:underline;font-weight:700;">{{ p.note }}</span>{% endif %}</p>
-          {% if p.presentation %}
-            <p class="pub-presentation" style="color:#888;font-size:0.9em;margin:0.2em 0;"><em>({{ p.presentation }})</em></p>
-          {% endif %}
-          {% if p.excerpt %}
-            <p class="pub-excerpt">{{ p.excerpt }}</p>
-          {% endif %}
-        </li>
-      {% endfor %}
+{% comment %}
+  Rendered from _data/publications.yml, which scripts/bib2yaml.rb generates from _bibliography/papers.bib.
+  The filter uses each entry's `directions` (bib field `direction`); without JavaScript the full list shows.
+{% endcomment %}
+<h1>Publications</h1>
+<ul class="inline-links" aria-label="Publication profiles">
+  <li><a href="https://scholar.google.com/citations?user=WHwGlwEAAAAJ&amp;hl=en" rel="noopener"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-scholar"></use></svg>Google Scholar</a></li>
+  <li><a href="https://orcid.org/0000-0003-3293-4986" rel="noopener"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-orcid"></use></svg>ORCID</a></li>
+  <li><a href="https://www.scopus.com/authid/detail.uri?authorId=59396565800" rel="noopener"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-scopus"></use></svg>Scopus</a></li>
+</ul>
+<div class="filters" role="group" aria-label="Filter by research direction" id="filters" hidden>
+  <span aria-hidden="true">Show:</span>
+  <button type="button" class="filter" data-f="all" aria-pressed="true">All</button>
+  <button type="button" class="filter" data-f="physics" aria-pressed="false">Physics-informed AI</button>
+  <button type="button" class="filter" data-f="uq" aria-pressed="false">Uncertainty quantification</button>
+  <button type="button" class="filter" data-f="automation" aria-pressed="false">Analysis automation</button>
+</div>
+<p class="status" id="pub-status" role="status" aria-live="polite"></p>
+<p class="muted small">An asterisk (*) marks the corresponding author.</p>
+<div id="pub-groups">
+{% assign groups = "manuscripts|Journal articles;underreview|Under review;inpreparation|In preparation;thesis|Dissertation;international|Conference papers: international;domestic|Conference papers: domestic" | split: ";" %}
+{% for g in groups %}{% assign kv = g | split: "|" %}
+  {% if kv[0] == "international" or kv[0] == "domestic" %}{% assign items = site.data.publications | where: "category", "conferences" | where: "scope", kv[0] %}{% else %}{% assign items = site.data.publications | where: "category", kv[0] %}{% endif %}
+  {% if items.size > 0 %}
+  <section data-group="{{ kv[0] }}" aria-labelledby="g-{{ kv[0] }}">
+    <h2 id="g-{{ kv[0] }}">{{ kv[1] }}</h2>
+    <ol class="publist" reversed>
+      {% for p in items %}{% include jj/pub.html p=p %}{% endfor %}
     </ol>
+  </section>
   {% endif %}
 {% endfor %}
+</div>

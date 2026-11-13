@@ -1,5 +1,6 @@
 ---
-layout: archive
+layout: jj
+body_class: cv-page
 title: "CV"
 permalink: /cv/
 author_profile: true
@@ -9,20 +10,20 @@ redirect_from:
 
 {% include base_path %}
 
+<h1>CV</h1>
+<p><a href="{{ base_path }}/files/CV.pdf">Download the CV as a PDF</a></p>
+
+{% comment %} Education and Work experience come from _data/positions.yml (shared with the home page and the PDF CV). {% endcomment %}
 Education
 ======
-* M.S./Ph.D. in Civil and Environmental Engineering, Seoul National University, 2020.03 – 2026.02
-* Visiting Graduate Student, University of Toronto, Toronto, Canada, September 1, 2022 – February 16, 2023
-* B.S. in Civil and Environmental Engineering, Seoul National University, 2013.03 – 2020.02
-
+{% for p in site.data.positions %}{% if p.section == "education" %}* {{ p.title }}, {% if p.unit %}{{ p.unit }}, {% endif %}{{ p.institution }}, {% if p.place %}{{ p.place }}, {% endif %}{{ p.dates }}
+{% endif %}{% endfor %}
 Work experience
 ======
-* 2026.05–Present: Postdoctoral Fellow
-  * Department of Civil and Mineral Engineering, University of Toronto
+{% for p in site.data.positions %}{% if p.section == "work" %}* {{ p.dates }}: {{ p.title }}
+  * {% if p.unit %}{{ p.unit }}, {% endif %}{{ p.institution }}
 
-* 2026.03–2026.04: Postdoctoral Researcher
-  * Institute of Construction and Environmental Engineering, Seoul National University
-
+{% endif %}{% endfor %}
 Honors and Awards (Selected)
 ======
 * **May 2026** — Korean Nuclear Society (KNS) Spring Meeting Best Paper Award

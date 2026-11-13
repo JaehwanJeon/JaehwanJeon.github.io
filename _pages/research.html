@@ -1,0 +1,95 @@
+---
+permalink: /research/
+title: "Research"
+layout: jj
+description: "Research of Jaehwan Jeon: physics-informed AI, uncertainty quantification, and analysis automation for structural engineering."
+---
+{% include base_path %}
+  <h1>Research</h1>
+  <p>Physics models are trustworthy but slow; AI surrogates are fast but hard to trust. My research connects the two. Physics-informed deep learning builds mechanics into the AI model, uncertainty quantification measures how much each prediction can be trusted, and agentic AI automates the analysis by choosing a model, running it, and checking the result.</p>
+  <figure>
+    <img src="{{ base_path }}/images/research/research-vision.svg" width="1784" height="588" alt="Research vision diagram. Three model types: a physics model such as FEM (mechanics-based, so trustworthy, but slow with strong model-form constraints); physics-informed deep learning, labeled 1 (builds mechanics into the AI model; fast and constrained by physics); and an AI surrogate model (fast with fewer model-form constraints, but can we trust it?). All three feed uncertainty quantification, labeled 2 (how much can we trust each prediction?), which serves a real structure, the Lysefjord Bridge, for response prediction, reliability assessment and design optimization. Agentic AI, labeled 3, surrounds the whole process: it chooses a model, runs the analysis and checks the result.">
+    <figcaption>Toward trustworthy and autonomous structural engineering: solving large-scale structural engineering problems efficiently, reliably, and autonomously. Bridge photo: Mercy, Wikimedia Commons, CC BY-SA 3.0.</figcaption>
+  </figure>
+  <ul class="inline-links" aria-label="On this page">
+    <li><a href="#physics"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-atom"></use></svg>1. Physics-informed AI</a></li>
+    <li><a href="#uq"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-sigma"></use></svg>2. Uncertainty quantification</a></li>
+    <li><a href="#automation"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-workflow"></use></svg>3. Analysis automation</a></li>
+  </ul>
+
+  <section id="physics" aria-labelledby="physics-h">
+    <h2 id="physics-h"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-atom"></use></svg>1. Physics-informed AI</h2>
+    <p class="lead">Embedding physics for trustworthy response prediction</p>
+    <p>Physical information injected into deep learning makes structural response predictions trustworthy. The physics can be encoded in the architecture, imposed through the loss, or used to guide the data.</p>
+
+    <h3>Neural network–augmented physics model (NNAP-m)</h3>
+    <p>A physics model in modal coordinates carries the global dynamics with only a few modes. A neural network learns the uncertain, response-dependent forces. Together they give the dynamic response of all degrees of freedom. The model was verified on the Lysefjord suspension bridge under wind loads.</p>
+    <figure>
+      <div class="pair">
+        <img src="{{ base_path }}/images/research/lysefjord-model.svg" alt="Finite element model of the Lysefjord suspension bridge with sensor locations" width="1263" height="597" loading="lazy">
+        <img src="{{ base_path }}/images/research/nnapm-prediction.svg" alt="Predicted and reference displacement and rotation time histories at the testing locations; the predictions follow the reference closely" width="1398" height="726" loading="lazy">
+      </div>
+      <figcaption>Lysefjord bridge model (left) and testing prediction against the reference (right).</figcaption>
+    </figure>
+    <p class="cite small"><b>Jeon, J.</b>, and J. Song (2025). <i>Journal of Engineering Mechanics</i>, 151(1), 04024103. <a href="https://doi.org/10.1061/JENMDT.EMENG-7845" rel="noopener">[Paper]</a></p>
+
+    <h3>Unified hysteresis model via physics-based deep learning</h3>
+    <p>One deep learning model represents diverse hysteresis. It combines three physics-based ingredients and was validated on yielding-link tests:</p>
+    <ul>
+      <li>a physics-encoded architecture, in which an LSTM cell emulates the Bouc–Wen solution process;</li>
+      <li>a physics-informed loss that keeps energy dissipation non-negative (Drucker’s postulate);</li>
+      <li>data augmentation that resamples hysteresis data, using rate independence.</li>
+    </ul>
+    <figure class="narrow">
+      <img src="{{ base_path }}/images/research/hysteresis-prediction.svg" alt="Force–displacement hysteresis loops of a yielding-link test: the proposed model’s prediction overlaps the reference loops" width="768" height="759" loading="lazy">
+      <figcaption>Yielding-link test: reference and predicted force–displacement hysteresis.</figcaption>
+    </figure>
+    <p class="cite small"><b>Jeon, J.</b>, O. Kwon, and J. Song (2026). <i>Earthquake Engineering &amp; Structural Dynamics</i>, 55(2), 379–396. <a href="https://doi.org/10.1002/eqe.70081" rel="noopener">[Paper]</a> <a href="https://github.com/JaehwanJeon/Testing_torch" rel="noopener">[Code]</a></p>
+    <p class="inprep muted"><i>In preparation:</i> Modal-basis spatio-temporal Fourier neural operator for virtual sensing of structural seismic responses (Jeon and Kim).</p>
+  </section>
+
+  <section id="uq" aria-labelledby="uq-h">
+    <h2 id="uq-h"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-sigma"></use></svg>2. Uncertainty quantification</h2>
+    <p class="lead">Decomposing the uncertainty of probabilistic surrogate models</p>
+    <p><b>Key question.</b> Is the uncertainty in a predicted structural response due to a lack of data, or is it irreducible even with more data?</p>
+    <p>A single surrogate model cannot separate model-form error from inherent data noise: its aleatoric estimate also absorbs model bias and sampling effects. I instead train an ensemble of Bayesian neural networks with diverse architectures, independently. The epistemic part (variance, discrepancy and bias) is what more data or better models can reduce; the aleatoric part is taken as the minimum over the ensemble.</p>
+    <figure class="narrow">
+      <img src="{{ base_path }}/images/research/uq-decomposition.svg" alt="One-dimensional example: variance against normalized input x from −1 to 1. The ensemble-based aleatoric estimate tracks the true noise variance, while single-model estimates deviate" width="1004" height="504" loading="lazy">
+      <figcaption>The ensemble aleatoric estimate (red dashed) tracks the true noise σ² (black); single-model estimates (dotted) deviate.</figcaption>
+    </figure>
+    <p>The result is a tighter bound on inherent randomness, and an epistemic measure of what more data or better models can reduce, shown for hysteretic force predictions under stochastic ground motions.</p>
+    <p class="cite small"><b>Jeon, J.</b>, J. Song, and O. Kwon (2026). <i>Structural Safety</i>, 121, 102698. <a href="https://doi.org/10.1016/j.strusafe.2026.102698" rel="noopener">[Paper]</a></p>
+  </section>
+
+  <section id="automation" aria-labelledby="auto-h">
+    <h2 id="auto-h"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-workflow"></use></svg>3. Analysis automation</h2>
+    <p class="lead">Multi-agent LLM framework for structural reliability analysis</p>
+    <p>A problem stated in plain language becomes an interpreted failure probability P<sub>f</sub>. LLM agents reason; validated solvers compute. The framework runs locally on open-weight models through a chat-based web interface.</p>
+    <ol>
+      <li><b>User</b> states the problem in plain language.</li>
+      <li><b>Problem Analyst</b> turns the text into a problem specification and asks for missing inputs.</li>
+      <li><b>Method Planner</b>, a QLoRA fine-tuned model, selects the analysis method; the user confirms it.</li>
+      <li><b>Code Engineer</b> writes the solver script.</li>
+      <li><b>Runner</b> executes validated, non-LLM solvers.</li>
+      <li><b>Result Interpreter</b> explains the engineering meaning and offers refinement.</li>
+      <li><b>Output</b>: P<sub>f</sub> with its interpretation.</li>
+    </ol>
+    <figure>
+      <img src="{{ base_path }}/images/research/reliability-llm.png" alt="Reliability LLM web interface: a user describes a column-buckling reliability problem and the system recommends a FORM-based method" width="1266" height="521" loading="lazy">
+      <figcaption>Chat-based web interface running open-weight models locally.</figcaption>
+    </figure>
+    <div class="tablewrap">
+      <table>
+        <caption>Method-selection accuracy on 20 held-out problems</caption>
+        <thead><tr><th scope="col">Model</th><th scope="col" class="c">Accuracy</th></tr></thead>
+        <tbody>
+          <tr><td>Gemma 4 E4B, untuned</td><td class="c num">45%</td></tr>
+          <tr><td>Gemma 4 26B-A4B, untuned</td><td class="c num">50%</td></tr>
+          <tr><td><b>Gemma 4 E4B + QLoRA</b></td><td class="c num"><b>60%</b></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>End to end, all 20 problems were executed, and P<sub>f</sub> was close to the reference for most.</p>
+    <p class="cite small"><b>Jeon, J.</b>, C. H. Lee, J. Choo, and T. Kim. Under review. <a href="https://arxiv.org/abs/2607.16580" rel="noopener">[Preprint]</a></p>
+    <p class="inprep muted"><i>In preparation:</i> An automated framework for substation topology extraction and ice and wind fragility assessment using vision-language models (Jeon, Kim, Tate and Kwon).</p>
+  </section>

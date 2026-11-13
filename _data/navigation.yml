@@ -30,3 +30,18 @@ main:
   # Hidden from the header menu (page still lives at /markdown/, just not linked).
   # - title: "Guide"
   #   url: /markdown/
+
+# Header menu of the 2026 redesign (layout: jj). CV opens the PDF built by scripts/build_cv_pdf.sh.
+jj:
+  - title: "About"
+    url: /
+  - title: "Research"
+    url: /research/
+  - title: "Publications"
+    url: /publications/
+  - title: "Talks"
+    url: /talks/
+  - title: "Teaching"
+    url: /teaching/
+  - title: "CV"
+    url: /files/CV.pdf

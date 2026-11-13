@@ -1,32 +1,30 @@
 ---
-layout: archive
+layout: jj
 title: "Teaching"
 permalink: /teaching/
-author_profile: true
 ---
-
 {% include base_path %}
+{% comment %}
+  Teaching experience: _data/teaching.yml (also feeds the CV).
+  Mentoring: _data/mentoring.yml (website only).
+{% endcomment %}
+<h1>Teaching</h1>
 
-<!-- Teaching is a single source of truth in _data/teaching.yml (one file). -->
-{% assign teaching_groups = site.data.teaching | group_by: "role" %}
-{% for group in teaching_groups %}
-{% if group.name == "Invited Guest Lecturer" %}
-<h2>Invited Guest Lectures</h2>
-{% elsif group.name == "Graduate Teaching Assistant" %}
-<h2>Teaching Assistantships</h2>
-{% else %}
-<h2>{{ group.name }}</h2>
-{% endif %}
-<ol class="teaching-list" reversed start="{{ group.items | size }}">
-  {% for t in group.items %}
-    <li class="teaching-item">
-      <p class="teaching-role"><strong>{{ t.role }}.</strong> {{ t.venue }} <em>({{ t.term }})</em></p>
-      {% if t.courses %}
-        <ul class="teaching-courses">
-          {% for c in t.courses %}<li>{{ c }}</li>{% endfor %}
-        </ul>
-      {% endif %}
-    </li>
+<h2>Teaching experience</h2>
+<ul class="plain">
+  {% for t in site.data.teaching %}
+  <li><b class="cite">{{ t.role }}</b>, {{ t.venue }}. <span class="muted">{{ t.term }}{% if t.upcoming %} (upcoming){% endif %}</span>
+    {% if t.courses %}<ul class="teaching-courses">{% for c in t.courses %}<li>{{ c }}</li>{% endfor %}</ul>{% endif %}
+  </li>
   {% endfor %}
-</ol>
+</ul>
+
+<h2>Mentoring</h2>
+<p>{{ site.data.mentoring.intro | replace: "Prof. ", "Prof.&nbsp;" }}</p>
+{% for s in site.data.mentoring.students %}
+<h3>{{ s.name }}</h3>
+<p class="muted small">{{ s.program }}, {{ s.since }} –</p>
+<ul>
+  {% for i in s.items %}<li>{{ i | markdownify | remove: "<p>" | remove: "</p>" | strip }}</li>{% endfor %}
+</ul>
 {% endfor %}

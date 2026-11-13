@@ -1,27 +1,18 @@
 ---
-layout: archive
+layout: jj
 title: "Talks"
 permalink: /talks/
-author_profile: true
 ---
-
 {% include base_path %}
-
-{% if site.talkmap_link == true %}
-<p style="text-decoration:underline;"><a href="/talkmap.html">See a map of all the places I've given a talk!</a></p>
-{% endif %}
-
-<!--
-  Invited / joint seminars are a single source of truth in _data/talks.yml
-  (one file, not one .md per talk). This page only renders it.
-  Conference presentations are NOT listed here — they live in Publications.
--->
-{% assign talks = site.data.talks | sort: "date" | reverse %}
-<ol class="talk-list" reversed start="{{ talks | size }}">
-  {% for t in talks %}
-    <li class="talk-item">
-      <p class="talk-title"><strong>{{ t.title }}</strong></p>
-      <p class="talk-venue">{{ t.venue }}{% if t.location %} <em>({{ t.location }})</em>{% endif %} <span style="color:#888;">— {{ t.date | date: "%B %-d, %Y" }}</span></p>
-    </li>
+{% comment %} Rendered from _data/talks.yml (newest first; also feeds the CV). {% endcomment %}
+<h1>Talks</h1>
+<p class="muted">Invited talks and seminars. Conference presentations are listed under <a href="{{ base_path }}/publications/">Publications</a>.</p>
+{% assign by_year = site.data.talks | group_by_exp: "t", "t.date | date: '%Y'" %}
+{% for y in by_year %}
+<h2>{{ y.name }}</h2>
+<ul class="plain">
+  {% for t in y.items %}
+  <li><b class="cite">{{ t.title | replace: "'", "’" }}</b><br>{{ t.venue | replace: "'", "’" | replace: "Prof. ", "Prof.&nbsp;" }}{% if t.location %}, {{ t.location }}{% endif %}. <span class="muted">{{ t.date | date: "%B %-d, %Y" }}</span></li>
   {% endfor %}
-</ol>
+</ul>
+{% endfor %}
