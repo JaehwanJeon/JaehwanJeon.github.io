@@ -27,6 +27,29 @@ PREPARATION = [
         "citation": "Jeon, J., and J. Kim*. Modal-basis spatio-temporal Fourier neural operator for "
                     "virtual sensing of structural seismic responses. (In preparation).",
     },
+    {
+        "title": "Ensemble-based uncertainty quantification for probabilistic surrogate models using SINDy",
+        "category": "inpreparation",
+        "venue": "In preparation",
+        "citation": "Park, S., J. Jeon, and J. Song*. Ensemble-based uncertainty quantification for "
+                    "probabilistic surrogate models using SINDy. (In preparation).",
+    },
+    {
+        "title": "Effects of constitutive model selection on the seismic fragility assessment of "
+                 "isolated structures",
+        "category": "inpreparation",
+        "venue": "In preparation",
+        "citation": "Guo, F., Z. Wang, J. Song, Y. Liu*, and J. Jeon. Effects of constitutive model "
+                    "selection on the seismic fragility assessment of isolated structures. (In preparation).",
+    },
+    {
+        "title": "Convex Identification of Hysteretic Restoring Forces from a Dictionary of Primitive "
+                 "Mechanisms",
+        "category": "inpreparation",
+        "venue": "In preparation",
+        "citation": "Park, S., J. Jeon, and J. Song*. Convex Identification of Hysteretic Restoring "
+                    "Forces from a Dictionary of Primitive Mechanisms. (In preparation).",
+    },
 ]
 
 LLM_TITLE = "Automating Structural Reliability Analysis with a Multi-Agent Large Language Model Framework"

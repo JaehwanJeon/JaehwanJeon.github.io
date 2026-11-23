@@ -586,3 +586,32 @@
   authors: Jeon, J., and J. Kim*
   directions:
   - physics
+- title: Ensemble-based uncertainty quantification for probabilistic surrogate models
+    using SINDy
+  category: inpreparation
+  venue: In preparation
+  citation: Park, S., J. Jeon, and J. Song*. Ensemble-based uncertainty quantification
+    for probabilistic surrogate models using SINDy. (In preparation).
+  authors: Park, S., J. Jeon, and J. Song*
+  directions:
+  - physics
+  - uq
+- title: Effects of constitutive model selection on the seismic fragility assessment
+    of isolated structures
+  category: inpreparation
+  venue: In preparation
+  citation: Guo, F., Z. Wang, J. Song, Y. Liu*, and J. Jeon. Effects of constitutive
+    model selection on the seismic fragility assessment of isolated structures. (In
+    preparation).
+  authors: Guo, F., Z. Wang, J. Song, Y. Liu*, and J. Jeon
+  directions:
+  - uq
+- title: Convex Identification of Hysteretic Restoring Forces from a Dictionary of
+    Primitive Mechanisms
+  category: inpreparation
+  venue: In preparation
+  citation: Park, S., J. Jeon, and J. Song*. Convex Identification of Hysteretic Restoring
+    Forces from a Dictionary of Primitive Mechanisms. (In preparation).
+  authors: Park, S., J. Jeon, and J. Song*
+  directions:
+  - physics
